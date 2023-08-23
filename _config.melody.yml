@@ -52,7 +52,7 @@ highlight_theme: darker
 # And you need to add the `fa` or `fab` prefix by your self.
 # ---------------
 social:
-github fa: https://github.com/AliceRayLu
+  github fa: https://github.com/AliceRayLu
 #icon_name fab: url
 
 # Algolia search
@@ -134,9 +134,9 @@ cdn:
 # ---------------
 avatar:
 
-top_img: true # false or url of img
+top_img: https://github.com/AliceRayLu/AliceRayLu.github.io/blob/main/source/pics/main_background.png?raw=true # false or url of img
 
-top_img_height: 60 # best range: 60 - 100
+top_img_height: 80 # best range: 60 - 100
 
 post_meta:
   date_type: created # created or updated
