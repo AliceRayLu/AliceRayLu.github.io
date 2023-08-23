@@ -134,9 +134,9 @@ cdn:
 # ---------------
 avatar:
 
-top_img: https://github.com/AliceRayLu/AliceRayLu.github.io/blob/main/source/pics/main_background.png?raw=true # false or url of img
+top_img: https://github.com/AliceRayLu/AliceRayLu.github.io/blob/main/source/pics/main_background_cut.png?raw=true # false or url of img
 
-top_img_height: 80 # best range: 60 - 100
+top_img_height: 100 # best range: 60 - 100
 
 post_meta:
   date_type: created # created or updated
