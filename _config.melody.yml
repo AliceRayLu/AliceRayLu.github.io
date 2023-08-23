@@ -134,7 +134,7 @@ cdn:
 # ---------------
 avatar:
 
-top_img: https://github.com/AliceRayLu/AliceRayLu.github.io/blob/main/source/pics/main_background_cut.png?raw=true # false or url of img
+top_img: https://github.com/AliceRayLu/AliceRayLu.github.io/blob/main/source/pics/back1.jpg?raw=true # false or url of img
 
 top_img_height: 100 # best range: 60 - 100
 
@@ -266,9 +266,9 @@ disqus:
 
 # Footer Settings
 # ---------------
-since: 2013
+since: 2023
 
-# footer_custom_text: put custom text directly or put hitokoto to fetch random texts
+#footer_custom_text: powered by Hexo
 
 ICP:
   enable: false
@@ -277,17 +277,17 @@ ICP:
 # busuanzi count for PV / UV in site
 busuanzi:
   # count values only if the other configs are false
-  enable: true
+  enable: false
   # custom uv span for the whole site
-  site_uv: true
+  site_uv: false
   site_uv_header: <i class="fa fa-user"></i>
   site_uv_footer:
   # custom pv span for the whole site
-  site_pv: true
+  site_pv: false
   site_pv_header: <i class="fa fa-eye"></i>
   site_pv_footer:
   # custom pv span for one page only
-  page_pv: true
+  page_pv: false
   page_pv_header: <i class="fa fa-file"></i>
   page_pv_footer:
 
