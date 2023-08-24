@@ -1219,12 +1219,13 @@
     "hexo-util" "^2.1.0"
     "nunjucks" "^3.0.0"
 
-"hexo-generator-index@^3.0.0":
-  "integrity" "sha512-83AuNN4cWdLVi//3ugR8E3kR6rrOwhXZt+hOCm1IjtIGj353/GlrtpMHpqZHU5kqipzj4miy9dweVdukXglVWw=="
-  "resolved" "https://registry.npmjs.org/hexo-generator-index/-/hexo-generator-index-3.0.0.tgz"
-  "version" "3.0.0"
+"hexo-generator-index-pin-top@^0.2.2":
+  "integrity" "sha512-1mVXHoUL5a3Q3yvIqoRVFhbJPlVAnRfc9ibToWpIlxU7ILTJwxhT6NFiS/jf/yZ0Suq1HvTI68yViMQMQVoDvg=="
+  "resolved" "https://registry.npmjs.org/hexo-generator-index-pin-top/-/hexo-generator-index-pin-top-0.2.2.tgz"
+  "version" "0.2.2"
   dependencies:
-    "hexo-pagination" "3.0.0"
+    "hexo-pagination" "0.0.2"
+    "object-assign" "^4.0.1"
 
 "hexo-generator-sitemap@^3.0.1":
   "integrity" "sha512-n+0KLNmq6TLbiZPTQF6NY5MbEem/O+DFx0lgQZNQcU4tdjXIZRrQJs+KRKeT66NTkdlYTqb4WwCxswLqQz0crA=="
@@ -1263,6 +1264,13 @@
   dependencies:
     "picocolors" "^1.0.0"
 
+"hexo-pagination@0.0.2":
+  "integrity" "sha512-4kSEfk+f1xX9UkLiFR0u1/uLombK7xiTcKcESkYTFc9GioeG8ORGe2IRaYF0meScMk5pDDTTmq73uZAuzpsgwg=="
+  "resolved" "https://registry.npmjs.org/hexo-pagination/-/hexo-pagination-0.0.2.tgz"
+  "version" "0.0.2"
+  dependencies:
+    "utils-merge" "^1.0.0"
+
 "hexo-pagination@3.0.0":
   "integrity" "sha512-8oo1iozloZo7TojPVYg4IxL3SJKCBdSJ908fTlIxIK7TWJIKdYnQlW31+12DBJ0NhVZA/lZisPObGF08wT8fKw=="
   "resolved" "https://registry.npmjs.org/hexo-pagination/-/hexo-pagination-3.0.0.tgz"
@@ -1283,7 +1291,7 @@
     "jade" "^1.11.0"
     "pug" "^2.0.1"
 
-"hexo-renderer-marked@^6.0.0":
+"hexo-renderer-marked@^6.1.1":
   "integrity" "sha512-vllmRFwl9A1NP/llQW2TbDnyvqaQKgktxXw7c+tK7XVQJmfIUnl32dr8M4jRYqYe5m9972eYm09kBXV8rBtA/A=="
   "resolved" "https://registry.npmjs.org/hexo-renderer-marked/-/hexo-renderer-marked-6.1.1.tgz"
   "version" "6.1.1"
@@ -2709,7 +2717,7 @@
   "resolved" "https://registry.npmjs.org/util-deprecate/-/util-deprecate-1.0.2.tgz"
   "version" "1.0.2"
 
-"utils-merge@1.0.1":
+"utils-merge@^1.0.0", "utils-merge@1.0.1":
   "integrity" "sha512-pMZTvIkT1d+TFGvDOqodOclx0QWkkgi6Tdoa8gC8ffGAAqz9pzPTZWAybbsHHoED/ztMtkv/VoYTYyShUn81hA=="
   "resolved" "https://registry.npmjs.org/utils-merge/-/utils-merge-1.0.1.tgz"
   "version" "1.0.1"

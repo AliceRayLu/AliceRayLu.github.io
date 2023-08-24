@@ -6,8 +6,8 @@ theme_color:
   enable: true
   main: "#626aef"
   paginator: "#626aef"
-  button_hover: "#FF7242"
-  text_selection: "#00C4B6"
+  button_hover: "#333aac"
+  text_selection: "#626aef"
   link_color: "#858585"
   hr_color: "#A4D8FA"
   tag_start_color: "#A4D8FA"
@@ -79,7 +79,7 @@ mathjax:
 # Please see doc for more details: https://molunerfinn.com/hexo-theme-melody-doc/third-party-support.html#katex
 # ---------------
 katex:
-  enable: false
+  enable: true
   cdn:
     css: https://cdn.jsdelivr.net/npm/katex@latest/dist/katex.min.css
   hide_scrollbar: true
@@ -136,12 +136,12 @@ avatar:
 
 top_img: https://github.com/AliceRayLu/AliceRayLu.github.io/blob/main/source/pics/back1.jpg?raw=true # false or url of img
 
-top_img_height: 100 # best range: 60 - 100
+top_img_height: 80 # best range: 60 - 100
 
 post_meta:
   date_type: created # created or updated
   categories: true
-  tags: true
+  tags: false
 
 # Please see doc for more details: https://molunerfinn.com/hexo-theme-melody-doc/additional-package-support.html#word-counting
 wordcount:
@@ -152,7 +152,7 @@ toc:
   # number: true
 
 post_copyright:
-  enable: true
+  enable: false
   license: CC BY-NC-SA 4.0
   license_url: https://creativecommons.org/licenses/by-nc-sa/4.0/
 
@@ -348,4 +348,4 @@ qihu_site_verification:
 disable_baidu_transformation: true
 
 # 404 Page SubTitle
-404Text:
+404Text: "Sorry! It seems that something is gone with the wind..."
