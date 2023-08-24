@@ -147,17 +147,17 @@ Hello, world!
 
 #### 3.7.6 导数
 
-* 偏导**$$\frac{\partial f}{\partial x$$**
+* 偏导 $\frac{\partial f}{\partial x}$
 
   ```LaTeX
   \frac{\partial f}{\partial x}
   ```
-* 求导**$$\frac{\mathrm{d} y}{\mathrm{d} x$$**
+* 求导 $\frac{\mathrm{d} y}{\mathrm{d} x}$
 
   ```LaTeX
   \frac{\mathrm{d} y}{\mathrm{d} x}
   ```
-* 拉普拉斯 梯度**$$\nabla$$**
+* 拉普拉斯 梯度 $\nabla$
 
   ```LaTeX
   \nabla f

@@ -105,3 +105,11 @@ deploy:
   type: git
   repo: https://github.com/AliceRayLu/AliceRayLu.github.io #仓库地址
   branch: master
+
+markdown_it_plus:
+  plugins:
+    - plugin:
+      name: "@neilsustc/markdown-it-katex"
+      enable: true
+      options:
+        strict: true
