@@ -73,7 +73,7 @@ cin.ignore();
 
 ### std::ws
 
-![image.png](assets/image-20221024215329-otyq0b8.png)
+![](https://github.com/AliceRayLu/AliceRayLu.github.io/blob/main/source/_posts/assets/image-20221024215329-otyq0b8.png?raw=true)
 
 忽略下一个换行
 
@@ -83,7 +83,7 @@ cin.ignore();
 
 ### std::vector<type>
 
-![image.png](assets/image-20220906214443-tv83pni.png)
+![](https://github.com/AliceRayLu/AliceRayLu.github.io/blob/main/source/_posts/assets/image-20220906214443-tv83pni.png?raw=true)
 
 `v[i]` notation will not check the boundary!!!
 
@@ -401,7 +401,7 @@ int mag(const vector<int>& vec){
 
 ### operator defination
 
-![image.png](assets/image-20221012172946-uq1d9bc.png)
+![](https://github.com/AliceRayLu/AliceRayLu.github.io/blob/main/source/_posts/assets/image-20221012172946-uq1d9bc.png?raw=true)
 
 ```cpp
 vector<string> v{"hello","world"};
