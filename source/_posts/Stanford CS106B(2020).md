@@ -160,7 +160,7 @@ Map<string,Vector<double>> counts;
 
 **bug warning:**
 
-![image.png](assets/image-20220728165217-8dhgg5l.png)
+![](https://github.com/AliceRayLu/AliceRayLu.github.io/blob/main/source/_posts/assets/image-20220728165217-8dhgg5l.png?raw=true)
 
 use *.containsKey(key)*  instead
 
@@ -168,7 +168,7 @@ use *.containsKey(key)*  instead
 
 breadth first search:
 
-![image.png](assets/image-20220730152955-6zeaut7.png)
+![](https://github.com/AliceRayLu/AliceRayLu.github.io/blob/main/source/_posts/assets/image-20220730152955-6zeaut7.png?raw=true)
 
 ## Assignment 2
 
@@ -459,7 +459,7 @@ m->unlock();
 
 ## 后记：补充课程推荐（stanford)
 
-![image.png](assets/image-20220823155046-3htohrr.png)
+![](https://github.com/AliceRayLu/AliceRayLu.github.io/blob/main/source/_posts/assets/image-20220823155046-3htohrr.png?raw=true)
 
-![image.png](assets/image-20220824223812-bdfg4nt.png)
+![](https://github.com/AliceRayLu/AliceRayLu.github.io/blob/main/source/_posts/assets/image-20220824223812-bdfg4nt.png?raw=true)
 
