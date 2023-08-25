@@ -132,7 +132,7 @@ cdn:
 
 # Post info settings
 # ---------------
-avatar:
+avatar: 
 
 top_img: https://github.com/AliceRayLu/AliceRayLu.github.io/blob/main/source/pics/back1.jpg?raw=true # false or url of img
 
@@ -268,7 +268,7 @@ disqus:
 # ---------------
 since: 2023
 
-#footer_custom_text: powered by Hexo
+footer_custom_text: 本站图片资源托管于Github, 网速限制可能无法正确加载
 
 ICP:
   enable: false
