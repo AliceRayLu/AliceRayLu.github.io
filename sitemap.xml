@@ -2,16 +2,61 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
-    <loc>https://aliceraylu.github.io/2023/08/04/Latex%E5%BF%AB%E9%80%9F%E5%85%A5%E9%97%A8/</loc>
+    <loc>https://aliceraylu.github.io/2023/08/24/The-Beginning-of-the-Story/</loc>
     
-    <lastmod>2023-08-24</lastmod>
+    <lastmod>2023-08-25</lastmod>
     
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
-    <loc>https://aliceraylu.github.io/2022/08/24/UCB%20CS61B(2021)/</loc>
+    <loc>https://aliceraylu.github.io/about/index.html</loc>
+    
+    <lastmod>2023-08-25</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://aliceraylu.github.io/2023/08/01/UCB%20Data100(22Spring)/</loc>
+    
+    <lastmod>2023-08-25</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://aliceraylu.github.io/2022/10/24/Stanford%20CS106L(2019)/</loc>
+    
+    <lastmod>2023-08-25</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://aliceraylu.github.io/2022/09/26/UCB%20CS61B(2021)/</loc>
+    
+    <lastmod>2023-08-25</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://aliceraylu.github.io/2022/08/24/Stanford%20CS106B(2020)/</loc>
+    
+    <lastmod>2023-08-25</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://aliceraylu.github.io/2023/08/04/Latex%E5%BF%AB%E9%80%9F%E5%85%A5%E9%97%A8/</loc>
     
     <lastmod>2023-08-24</lastmod>
     
@@ -56,15 +101,6 @@
   </url>
   
   <url>
-    <loc>https://aliceraylu.github.io/2023/08/24/The-Beginning-of-the-Story/</loc>
-    
-    <lastmod>2023-08-24</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
     <loc>https://aliceraylu.github.io/archives/index.html</loc>
     
     <lastmod>2023-08-24</lastmod>
@@ -82,19 +118,10 @@
     <priority>0.6</priority>
   </url>
   
-  <url>
-    <loc>https://aliceraylu.github.io/about/index.html</loc>
-    
-    <lastmod>2023-08-23</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
 
   <url>
     <loc>https://aliceraylu.github.io/</loc>
-    <lastmod>2023-08-24</lastmod>
+    <lastmod>2023-08-25</lastmod>
     <changefreq>daily</changefreq>
     <priority>1.0</priority>
   </url>
@@ -104,21 +131,28 @@
   
   <url>
     <loc>https://aliceraylu.github.io/categories/Unclassified/</loc>
-    <lastmod>2023-08-24</lastmod>
+    <lastmod>2023-08-25</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://aliceraylu.github.io/categories/Stanford-Lecture-Notes/</loc>
+    <lastmod>2023-08-25</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://aliceraylu.github.io/categories/UCB-Lecture-Notes/</loc>
-    <lastmod>2023-08-24</lastmod>
+    <lastmod>2023-08-25</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://aliceraylu.github.io/categories/NJU-Lecture-Notes/</loc>
-    <lastmod>2023-08-24</lastmod>
+    <lastmod>2023-08-25</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
