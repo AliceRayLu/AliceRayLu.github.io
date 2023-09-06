@@ -18,6 +18,8 @@ TeX live + vscode
 
 pdfTeX, pdfLaTeX, XeTeX, XeLaTeX
 
+> Note：文档使用中文必须要使用ctex包！！！<mark>代码：`\usepackage{ctex}`</mark>
+
 ## 3 语法
 
 ```LaTeX
