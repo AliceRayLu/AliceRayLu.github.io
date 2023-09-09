@@ -1,7 +1,7 @@
 ---
 title: Latex快速入门
 date: 2023-08-04
-category: Unclassified
+category: LaTex
 toc_number: false
 ---
 
@@ -18,7 +18,7 @@ TeX live + vscode
 
 pdfTeX, pdfLaTeX, XeTeX, XeLaTeX
 
-> Note：文档使用中文必须要使用ctex包！！！<mark>代码：`\usepackage{ctex}`</mark>
+> Note：文档使用中文可以使用ctex包+XeLaTex编译！！！<mark>代码：`\usepackage{ctex}`</mark>
 
 ## 3 语法
 
