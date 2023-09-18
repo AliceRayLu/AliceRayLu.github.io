@@ -1,7 +1,7 @@
 ---
 title: The Beginning of the Story
 date: 2023-08-24
-category: Unclassified
+category: Stories
 top: True
 ---
 Once upon a time, there was a girl, who, after trying jekyll and hexo, after choosing so many themes, and failing at making her favourites work, finally got tired and decided that this is the begin of this site.

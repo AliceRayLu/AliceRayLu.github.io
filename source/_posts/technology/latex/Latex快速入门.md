@@ -1,7 +1,7 @@
 ---
 title: Latex快速入门
 date: 2023-08-04
-category: LaTex
+category: [Technology,LaTex]
 toc_number: false
 ---
 
@@ -85,10 +85,19 @@ Hello, world!
 
 ### 3.5 列表
 
+无序列表
+
 ```LaTeX
 \begin{itemize}
 \item ...
 \end{itemize}
+```
+
+有序列表（中括号可以修改列表编号形式）
+```LaTeX
+\begin{enumerate}
+\item[1.]
+\end{enumerate}
 ```
 
 ### 3.6 目录

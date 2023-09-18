@@ -1,7 +1,7 @@
 ---
 title: 计算机网络(22Fall)
 date: 2023-02-26
-category: NJU Lecture Notes
+category: [Knowledge, Computer Network]
 ---
 
 # 计算机网络（2022）

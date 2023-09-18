@@ -1,7 +1,7 @@
 ---
 title: Stanford CS106B(2020)
 date: 2022-08-24
-category: Stanford Lecture Notes
+category: [Knowledge,C++]
 ---
 
 

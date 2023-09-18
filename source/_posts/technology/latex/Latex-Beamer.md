@@ -1,7 +1,7 @@
 ---
 title: Latex-Beamer快速入门
 date: 2023-09-08
-category: LaTex
+category: [Technology,LaTex]
 toc_number: false
 ---
 

@@ -1,7 +1,7 @@
 ---
 title: Github Personal Blog Quick Setup
 date: 2023-08-24
-category: Unclassified
+category: [Technology,Blog]
 toc_number: false
 ---
 

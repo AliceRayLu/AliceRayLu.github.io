@@ -1,7 +1,7 @@
 ---
 title: UCB Data100(22Spring)
 date: 2023-08-01
-category: UCB Lecture Notes
+category: [Knowledge, Data Science]
 ---
 
 All the materials: 🔗[Github Repo Link](https://github.com/AliceRayLu/data-100-sp22)

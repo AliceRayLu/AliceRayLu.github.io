@@ -1,7 +1,7 @@
 ---
 title: Stanford CS106L(2019)
 date: 2022-10-24
-category: Stanford Lecture Notes
+category: [Knowledge,C++]
 ---
 
 
