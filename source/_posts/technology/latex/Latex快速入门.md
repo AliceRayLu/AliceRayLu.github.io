@@ -12,7 +12,7 @@ toc_number: false
 
 ## 1 工具安装与环境配置
 
-TeX live + vscode
+TeX live + vscode （某乎有详细教程）
 
 ## 2 排版工具与编译模式
 
@@ -66,6 +66,8 @@ Hello, world!
 
 语法：`\usepackage{}`
 
+常用`\usepackage{ctex}`使得文档支持中文
+
  **【标题】** 在正文中使用maketitle使得标题展示在文档中
 
 ```LaTeX
@@ -118,6 +120,7 @@ Hello, world!
   ...
   \end{equation}
   ```
+  使用`equation*`可以取消公式编号
 
 #### 3.7.2 上下标
 
@@ -125,6 +128,8 @@ Hello, world!
 * 下标 `_`
 
 所有上下标默认只作用于之后紧跟的一个字符，使用`{}`来包括多个字符
+
+文章中非数学公式的上下标（<mark>文字角标</mark>）可以使用`\textsuperscript{}`表示上标，`\textsubscript{}`表示下标
 
 #### 3.7.3 根式和分式
 
@@ -182,6 +187,8 @@ Hello, world!
 
 ### 3.8 插入图片
 
+#### 3.8.1 法一
+
 使用`graphicx`宏包提供的`\includegraphics`命令，文件要在.tex文件同目录下
 
 ```LaTeX
@@ -191,6 +198,13 @@ Hello, world!
 ```
 
 `[width = .8\textwidth]`将图片缩放到页面宽度的80%
+
+#### 3.8.2 法二
+```LaTex
+\begin{figure}
+\includegraphics[width = .8\textwidth]{a.jpg}
+\end{figure}
+```
 
 ### 3.9 插入表格
 
@@ -216,6 +230,10 @@ Mac OS & MacTeX & TeXShop \\
 * 在列格式中用 `|` 表示竖线
 * 用 `&` 来分列，用 `\\` 来换行；
 * 每列可以采用居左、居中、居右等横向对齐方式，分别用 `l`、`c`、`r` 来表示。
+
+有关表格的详细使用请查看[这篇博客](https://blog.csdn.net/xovee/article/details/109254872)
+
+使用`\begin{table}`包裹tabular可以实现居中、浮动、添加说明等操作
 
 ### 3.10 浮动体
 

@@ -42,7 +42,15 @@ STFI for more themes!
 \logo{\includegraphics[height=1.5cm]{logo.jpg}} % 默认logo加在右下角
 ```
 
-## 1.4 小节前导目录
+## 1.4 catalogue
+### 1.4.1 整体目录
+```Latex
+\begin{frame}{catalogue}
+\tableofcontents     % 生成目录
+\end{frame}
+```
+
+### 1.4.2 小节前导目录
 在导言区加上以下代码可以生成每一小节前的前导目录
 ```Latex
 \AtBeginSection[]
