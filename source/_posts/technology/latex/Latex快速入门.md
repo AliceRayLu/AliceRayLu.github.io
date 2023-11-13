@@ -66,7 +66,7 @@ Hello, world!
 
 语法：`\usepackage{}`
 
-常用`\usepackage{ctex}`使得文档支持中文
+常用`\usepackage{ctex}`使得文档支持中文(`ctex`需要使用`XeLaTex`编译)
 
  **【标题】** 在正文中使用maketitle使得标题展示在文档中
 
@@ -107,6 +107,8 @@ Hello, world!
 在`\maketitle`下一行写`\tableofcontents`自动生成目录
 
 ### 3.7 数学公式
+
+**注意**：当数学公式编译出现`undefined`情形时，需要注意是否引入了数学相关的包，比如`amsmath`等。
 
 #### 3.7.1 模式
 
@@ -178,6 +180,14 @@ Hello, world!
   ```LaTeX
   \nabla f
   ```
+
+#### 3.7.7 特殊字体
+花体包（Scripts）：`mathrsfs`
+
+```LaTeX
+$\mathscr{A}$
+```
+注：这个花体包似乎不支持小写字母。
 
 #### 总结
 
