@@ -53,6 +53,7 @@ highlight_theme: darker
 # ---------------
 social:
   github fa: https://github.com/AliceRayLu
+  envelope fa: mailto:aliceraylu0710@gmail.com
 #icon_name fab: url
 
 # Algolia search
