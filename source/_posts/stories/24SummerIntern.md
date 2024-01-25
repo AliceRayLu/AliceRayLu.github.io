@@ -7,7 +7,8 @@ category: Stories
 # Timeline
 |公司/职位/base                        | 投递时间  | 通知时间 | 一面时间 | 二面时间 | offer |
 |    :--                              |   :--:    |   :--:  |  :--:   | :--:    | :-- |
-|Google / SE summer intern / Shanghai | 12.16 |12.19（补充学历成绩等信息，面试时间）12.26（收到recruiter邮件）|1.15| 1.17|
+|Google / SE summer intern / Shanghai | 12.16 |12.19（补充学历成绩等信息，面试时间）12.26（收到recruiter邮件）|1.15| 1.17| 1.24挂 |
+
 
 
 # 简历内容
