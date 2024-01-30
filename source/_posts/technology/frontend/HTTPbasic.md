@@ -114,6 +114,8 @@ TCP首部包含固定20B和可变部分
 # 2 HTTP/HTTPS
 超文本传输协议，用于从服务器传输超文本内容给客户端浏览器
 
+更加详细内容参考[这篇博客](https://blog.csdn.net/renxingzhadan/article/details/118946176)
+
 ## 2.1 HTTP请求和响应步骤
 
 1. 客户端和服务端之间建立TCP连接
@@ -125,21 +127,81 @@ TCP首部包含固定20B和可变部分
 ## 2.2 HTTP请求类型
 | 方法 | 描述 |
 |:--   | :-- |
-| GET  | 请求指定页面信息， |
-| POST | |
-| HEAD | |
-|DELETE|  |
-| PUT  |   |
-| TRACE|  |
-|OPTIONS|  |
-|CONNECT|  |
+| GET  | 请求指定页面信息，返回实体 |
+| POST | 向指定资源提交数据处理请求，需要携带请求体|
+| HEAD | 类似get请求，返回响应中没有具体内容，通常用于获取报头|
+|DELETE| 请求服务器删除指定资源 |
+| PUT  | 从客户端向服务器传送数据取代指定的内容 |
+| TRACE| 回显服务器收到请求，用于测试或者诊断 |
+|OPTIONS| 允许客户端查看服务器性能 |
+|CONNECT| 将连接改为管道方式的代理服务器 |
 
 【GET和POST的区别】
-
+1. 浏览器回退表现不同：GET在浏览器回退时是无害的，而POST会再次提交请求（如表单等数据）
+2. 浏览器对请求地址的处理不同：GET请求地址会被浏览器主动缓存，而POST不会，除非手动设置 
+3. 浏览器对响应的处理不同：GET请求参数会被完整的保留在浏览器**历史记录**里，而POST中的参数不会被保留；GET请求获取的资源可以作为书签保存，POST不可以
+4. **参数大小**不同：GET请求在URL中传送的参数是有长度的限制，而POST没有限制 
+5. **安全性**不同. GET参数通过URL传递，会暴露，不安全；POST放在Request Body中，相对更安全 
+6. 针对**数据操作**的类型不同：GET对数据进行查询，POST主要对数据进行增删改！简单说，GET是只读，POST是写。
 
 ## 2.3 HTTP报文
 
+### 2.3.1 请求报文
+- 请求行：方法+URL+HTTP协议版本
+- 请求头：每一行：一个头部字段名+值
+- 空行
+- 请求体：post携带的数据
+
+```text
+GET /sample.Jsp HTTP/1.1                               //请求行
+Host  www.uuid.online/                                 //请求的目标域名和端口号
+Origin  http://localhost:8081/                         //请求的来源域名和端口号 （跨域请求时，浏览器会自动带上这个头信息）
+Referer  https://localhost:8081/link?query=xxxxx       //请求资源的完整URI
+User-Agent  Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/67.0.3396.99 Safari/537.36       //浏览器信息
+Cookie  BAIDUID=FA89F036:FG=1; BD_HOME=1; sugstore=0   //当前域名下的Cookie
+Accept  text/html,image/apng                           //代表客户端希望接受的数据类型是html或者是png图片类型 
+Accept-Encoding  gzip, deflate                         //代表客户端能支持gzip和deflate格式的压缩
+Accept-Language  zh-CN,zh;q=0.9                        //代表客户端可以支持语言zh-CN或者zh(q(0~1)是优先级权重的意思，不写默认1，这里zh-CN是1，zh是0.9)
+Connection  keep-alive                                 //告诉服务器，客户端需要的tcp连接是一个长连接
+```
+
+```text
+POST / HTTP1.1
+Host  www.wrox.com
+User-Agent  Mozilla/4.0 (compatible; MSIE 6.0; Windows NT 5.1; SV1; .NET CLR 2.0.50727; .NET CLR 3.0.04506.648; .NET CLR 3.5.21022)
+Content-Type  application/x-www-form-urlencoded
+Content-Length  40
+Connection  Keep-Alive
+ 
+name=Professional%20Ajax&publisher=Wiley           //请求体数据行
+```
+
+### 2.3.2 响应报文
+- 状态行
+- 响应头
+- 空行
+- 响应体
+
+```text
+HTTP/1.1 200 OK                             //状态行
+Date: Fri, 22 May 2009 06:07:21 GMT         //响应头
+Content-Type: text/html; charset=UTF-8
+ 
+<html>                                      //响应体（响应正文）
+      <head></head>
+      <body>
+            <!--body goes here-->
+      </body>
+</html>
+```
 ## 2.4 HTTP常见返回状态码
+|状态码    |   含义                                     | 典型例子  |
+| :--:    | :--                                         | :--    |
+| 1xx     | 指示信息类，表示请求已接受，继续处理            |  **101**：准备切换协议       |
+| 2xx     | 指示成功类，表示请求已成功接受                  | **200**：请求成功 **201**: 成功创建资源  **204**: 成功处理请求但是没有返回          |
+| 3xx     | 指示重定向，表示要完成请求必须进行更近一步的操作 | **301**：请求页面永久移动到新url **302**：请求页面临时移动 |
+| 4xx     | 指示客户端错误，请求有语法错误或请求无法实现     | **403**：禁止，服务器拒绝请求  **404**：服务器找不到请求的网页   |
+| 5xx      |指示服务器错误，服务器未能实现合法的请求         | **500**：服务器内部错误 **502**：错误网关  **503**：服务器不可用   |
 
 ## 2.5 HTTP跨域问题
 
