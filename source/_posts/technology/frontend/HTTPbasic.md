@@ -111,6 +111,12 @@ TCP首部包含固定20B和可变部分
 - **快重传**：通过发送冗余ACK包的方式来触发重传
 - **快恢复**：把慢开始的阈值设为当前窗口大小的一半，然后使用拥塞避免算法将窗口缓慢增大（逐步加1）。【相当于跳过了窗口降为1的过程】
 
+#### 1.2.2.5 粘包问题
+
+#### 1.2.2.6 客户端与服务端建立长连接的方式
+
+#### 1.2.2.7 通过socket建立连接
+
 # 2 HTTP/HTTPS
 超文本传输协议，用于从服务器传输超文本内容给客户端浏览器
 
@@ -215,15 +221,30 @@ Content-Type: text/html; charset=UTF-8
 3. 无法向非同源地址发送 AJAX 请求
 
 ### 2.5.2 解决方案
-避开浏览器的安全限制
+避开浏览器的安全限制，参考[这篇博客](https://blog.csdn.net/qq_38128179/article/details/84956552)
 
 - `JSONP`：
 - `document.domin`：当主域名相同子域名不同时，可以通过设置两个页面相同的`document.domin`来实现两个页面共享cookie
 - `window.name`：
 - `window.postMessage()`：
+    ```js
+    // 父窗口打开一个子窗口
+    var openWindow = window.open('http://test2.com', 'title');
+ 
+    // 父窗口向子窗口发消息(第一个参数代表发送的内容，第二个参数代表接收消息窗口的url)
+    openWindow.postMessage('Nice to meet you!', 'http://test2.com');
+    ```
+    ```js
+    // 子窗口监听 message 消息
+    window.addEventListener('message', function (e) {
+        console.log(e.source); // e.source 发送消息的窗口
+        console.log(e.origin); // e.origin 消息发向的网址
+        console.log(e.data);   // e.data   发送的消息
+    },false);
+    ```
 - `CORS`
-- `proxy`
-- `websocket`：
+- `proxy`：nginx配置反向代理。原理：浏览器有同源策略，使用服务器向另一个服务器发送请求，然后将另一个服务器的响应返回客户端
+- `websocket`：一种双向通信协议，允许客户端和服务器主动发送或接受数据（html5持久化协议）
 
 ## 2.6 HTTP和HTTPS联系与区别
 
@@ -238,13 +259,23 @@ Content-Type: text/html; charset=UTF-8
 - 发送方事后不能否认所发送过的报文
 - 收方或非法者不能伪造、篡改报文
 
+### 2.7.1 非对称加密算法RSA
+
+如果用公开密钥对数据进行加密，只有用对应的私有密钥才能解密。如果用私有密钥对数据进行加密，只有用对应的公开密钥才能解密。
+
+公钥包括在数字证书中
+
+### 2.7.2 SSL建立连接
+
+## 2.8 HTTP各版本特性
+
 # 3 DNS
 
 # 4 浏览器
 
 ## 4.1 cookie & sessionStorage & localStorage
 
-## 4.2
+## 4.2 缓存机制
 
 # 5 网络攻击与安全
 
@@ -258,3 +289,4 @@ Content-Type: text/html; charset=UTF-8
 4. **常见的http状态码和含义？**
     见2.4节
 5. **跨域的解决方案？**
+    见2.5节，浏览器同源策略以及避开安全限制的方法
