@@ -9,7 +9,8 @@ category: Stories
 |    :--                              |   :--:    |   :--:  |  :--:   | :--:    | :--: |
 |Google / SE summer intern / Shanghai | 12.16 |12.19（补充学历成绩等信息，面试时间）12.26（收到recruiter邮件）|1.15| 1.17 | 1.24挂 |
 |Microsoft / SWE intern / Shanghai or Beijing |2.2 |2.14（填写问卷） |     |    |    |
-|Vivo / frontend / Nanjing            | 2.21      |  2.25（填写测评） |        |         |          |
+|vivo / frontend intern / Nanjing     | 2.21      |  2.25（填写测评） |        |         |          |
+|美团 / 前端&移动端实习 / Shanghai or Beijing | 2.26 |       |         |         |         |
 
 
 # 信息来源
@@ -37,7 +38,7 @@ google一般都是最早开始暑期实习招聘的，2023年是12月14号开始
 
 # Microsoft
 
-# Vivo
+# vivo
 
 ## 测评
 阅读理解+数据处理+智力题+性格测试题
