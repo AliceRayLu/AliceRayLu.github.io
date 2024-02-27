@@ -11,6 +11,7 @@ category: Stories
 |Microsoft / SWE intern / Shanghai or Beijing |2.2 |2.14（填写问卷） |     |    |    |
 |vivo / frontend intern / Nanjing     | 2.21      |  2.25（填写测评） |        |         |          |
 |美团 / 前端&移动端实习 / Shanghai or Beijing | 2.26 |       |         |         |         |
+|网易雷火 / web前端实习 / Hangzhou    |  2.27   |       |    |    |      |
 
 
 # 信息来源
