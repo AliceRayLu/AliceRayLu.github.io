@@ -12,6 +12,10 @@ category: Stories
 |vivo / frontend intern / Nanjing     | 2.21      |  2.25（填写测评） |        |         |          |
 |美团 / 前端&移动端实习 / Shanghai or Beijing | 2.26 |       |         |         |         |
 |网易雷火 / web前端实习 / Hangzhou    |  2.27   |       |    |    |      |
+|腾讯 / web前端(实习基地) / ？        | 2.28  |        |        |      |      |
+|Morgan Stanley/?/?            | 2.29 |    |      |      |      |
+|Mihoyo / 前端 / Shanghai | 2.29 |      |      |       |           |
+|阿里 /
 
 
 # 信息来源
