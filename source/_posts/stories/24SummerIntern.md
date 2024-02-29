@@ -15,7 +15,7 @@ category: Stories
 |腾讯 / web前端(实习基地) / ？        | 2.28  |        |        |      |      |
 |Morgan Stanley/?/?            | 2.29 |    |      |      |      |
 |Mihoyo / 前端 / Shanghai | 2.29 |      |      |       |           |
-|阿里 /
+
 
 
 # 信息来源
