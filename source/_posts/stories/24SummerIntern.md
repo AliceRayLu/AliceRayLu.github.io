@@ -9,12 +9,13 @@ category: Stories
 |    :--                              |   :--:    |   :--:  |  :--:   | :--:    | :--: |
 |Google / SE summer intern / Shanghai | 12.16 |12.19（补充学历成绩等信息，面试时间）12.26（收到recruiter邮件）|1.15| 1.17 | 1.24挂 |
 |Microsoft / SWE intern / Shanghai or Beijing |2.2 |2.14（填写问卷） |     |    |    |
-|vivo / frontend intern / Nanjing     | 2.21      |  2.25（填写测评） |        |         |          |
+|vivo / frontend intern / Nanjing     | 2.21  |  2.25（填写测评） |        |         |          |
 |美团 / 前端&移动端实习 / Shanghai or Beijing | 2.26 |       |         |         |         |
 |网易雷火 / web前端实习 / Hangzhou    |  2.27   |       |    |    |      |
 |腾讯 / web前端(实习基地) / ？        | 2.28  |        |        |      |      |
-|Morgan Stanley/ IT技术部实习 / Shanghai | 2.29 | 3.1(fast track预约面试时间) |      |      |      |
+|Morgan Stanley/ IT技术部实习 / Shanghai | 2.29 | 3.1(fast track预约面试时间) | 3.6电面 |      |      |
 |Mihoyo / 前端 / Shanghai | 2.29 |      |      |       |           |
+|Amazon / SDE Intern / Shanghai | 3.3 |  | | | |
 
 
 
