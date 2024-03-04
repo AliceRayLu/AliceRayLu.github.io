@@ -46,9 +46,17 @@ category: [Knowledge,C++]
 - inline类型写死
 
 ## template
+```cpp
+template<typename T>
+void swap(T& a,T& b){
+    ...
+}
+```
 
+模板的实例化：显式实例化、隐式实例化、特化
 
-
+【define与template】
+define仅仅是字符串替换，不含类型检查
 
 # const
 
@@ -60,7 +68,7 @@ category: [Knowledge,C++]
 
 # 左值和右值
 
-# 继承 (面向对象)
+# 面向对象
 
 ## 普通继承与虚继承
 
