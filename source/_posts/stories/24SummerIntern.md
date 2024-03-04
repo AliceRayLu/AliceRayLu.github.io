@@ -16,6 +16,8 @@ category: Stories
 |Morgan Stanley/ IT技术部实习 / Shanghai | 2.29 | 3.1(fast track预约面试时间) | 3.6电面 |      |      |
 |Mihoyo / 前端 / Shanghai | 2.29 |      |      |       |           |
 |Amazon / SDE Intern / Shanghai | 3.3 |  | | | |
+|小米 / 前端开发 / Nanjing | 3.4 |   |     |     |       |
+|拼多多 / 前端 / Shanghai | 3.4 |  |    |   |   |
 
 
 
