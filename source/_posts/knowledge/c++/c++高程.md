@@ -60,9 +60,28 @@ define仅仅是字符串替换，不含类型检查
 
 # const
 
-# 指针
+参考这篇博客的[总结](https://blog.csdn.net/eric_jo/article/details/4138548)
+
+## 常量
+`const int t = 1`或者`int const t = 1`是一样的，都表示一个常量，必须声明时赋值
+
+`extended const int t = 1`使用extended可以不进行初始化，变量作用于扩大至全局,编译时会分配内存
 
 ## 指针常量和常量指针
+`const char* p`：指针指向的内容不可变
+
+`char* const p`：指针本身是常量不可变
+
+`const char* const p`：指针本身不可变且指向的内容不可变
+
+## 函数中使用
+
+## 类中使用
+
+## const转为非const类型
+
+# 指针
+
 
 ## 指针和引用
 

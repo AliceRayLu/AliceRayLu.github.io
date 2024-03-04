@@ -20,6 +20,7 @@ category: Stories
 |拼多多 / 前端 / Shanghai             | 3.4 |  |    |   |   |
 |京东 / 前端 / Shanghai or Beijing    | 3.4 |   |    |     |     |
 |携程 / 前端 / Shanghai               | 3.4 |    |    |     |     |
+|字节跳动 / 前端 / Shanghai | 3.4 |  |   |   |   |
 
 
 
