@@ -19,3 +19,10 @@ toc_number: false
 
 
 # Vue VS React
+
+React特点总结：
+- JSX：使用javascript写html
+- 
+
+Vue特性：
+- html、js、css集成在一个文件中

@@ -75,8 +75,19 @@ define仅仅是字符串替换，不含类型检查
 `const char* const p`：指针本身不可变且指向的内容不可变
 
 ## 函数中使用
+```cpp
+// as parameter
+
+// as return value
+```
 
 ## 类中使用
+
+```cpp
+// member function with const: can't change any attribute variable
+
+// const class: can't use any not const function
+```
 
 ## const转为非const类型
 
@@ -84,6 +95,13 @@ define仅仅是字符串替换，不含类型检查
 
 
 ## 指针和引用
+the difference between pointer and reference
+
+- pointer is an address, reference is an alias which is the same as the original variable(sizeof)
+- pointers can point to pointers, but reference can't
+- pointers can be initialized later, but reference must be initialized while declaring.
+- pointers can point to NULL, reference can't
+- pointers can be changed, but reference can't
 
 # 左值和右值
 
@@ -98,4 +116,14 @@ define仅仅是字符串替换，不含类型检查
 # c++多态
 
 # 虚函数
-静态/动态绑定
+## 静态/动态绑定
+
+动态绑定：编译器在编译阶段不知道对象的实际类型，在运行时才能确定
+
+## 纯虚函数
+```cpp
+virtual int f() = 0;
+```
+
+## 抽象类
+a class that can't be instantiated. Must include at least **one pure virtual function**.
