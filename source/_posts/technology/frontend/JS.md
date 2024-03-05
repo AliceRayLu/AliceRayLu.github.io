@@ -38,6 +38,14 @@ for(let i = 0;i < 5;++i){
 - `Object`
 
 ### 1.2.1 typeof
+typedef会返回：
+- `undefined`
+- `boolean`
+- `number`
+- `string`
+- `object`
+
+`typedef null`会返回object，认为null是一个空对象 
 
 # 2 DOM
 
