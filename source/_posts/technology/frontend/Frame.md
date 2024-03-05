@@ -22,7 +22,10 @@ toc_number: false
 
 React特点总结：
 - JSX：使用javascript写html
-- 
+- functional programming
+- lifecycle hooks
+- react native for mobile devices
 
 Vue特性：
 - html、js、css集成在一个文件中
+- syntatic sugar: v-if v-for
