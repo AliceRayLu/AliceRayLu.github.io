@@ -270,14 +270,29 @@ Content-Type: text/html; charset=UTF-8
 ## 2.8 HTTP各版本特性
 
 # 3 DNS
+domin name system
+
+
 
 # 4 浏览器
 
 ## 4.1 cookie & sessionStorage & localStorage
+都存储在客户端
+
+- 数据大小：cookie大小不能超过4k，其他两个可以存储5M+大小的数据
+- 有效时间：cookie在有效期结束之前一直有效，localStorage永久有效（除非手动删除），sessionStorage在浏览器窗口关闭前有效（关闭后自动删除）
+- 数据存储：cookie会被传输至服务端，local和session只存储在本地
 
 ## 4.2 缓存机制
 
 # 5 网络攻击与安全
+
+## 5.1 xss攻击
+
+## 5.2 csrf攻击
+
+## 5.3 ddos攻击
+
 
 # 6 Ｑ＆Ａ
 1. **什么是三次握手和四次挥手？**
@@ -285,7 +300,7 @@ Content-Type: text/html; charset=UTF-8
 2. **http和https是什么？有什么联系和区别？**
     http和https是超文本传输协议，联系与区别见2.6节
 3. **在浏览器中输入url后到加载完整页面的过程？**
-
+    见3节
 4. **常见的http状态码和含义？**
     见2.4节
 5. **跨域的解决方案？**
