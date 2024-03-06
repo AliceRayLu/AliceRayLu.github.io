@@ -62,3 +62,8 @@ google一般都是最早开始暑期实习招聘的，2023年是12月14号开始
 
 涉及的方面比较多，包括c++，Java，OS，DB以及数据结构。但是内容相对固定，就是传统的一些问题。算法题刚好问到了数据流的中位数，前两天刚做过印象深刻。（主要是看微软面经看到了这道题，就去做了一下，没想到外企题库出奇地一致啊）
 
+c++：stack/heap，abstract class (example), smart pointer
+java：garbage collection(advantage / disadvantage)
+os：process/threads, dead lock, starving
+db: index, primary key, foreign key, inner/outer join
+Algorithm：linked list(head node), BST, time complexity of operations 

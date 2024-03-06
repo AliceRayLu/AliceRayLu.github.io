@@ -77,20 +77,36 @@ define仅仅是字符串替换，不含类型检查
 ## 函数中使用
 ```cpp
 // as parameter
+int func(const int& t)
 
 // as return value
+const int func(int t)
+const int* func(int t)
 ```
 
 ## 类中使用
 
 ```cpp
-// member function with const: can't change any attribute variable
+// const attribute: can't change
+class A{
+    const int t;
+    A(int x):t(x){
+        // can only be initialized this way
+    }
+
+    void func()const;// member function with const: can't change any attribute variable & can't use non-const function & can access const attribute
+}
+
 
 // const class: can't use any not const function
+const A aaa;
+aaa.func(); //correct
 ```
 
 ## const转为非const类型
-
+```cpp
+const_cast<int*>(p);// 通常用于指针
+```
 # 指针
 
 
@@ -103,6 +119,8 @@ the difference between pointer and reference
 - pointers can point to NULL, reference can't
 - pointers can be changed, but reference can't
 
+## 智能指针
+
 # 左值和右值
 
 # 面向对象
@@ -112,6 +130,8 @@ the difference between pointer and reference
 ## 析构函数
 
 ## 操作符重载
+
+## 拷贝构造函数
 
 # c++多态
 
@@ -127,3 +147,5 @@ virtual int f() = 0;
 
 ## 抽象类
 a class that can't be instantiated. Must include at least **one pure virtual function**.
+
+# stack & heap
