@@ -29,3 +29,4 @@ React特点总结：
 Vue特性：
 - html、js、css集成在一个文件中
 - syntatic sugar: v-if v-for
+- slot

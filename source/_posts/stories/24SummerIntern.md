@@ -12,7 +12,7 @@ category: Stories
 |vivo / frontend intern / Nanjing     | 2.21  |  2.25（填写测评） |        |         |          |
 |美团 / 前端&移动端实习 / Shanghai or Beijing | 2.26 |       |         |         |         |
 |网易雷火 / web前端实习 / Hangzhou    |  2.27   |       |    |    |      |
-|腾讯 / web前端(实习基地) / ？        | 2.28  |        |        |      |      |
+|腾讯 / web前端 / ？        | 2.28  |        |        |      |      |
 |Morgan Stanley/ IT技术部实习 / Shanghai | 2.29 | 3.1(fast track预约面试时间) | 3.6电面 |      |      |
 |Mihoyo / 前端 / Shanghai            | 2.29 |      |      |       |           |
 |Amazon / SDE Intern / Shanghai      | 3.3 |  | | | |
@@ -55,3 +55,10 @@ google一般都是最早开始暑期实习招聘的，2023年是12月14号开始
 阅读理解+数据处理+智力题+性格测试题
 
 做下来感觉我是智障？？？
+
+# Morgan Stanley
+
+## 电面
+
+涉及的方面比较多，包括c++，Java，OS，DB以及数据结构。但是内容相对固定，就是传统的一些问题。算法题刚好问到了数据流的中位数，前两天刚做过印象深刻。（主要是看微软面经看到了这道题，就去做了一下，没想到外企题库出奇地一致啊）
+
