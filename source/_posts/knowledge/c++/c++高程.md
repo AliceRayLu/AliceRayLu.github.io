@@ -149,3 +149,11 @@ virtual int f() = 0;
 a class that can't be instantiated. Must include at least **one pure virtual function**.
 
 # stack & heap
+
+# struct
+
+## struct & class
+
+## struct内存
+
+## struct & union
