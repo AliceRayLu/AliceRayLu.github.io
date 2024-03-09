@@ -64,3 +64,10 @@ java：garbage collection(advantage / disadvantage)
 os：process/threads, dead lock, starving
 db: index, primary key, foreign key, inner/outer join
 Algorithm：linked list(head node), BST, time complexity of operations 
+
+# 美团
+
+## 笔试
+实习生笔试分为两部分，一部分是选择题，包括很多基础知识，数据库、编译原理、os、计组、设计模式以及一些数学题，主要是找规律和鸡兔同笼类似的简单计算题。
+
+另一部分是两道easy级别的算法题，没想到算法题那么简单，一个小时就提交了前面的选择题，不能回去改了，早知道多花点时间好好考虑选择题了呜呜。
