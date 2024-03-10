@@ -149,6 +149,13 @@ virtual int f() = 0;
 a class that can't be instantiated. Must include at least **one pure virtual function**.
 
 # stack & heap
+【栈】
+
+由编译器自动分配管理释放，用来存储函数参数和局部变量，从高地址向低地址增长
+
+【堆】
+
+由程序员管理分配和释放，用来存放程序中的动态内存，程序结束由操作系统自动回收，从低地址向高地址生长
 
 # struct
 
