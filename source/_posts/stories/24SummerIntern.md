@@ -12,13 +12,13 @@ category: Stories
 |vivo / frontend intern / Nanjing     | 2.21  |  2.25（填写测评） |        |         |          |
 |美团 / 前端&移动端实习 / Shanghai or Beijing | 2.26 | 3.8（参与3.9笔试） |         |         |         |
 |网易雷火 / web前端实习 / Hangzhou    |  2.27   |       |    |    |      |
-|腾讯 / web前端 / ？        | 2.28  |        |        |      |      |
+|腾讯 / web前端 / ？    | 2.28  |   3.11    |  3.12  |      |      |
 |Morgan Stanley/ IT技术部实习 / Shanghai | 2.29 | 3.1（fast track预约面试时间）3.8（online assessment） | 3.6电面 |      |      |
 |Mihoyo / 前端 / Shanghai            | 2.29 |      |      |       |           |
 |小米 / 前端开发 / Nanjing            | 3.4 |   |     |     |       |
 |拼多多 / 前端 / Shanghai             | 3.4 |  |    |   |   |
 |京东 / 前端 / Shanghai or Beijing    | 3.4 |   |    |     |     |
-|携程 / 前端 / Shanghai               | 3.4 |    |    |     |     |
+|携程 / 前端 / Shanghai               | 3.4 | 3.11（3.13笔试）|    |     |     |
 |蚂蚁 / 前端 / Shanghai(支付宝)       | 3.8  |    |    |     |     |
 |恒生 / 前端 / Hangzhou               | 3.8  |    |    |     |     |
 
