@@ -283,6 +283,8 @@ domin name system
 - 有效时间：cookie在有效期结束之前一直有效，localStorage永久有效（除非手动删除），sessionStorage在浏览器窗口关闭前有效（关闭后自动删除）
 - 数据存储：cookie会被传输至服务端，local和session只存储在本地
 
+cookie
+
 ## 4.2 缓存机制
 
 ## 4.3 严格模式和混杂模式
