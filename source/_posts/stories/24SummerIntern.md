@@ -19,7 +19,7 @@ category: Stories
 |拼多多 / 前端 / Shanghai             | 3.4 |  |    |   |   |
 |京东 / 前端 / Shanghai or Beijing    | 3.4 |   |    |     |     |
 |携程 / 前端 / Shanghai               | 3.4 | 3.11（3.13笔试）|    |     |     |
-|蚂蚁 / 前端(支付宝) / Shanghai       | 3.8  |    |    |     |     |
+|蚂蚁 / 前端(支付宝) / Shanghai       | 3.8  |  3.14简历挂   |    |     |     |
 |恒生 / 前端 / Hangzhou               | 3.8  |    |    |     |     |
 
 
