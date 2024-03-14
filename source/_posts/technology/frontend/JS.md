@@ -141,6 +141,8 @@ let jas = `${val} use`
 
 ## 2.4 array
 
+【Array.prototype方法重写】
+
 # 3 control flow
 
 ## 3.1 loops & iterators
