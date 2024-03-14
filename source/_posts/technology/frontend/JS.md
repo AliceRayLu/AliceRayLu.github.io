@@ -101,15 +101,7 @@ isNaN("blue") // true 不可以转化为数值
 isNaN(true) // false 可以转化为1
 ```
 
-### 1.2.5 类型转换
-- Number()
-- parseInt() / parseInt(object,base)[指定底数]
-- parseFloat()
-- toString() / toString(base)[数值转换字符串指定底数]
-- valueOf()
-- String()
-
-### 1.2.6 模板字符串
+### 1.2.5 模板字符串
 `包括的字符串是模板字符串，允许**换行**，**嵌入变量**
 ```js
 let val = `hi
@@ -117,7 +109,73 @@ hither`;
 let jas = `${val} use`
 ```
 
-# 2 DOM
+## 1.3 类型转换
+- Number()
+- parseInt() / parseInt(object,base)[指定底数]
+- parseFloat()
+- toString() / toString(base)[数值转换字符串指定底数]
+- valueOf()
+- String()
+
+### 1.3.1 显式类型转换
+
+### 1.3.2 隐式类型转换
+
+
+
+## 1.4 相等性比较
+
+## 1.5 判断数据类型
+
+### 1.5.1 typeof
+
+### 1.5.2 instanceof
+
+
+# 2 数据结构
+## 2.1 set
+
+## 2.2 map
+
+## 2.3 json
+
+## 2.4 array
+
+# 3 control flow
+
+## 3.1 loops & iterators
+
+## 3.2 branches
+
+# 4 函数
+
+# 5 异步
+
+# 6 类
+
+## 6.1 this
+
+## 6.2 new
+
+## 6.3 原型
+
+## 6.4 继承
+
+# 7 优化
+
+## 7.1 节流
+
+## 7.2 防抖
+
+# 8 ES6 新特性
+
+## 8.1 Generator
+
+## 8.2 Proxy
+
+## 8.3 Module
+
+## 8.4 Decorator
 
 
 # Q & A
