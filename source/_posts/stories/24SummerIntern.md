@@ -14,7 +14,7 @@ category: Stories
 |网易雷火 / web前端实习 / Hangzhou    |  2.27   |       |    |    |      |
 |腾讯 / web前端 / ？    | 2.28  |   3.11（腾讯云捞）    |  3.12（腾讯云）  |      |      |
 |Morgan Stanley/ IT技术部实习 / Shanghai | 2.29 | 3.1（fast track预约面试时间）3.8（online assessment） | 3.6电面 |      |      |
-|Mihoyo / 前端 / Shanghai     | 2.29 |      |      |       |           |
+|Mihoyo / 前端 / Shanghai     | 2.29 | 3.17笔试  |      |       |           |
 |小米 / 前端开发 / Nanjing            | 3.4 |   |     |     |       |
 |拼多多 / 前端 / Shanghai             | 3.4 |  |    |   |   |
 |京东 / 前端 / Shanghai or Beijing    | 3.4 |   |    |     |     |
@@ -23,6 +23,7 @@ category: Stories
 |恒生 / 前端 / Hangzhou               | 3.8  |    |    |     |     |
 |快手 / 前端 / Hangzhou or Beijing   | 3.14 |    |   |   |  |
 |百度 / AI前端 / Beijing or Shanghai | 3.15 |    |    |   |   |
+|华为 / 终端BG软件部 / Shanghai or Nanjing|3.17 |  |   |    |   |
 
 # 信息来源
 大部分企业都会在官方“xx招聘”公众号上发布暑期实习的相关内容，对于国内的一些企业辅导员或校方也会发布信息，及时关注这些信息，注意截止的一些时间点，越早投递越好。
