@@ -9,5 +9,6 @@ category: [Technology,Frontend]
 - [Internet & browser](https://aliceraylu.github.io/2024/01/14/technology/frontend/HTTPbasic/)
 - [HTML]()
 - [CSS]()
-- [Javascript]()
+- [JavaScript]()
+- [TypeScript]()
 - [Frameworks]()
