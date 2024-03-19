@@ -98,12 +98,31 @@ let jas = `${val} use`
 ```
 
 #### 1.2.4.2 修改
+- `+`/`concat()`/`${}`都可以用于拼接字符串
+- `slice(start,end)`/`substring(start,end)`：获取[start,end)副本
+- `substr(start,len)`：获取从start开始长度为len的字符串副本
+- `trim()`/`trimLeft()`/`trimRight()`：删除指定位置空格
+- `repeat(n)`：字符串重复n次
+- `padStart(len,char)`/`padEnd(len,char)`：当字符串长度不满len时，使用char填充到指定位置
+- `toLowerCase()`/`toUpperCase()`：全小写，全大写
 
 #### 1.2.4.3 查询
+- `chatAt(pos)`
+- `indexOf(string)`
+- `startWith(string)`
+- `includes(string)`
 
 #### 1.2.4.4 匹配
+基于正则表达式
+- `match(pattern)`：返回一个匹配的字符串数组
+- `search(pattern)`：返回找到的位置下标
+- `replace(old,new)`：替换字符串中匹配的位置，返回替换后的结果字符串
 
 #### 1.2.4.5 转化
+- `split(char)`：按照char分割字符串，返回字符串数组
+
+### 1.2.5 Object常用方法
+
 
 ## 1.3 类型转换
 - Number()
@@ -136,12 +155,71 @@ Object.is(NaN, NaN)  // true
 
 ### 1.4.2 深拷贝和浅拷贝
 
+#### 1.4.2.1 浅拷贝
+拷贝时只拷贝一层，即基本类型拷贝一份精确复制，对于引用对象类型拷贝一份内存地址，深层的引用共享相同的内存地址。
+
+```js
+function shallowCopy(obj){
+    var newobj = {};
+    for(let prop in obj){
+        if(obj.hasOwnProperty(prop)){
+            newobj[prop] = obj[prop];
+        }
+    }
+    return newobj;
+}
+```
+
+【存在浅拷贝现象的方法】
+- `Object.assign`：将源对象赋值合并给目标对象，并返回合并后目标对象的值
+    ```js
+    Object.assign(target, ...sources)
+    ```
+- `Array.prototype.slice()`, `Array.prototype.concat()`
+- 使用拓展运算符实现的复制
+    ```js
+    let arr = [1,2,3];
+    let narr = [...arr];
+    narr[1] = 5;
+    console.log(narr);
+    console.log(arr);
+    ```
+
+#### 1.4.2.2 深拷贝
+开辟一个栈，把所有属性都严格拷贝一份。因此改变一个对象的属性值不会影响另一个对象的属性值。
+
+【实现方式】
+
+- `_.cloneDeep()`
+    ```js
+    const _ = require('lodash');
+    const obj1 = {
+        //属性
+    };
+    const obj2 = _.cloneDeep(obj1);
+    ```
+- `jQuery.extend()`
+- `Json.stringify()`
+- 手写
+    ```js
+    function deepCopy(obj){
+        //只拷贝对象
+        if(!obj || typeof obj !== 'object')return;
+        let newobj = Array.isArray(obj)?[]:{};
+        for(let prop in obj){
+            if(obj.hasOwnProperty(prop)){
+                newobj = (typeof obj[prop] === 'object')?deepCopy(obj[prop]):obj[prop];
+            }
+        }
+        return newobj;
+    }
+    ```
 
 
 ## 1.5 判断数据类型
 
 ### 1.5.1 typeof
-typeof会返回：
+typeof会返回以下字符串：
 - `undefined`
 - `boolean`
 - `number`
@@ -165,7 +243,40 @@ typeof [] // object
 ```
 
 ### 1.5.2 instanceof
+instanceof 运算符用于检测构造函数的 prototype 属性是否出现在某个实例对象的原型链上
 
+一般格式为`object instanceof constructor`
+
+```js
+let Car = function() {}
+let benz = new Car()
+benz instanceof Car // true
+let car = new String('xxx')
+car instanceof String // true
+let str = 'xxx'
+str instanceof String // false
+```
+
+实现原理：在原型链上依次查找是否由该constructor构建
+
+```js
+function instanceof(left,right){
+    if(left === null || typeof left !== 'object')return false;
+    let proto = Object.getPrototypeOf(left);
+    while(true){
+        if(proto === null) return false;
+        if(proto === right.prototype) return true;
+        proto = Object.getPrototypeOf(proto);
+    }
+}
+```
+
+【typeof和instanceof的区别】
+- typeof返回字符串，告知对象类型，instanceof返回布尔值
+- instanceof用于判断引用对象类型，不能用于判断基础数据类型
+- typeof用于判断基础数据类型和function引用对象类型，无法判断具体的复杂引用对象类型
+
+通用方法：`Object.prototype.toString()`
 
 # 2 数据结构
 ## 2.1 set
@@ -254,17 +365,97 @@ arguments和函数的参数同步，修改函数参数值就是修改arguments�
 
 如果不传参，默认为undefined
 
+
+## 4.3 闭包
+
+一个函数被其引用的状态包围在一起，函数被引用包围
+
+### 4.3.1 优缺点
+
+【优点】保护函数内变量的安全，封装降低耦合
+
+【缺点】容易造成内存泄漏，内存浪费问题
+
+### 4.3.2 适用场景
+- 设计一些私有方法和变量
+- 延长变量的生命周期
+
+```js
+// 柯里化函数
+
+function getArea(width){
+    return height => {
+        return width * height;
+    }
+}
+let getAreaByTen = getArea(10);
+console.log(getAreaByTen(20));
+```
+
+```js
+// 封装一个计数器counter
+var Counter = (function(){
+    var privateCount = 0;
+    function changeBy(val){
+        privateCount += val;
+    }
+    return {
+        increment:function(){
+            changeBy(1);
+        },
+        decrement:function(){
+            changeBy(-1);
+        },
+        value:function(){
+            return privateCount;
+        }
+    }
+})
+
+let count1 = Counter();
+count1.increment();
+count1.increment();
+console.log(count1.value()); // 2
+```
+
+## 4.4 作用域
+块级，函数级，全局作用域级
+
+【作用域链】
+从最内部的块级/函数级作用域开始，向外部寻找
+
 # 5 异步
 
 # 6 类
 
 ## 6.1 this
 
-### call, bind, apply
+### 6.1.1 this对象
+this指向函数、类内部对象，运行时自动生成
+
+
+
+### 6.1.1 改变this指向
+可以使用`call`, `apply`, `bind`方法
+
+
 
 ## 6.2 new
+1. 创建一个新对象
+2. 将构造函数的作用域赋给新对象（因此this指向了这个新对象）
+3. 执行构造函数中的代码（为这个新对象添加属性）
+4. 返回新对象
 
 ## 6.3 原型
+原型模式：设计模式，构建一个prototype负责clone新对象
+
+每个对象都拥有一个原型，原型对应的也有自己的原型，一层层向上传递构成原型链
+
+- 一切对象都是继承自Object对象，Object 对象直接继承根源对象null
+- 一切的函数对象（包括 Object 对象），都是继承自 Function 对象
+- Object 对象直接继承自 Function 对象
+- Function对象的__proto__会指向自己的原型对象，最终还是继承自Object对象
+
 
 ## 6.4 继承
 
@@ -288,6 +479,76 @@ arguments和函数的参数同步，修改函数参数值就是修改arguments�
 
 ## 8.4 Decorator
 
+# 9 JS内存机制
+
+## 9.1 引用
+每个对象拥有一个关于原型的隐式引用，以及关于属性的显式引用
+
+如果使用引用计数法无法解决循环引用导致的内存泄漏问题
+
+## 9.2 垃圾回收
+【标记-清除算法】
+
+从全局根开始，将无法被获取访问到的部分内存清除。
+
+## 9.3 内存泄露
+程序未能释放且不能再被使用的内存
+
+- 意外的全局变量：在函数中使用全局变量或者用this创建全局变量（解决方案：使用严格模式）
+    ```js
+    function foo(arg) {
+        bar = "this is a hidden global variable";
+    }
+
+    function foo() {
+        this.variable = "potential accidental global";
+    }
+    // foo 调用自己，this 指向了全局对象（window）
+    foo()
+    ```
+- 定时器：获取到的元素在dom中被删除，但是定时器仍然存在，定时器拥有的资源不会被释放
+    ```js
+    var someResource = getData();
+    setInterval(function() {
+        var node = document.getElementById('Node');
+        if(node) {
+            // 处理 node 和 someResource
+            node.innerHTML = JSON.stringify(someResource);// someResource不会被释放
+        }
+    }, 1000);
+    ```
+- 闭包：闭包内使用的引用导致不会释放
+    ```js
+    function bindEvent() {
+        var obj = document.createElement('XXX');
+        var unused = function () {
+            console.log(obj, '闭包内引用obj obj不会被释放');
+        };
+        obj = null; // 解决方法
+    }
+    ```
+- 没有清理对dom元素的引用：dom元素在被删除后还存在对其的引用
+    ```js
+    const refA = document.getElementById('refA');
+    document.body.removeChild(refA); // dom删除了
+    console.log(refA, 'refA'); // 但是还存在引用能console出整个div 没有被回收
+    refA = null; // 解决办法
+    console.log(refA, 'refA'); // 解除引用
+    ```
+
+# 10 严格模式
+
+## 10.1 设置严格模式的目的
+- 消除Javascript语法的一些不合理、不严谨之处，减少一些怪异行为;
+- 消除代码运行的一些不安全之处，保证代码运行的安全；
+- 提高编译器效率，增加运行速度；
+- 为未来新版本的Javascript做好铺垫。
+
+## 10.2 使用方式
+
+```js
+"use strict";
+```
 
 # Q & A
 
