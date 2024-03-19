@@ -332,11 +332,32 @@ function instanceof(left,right){
 
 ### 2.4.5 Array.prototype方法重写
 
+#### 2.4.5.1 flat
 
+```js
+Array.prototype.flat = function(deep = 1) {
+    let res = [];
+    deep--;
+    for(const val of this){
+        if(Array.isArray(val) && deep >= 0){
+            res = res.concat(val.flat(deep));
+        }else{
+            res.push(val);
+        }
+    }
+    return res;
+}
+```
 
 # 3 control flow
 
 ## 3.1 loops & iterators
+
+### for in VS for of
+
+for in 遍历对象中所有属性，包括原型属性。如果是数组的话按照index遍历
+
+for of 遍历数组元素值，不能遍历对象
 
 ## 3.2 branches
 
@@ -431,14 +452,79 @@ console.log(count1.value()); // 2
 ## 6.1 this
 
 ### 6.1.1 this对象
-this指向函数、类内部对象，运行时自动生成
+this指向函数、类内部对象，运行时自动生成。调用方式决定this对象，谁调用指向谁。
 
+一旦确定，不能被直接更改。
 
+【绑定规则】
 
-### 6.1.1 改变this指向
+- 默认绑定：函数中调用全局变量
+- 隐式绑定：作为函数被某个对象调用，绑定到这个对象上
+- new绑定：除非函数返回一个对象，否则对函数使用new时将this绑定到赋值对象上
+- 显式绑定：使用apply\call\bind改变
+
+new绑定优先级 > 显示绑定优先级 > 隐式绑定优先级 > 默认绑定优先级
+
+### 6.1.2 改变this指向
 可以使用`call`, `apply`, `bind`方法
 
+#### 6.1.2.1 call
+```js
+func.call(obj,1,2);
+```
 
+call只生效一次，函数立即执行，传入参数可以不用数组括起来
+
+【手写call】
+```js
+Function.prototype.myCall = function(context, ...args){
+    context = (context === null || context === undefined) ? window : context;
+    context.__fn = this;
+    let result = context.__fn(...args);
+    delete context.__fn;
+    return result;
+}
+```
+
+#### 6.1.2.2 apply
+
+```js
+func.apply(obj,[1,2]); // obj是this指向的新对象，传给func的参数必须以数组形式传入
+```
+
+apply只生效一次，且是临时生效，函数立即执行，执行完后绑定失效。
+
+如果obj传入null,undefined默认指向浏览器window
+
+【手写apply】
+```js
+Function.prototype.myApply = function(context,args){
+    context = (context === null || context === undefined)? window:context;
+    context.__fn = this;
+    let result = context.__fn(...args);
+    delete context.__fn;
+    return result;
+}
+```
+
+#### 6.1.2.3 bind
+```js
+let func = oldfunc.bind(obj);
+```
+bind返回一个绑定永久有效的新函数，参数传递给新函数
+
+```js
+Function.prototype.myBind = function(context, ...args1){
+    context = (context === null || context === undefined)?window:context;
+    let _this = this;
+    return function(...args2){
+        context.__fn = _this;
+        let result = context.__fn(...[...args1,...args2]);
+        delete context.__fn;
+        return result;
+    }
+}
+```
 
 ## 6.2 new
 1. 创建一个新对象
@@ -458,6 +544,15 @@ this指向函数、类内部对象，运行时自动生成
 
 
 ## 6.4 继承
+
+- 原型链继承：将子类的prototype设为父类。问题：创建出的子类共享父类属性，修改一个会导致父类修改
+- 构造函数继承：使用call将this强行绑定。问题：只能继承父类的实例属性和方法，无法继承prototype方法
+- 组合以上两种继承：相当于调用了两次父类，解决以上问题但是导致性能下降
+- 原型式继承：使用`Object.create()`，相当于浅拷贝了一份（修改属性会导致原始对象的修改）
+- 寄生式继承：封装一个函数，其中仍然使用`Object.create()`创建对象，为这个对象添加一些方法
+- 寄生组合式继承
+
+ES6：直接用extends
 
 ## 6.5 assign
 
@@ -549,6 +644,10 @@ this指向函数、类内部对象，运行时自动生成
 ```js
 "use strict";
 ```
+
+# 11 DOM
+
+# 12 事件
 
 # Q & A
 
