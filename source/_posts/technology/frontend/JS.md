@@ -280,8 +280,26 @@ function instanceof(left,right){
 
 # 2 数据结构
 ## 2.1 set
+- `add(a)`
+- `delete(a)`
+- `has(a)`
+- `clear()`
+keys()：返回键名的遍历器
+values()：返回键值的遍历器
+entries()：返回键值对的遍历器
+forEach()：使用回调函数遍历每个成员
+
+### weakset
 
 ## 2.2 map
+size 属性
+set(key,value)
+get()
+has()
+delete()
+clear()
+
+### weakmap
 
 ## 2.3 json
 
@@ -344,6 +362,17 @@ Array.prototype.flat = function(deep = 1) {
         }else{
             res.push(val);
         }
+    }
+    return res;
+}
+```
+
+#### 2.4.5.2 map
+```js
+Array.prototype.map = function(callback){
+    let res = [];
+    for(let i = 0;i < this.length;i++){
+        res.push(callback(this[i],i,this));
     }
     return res;
 }
@@ -445,7 +474,68 @@ console.log(count1.value()); // 2
 【作用域链】
 从最内部的块级/函数级作用域开始，向外部寻找
 
-# 5 异步
+# 5 事件
+
+## 5.1 事件与事件流
+javascript中的事件，可以理解就是在HTML文档或者浏览器中发生的一种交互操作，使得网页具备互动性， 常见的有加载事件、鼠标事件、自定义事件等
+
+包括事件和事件流。事件流的产生是因为父子结点执行事件存在顺序问题。
+
+【事件流的三个阶段】
+1. 事件捕获阶段(capture phase)
+2. 处于目标阶段(target phase)/事件处理阶段
+3. 事件冒泡阶段(bubbling phase)：从子节点依次上传直到DOM根节点
+
+## 5.2 事件模型
+
+- 原始事件模型（DOM0级）：标签/js直接绑定，绑定速度快，支持冒泡不支持捕获，不能重复绑定（只能绑定一次）
+- 标准事件模型（DOM2级）：事件流
+    ```js
+    var btn = document.getElementById('.btn');
+    btn.addEventListener(‘click’, showMessage, false);
+    btn.removeEventListener(‘click’, showMessage, false);
+    ```
+    - 允许绑定多个事件处理器
+    - 第三个参数设为true，允许捕获阶段执行，false冒泡阶段执行
+- IE事件模型（基本不用）：只有事件处理阶段和冒泡阶段
+
+## 5.3 事件循环
+任务分为同步任务和异步任务。
+
+同步任务进入主线程，即主执行栈，异步任务进入任务队列，主线程内的任务执行完毕为空，会去任务队列读取对应的任务，推入主线程执行。
+
+同步异步任务的划分不够精确，可以使用微任务和宏任务
+
+### 5.3.1 微任务和宏任务
+
+### 5.3.2 async & await
+async就是用来声明一个异步方法，而 await是用来等待异步方法执行
+
+
+#### 5.3.2.1 async
+async函数返回一个promise对象
+```js
+function f() {
+    return Promise.resolve('TEST');
+}
+
+// asyncF is equivalent to f!
+async function asyncF() {
+    return 'TEST';
+}
+```
+#### 5.3.2.2 await
+await后面接一个promise对象，返回这个对象的结果
+
+## 5.4 异步&promise
+- pending（进行中）
+- fulfilled（已成功）
+- rejected（已失败）
+
+
+
+## 5.4 事件代理
+把一个元素响应事件（click、keydown......）的函数委托到另一个元素，在冒泡阶段完成。事件委托，会把一个或者一组元素的事件委托到它的父层或者更外层元素上，真正绑定事件的是外层元素，而不是目标元素
 
 # 6 类
 
@@ -527,10 +617,28 @@ Function.prototype.myBind = function(context, ...args1){
 ```
 
 ## 6.2 new
+
+new一个类：
 1. 创建一个新对象
 2. 将构造函数的作用域赋给新对象（因此this指向了这个新对象）
 3. 执行构造函数中的代码（为这个新对象添加属性）
 4. 返回新对象
+
+new一个函数：
+1. 创建一个新的对象obj
+2. 将对象与构建函数通过原型链连接起来
+3. 将构建函数中的this绑定到新建的对象obj上
+4. 根据构建函数返回类型作判断，如果是原始值则被忽略，如果是返回对象，需要正常处理
+
+【手写new】
+```js
+function mynew(Func,...args){
+    const obj = {};
+    obj.__proto__ = Func.prototype;
+    let result = Func.apply(obj,args);
+    return (typeof result === 'object') ? result : obj;
+}
+```
 
 ## 6.3 原型
 原型模式：设计模式，构建一个prototype负责clone新对象
@@ -561,8 +669,14 @@ ES6：直接用extends
 # 7 优化
 
 ## 7.1 节流
+定义：**n 秒内**只运行一次，若在 n 秒内重复触发，只有一次生效
+
+【手写】
 
 ## 7.2 防抖
+定义：**n 秒后**在执行该事件，若在 n 秒内被重复触发，则重新计时
+
+【手写】
 
 # 8 ES6 新特性
 
@@ -647,7 +761,7 @@ ES6：直接用extends
 
 # 11 DOM
 
-# 12 事件
+
 
 # Q & A
 

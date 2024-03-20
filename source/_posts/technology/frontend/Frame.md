@@ -19,6 +19,8 @@ toc_number: false
 
 ## hooks
 
+## 函数式组件和类式组件
+
 
 # Vue VS React
 

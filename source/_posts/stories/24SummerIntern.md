@@ -14,7 +14,7 @@ category: Stories
 |网易雷火 / web前端实习 / Hangzhou    |  2.27   |       |    |    |      |
 |腾讯 / web前端 / ？    | 2.28  |   3.11（腾讯云捞）    |  3.12（腾讯云）  |      |      |
 |Morgan Stanley/ IT技术部实习 / Shanghai | 2.29 | 3.1（fast track预约面试时间）3.8（online assessment） | 3.6电面 |      |      |
-|Mihoyo / 前端 / Shanghai     | 2.29 | 3.17笔试  |      |       |           |
+|Mihoyo / 前端 / Shanghai     | 2.29 | 3.17笔试  |  3.27    |       |           |
 |小米 / 前端开发 / Nanjing            | 3.4 |   |     |     |       |
 |拼多多 / 前端 / Shanghai             | 3.4 |  |    |   |   |
 |京东 / 前端 / Shanghai or Beijing    | 3.4 |   |    |     |     |
@@ -98,6 +98,24 @@ Algorithm：linked list(head node), BST, time complexity of operations
 4道编程，1道签到题，1道前缀和优化题（脑子抽了最后才想出来，有个小bug没来得及修好），1道模拟题（好好处理爆int型数据即可通过），1道比较难的题目（没来得及做）
 
 最后通过了2.5/4（其实可以3/4的），拿到第一批面试机会
+
+## 一面复盘
+1. 什么是事件循环？
+2. 宏任务，微任务分别是哪些
+3. promise是什么，解决什么问题，怎么解决回调地狱的问题？.then有返回值吗？
+4. 普通函数和箭头函数区别
+5. 闭包，使用时要注意什么
+6. 什么是防抖，什么是节流
+7. react虚拟dom
+8. react diff算法
+9. vue的key
+10. git reset revert，reset soft和hard区别，有三次提交，要删除第一次，保持第二次和第三次
+11. 两栏布局：左边栏固定，右栏填满
+12. 从输入url到浏览器展示的过程，js线程，渲染线程
+13. typescript工具
+14. interface和type
+
+感觉大多数答得都一知半解，这样很不好，一旦被追问就露馅了。。。
 
 # 米哈游
 
