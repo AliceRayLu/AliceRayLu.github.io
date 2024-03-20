@@ -111,9 +111,11 @@ Algorithm：linked list(head node), BST, time complexity of operations
 9. vue的key
 10. git reset revert，reset soft和hard区别，有三次提交，要删除第一次，保持第二次和第三次
 11. 两栏布局：左边栏固定，右栏填满
-12. 从输入url到浏览器展示的过程，js线程，渲染线程
-13. typescript工具
-14. interface和type
+12. margin重叠
+13. 从输入url到浏览器展示的过程，js线程，渲染线程
+14. xss攻击，csrf
+15. typescript工具
+16. interface和type
 
 感觉大多数答得都一知半解，这样很不好，一旦被追问就露馅了。。。
 
