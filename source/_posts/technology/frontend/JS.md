@@ -506,7 +506,22 @@ javascript中的事件，可以理解就是在HTML文档或者浏览器中发生
 
 同步异步任务的划分不够精确，可以使用微任务和宏任务
 
+[事件循环详解](https://juejin.cn/post/7020710294083092493)
+
 ### 5.3.1 微任务和宏任务
+
+异步任务划分为宏任务和微任务。以下宏任务和微任务的划分是在浏览器中的划分，node.js的划分是不同的。
+
+【宏任务】
+- `setTimeout()`
+- `setInterval()`
+
+【微任务】
+- `promise.then()`
+- `async/await`
+- `new MutationObserver()`
+
+同步任务执行完毕后，会先查看微任务队列，当微任务队列执行完毕后才会去查看调用宏任务队列。
 
 ### 5.3.2 async & await
 async就是用来声明一个异步方法，而 await是用来等待异步方法执行
@@ -761,6 +776,10 @@ ES6：直接用extends
 
 # 11 DOM
 
+## 11.1 window
+高度：innerheight, outerheight
+
+https://zhuanlan.zhihu.com/p/141845423
 
 
 # Q & A
