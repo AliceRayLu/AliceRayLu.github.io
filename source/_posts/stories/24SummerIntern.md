@@ -16,7 +16,7 @@ category: Stories
 |Morgan Stanley/ IT技术部实习 / Shanghai | 2.29 | 3.1（fast track预约面试时间）3.8（online assessment） | 3.6电面 |      |      |
 |Mihoyo / 前端 / Shanghai     | 2.29 | 3.17笔试  |  3.27    |       |           |
 |小米 / 前端开发 / Nanjing            | 3.4 |   |     |     |       |
-|拼多多 / 前端 / Shanghai             | 3.4 |  |    |   |   |
+|拼多多 / 前端 / Shanghai             | 3.4 | 3.24笔试 |    |   |   |
 |京东 / 前端 / Shanghai or Beijing    | 3.4 |   |    |     |     |
 |携程 / 前端 / Shanghai               | 3.4 | 3.11（3.13笔试）|  3.20  |     |     |
 |蚂蚁 / 前端 / Shanghai       | 3.8  |  3.14简历挂   |    |     |     |

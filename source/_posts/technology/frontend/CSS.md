@@ -21,6 +21,10 @@ id选择器（#box），选择id为box的元素
 
 群组选择器（div,p），选择div、p的所有元素
 
+## 1.1 选择器优先级
+
+## 1.2 复合选择器
+
 # 2 预处理器
 less sass
 
@@ -68,7 +72,9 @@ absolute和fixed会脱离文档流
 
 flex-direction
 
-## 7.4 BFC
+## 7.5 BFC
+
+## 7.6 文字溢出
 
 # 8 回流与重绘
 

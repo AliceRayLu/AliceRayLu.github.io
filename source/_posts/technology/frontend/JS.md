@@ -112,7 +112,7 @@ let jas = `${val} use`
 - `startWith(string)`
 - `includes(string)`
 
-#### 1.2.4.4 匹配
+#### 1.2.4.4 正则表达式匹配
 基于正则表达式
 - `match(pattern)`：返回一个匹配的字符串数组
 - `search(pattern)`：返回找到的位置下标
@@ -122,6 +122,12 @@ let jas = `${val} use`
 - `split(char)`：按照char分割字符串，返回字符串数组
 
 ### 1.2.5 Object常用方法
+- `Object.assign(obj,src1,src2,...)`：后面的src会覆盖前面src的相同属性
+- `Object.create(proto)`：创建一个以proto为原型的对象
+- `Object.entries(obj)`：可枚举属性对数组
+- `Object.keys(obj)`：自身可枚举属性（不包括原型链）【`for...in`：全部可枚举属性，包括原型链】
+- `Object.getOwnPropertyNames(obj)`：自身所有属性，包括可枚举不可枚举（不包括原型链）
+- `Object.values(obj)`：与keys对应
 
 
 ## 1.3 类型转换
@@ -133,9 +139,17 @@ let jas = `${val} use`
 - String()
 
 ### 1.3.1 显式类型转换
+明确调用某些方法：
+- Number()
+- parseInt()
+- String()
+- Boolean()
+
 
 ### 1.3.2 隐式类型转换
 
+- 比较运算（==、!=、>、<）、if、while需要布尔值地方
+- 算术运算（+、-、*、/、%）
 
 
 ## 1.4 相等性比较与拷贝
@@ -242,6 +256,13 @@ typeof {} // object
 typeof [] // object
 ```
 
+【手写typeof】
+```js
+function typeof(obj){
+    return Object.prototype.toString.call(obj).slice(8,-1).toLowerCase();
+}
+```
+
 ### 1.5.2 instanceof
 instanceof 运算符用于检测构造函数的 prototype 属性是否出现在某个实例对象的原型链上
 
@@ -260,14 +281,14 @@ str instanceof String // false
 实现原理：在原型链上依次查找是否由该constructor构建
 
 ```js
-function instanceof(left,right){
-    if(left === null || typeof left !== 'object')return false;
+function instanceOf(left,right){
+    if(left === null || typeof left != "object")return false;
     let proto = Object.getPrototypeOf(left);
-    while(true){
-        if(proto === null) return false;
-        if(proto === right.prototype) return true;
+    while(proto != null){
+        if(proto == right.prototype) return true;
         proto = Object.getPrototypeOf(proto);
     }
+    return false;
 }
 ```
 
@@ -276,7 +297,17 @@ function instanceof(left,right){
 - instanceof用于判断引用对象类型，不能用于判断基础数据类型
 - typeof用于判断基础数据类型和function引用对象类型，无法判断具体的复杂引用对象类型
 
+### 1.5.3 通用检测
 通用方法：`Object.prototype.toString()`
+
+【手写通用检测方法】
+```js
+function getType(obj){
+    let type = typeof obj;
+    if(type != "object")return type;
+    return Object.prototype.toString.call(obj).replace(/^\[object (\S+)\]$/,'$1');
+}
+```
 
 # 2 数据结构
 ## 2.1 set
@@ -347,6 +378,8 @@ clear()
 - `forEach(func)`：对每一个元素运行函数，没有返回值
 - `filter(func)`：返回满足筛选函数的数组
 - `map(func)`：返回每个函数经过func操作后的数组
+
+对于数组遍历，`for in`绑定下标，`for of`才是绑定元素
 
 ### 2.4.5 Array.prototype方法重写
 
@@ -504,7 +537,6 @@ javascript中的事件，可以理解就是在HTML文档或者浏览器中发生
 
 同步任务进入主线程，即主执行栈，异步任务进入任务队列，主线程内的任务执行完毕为空，会去任务队列读取对应的任务，推入主线程执行。
 
-同步异步任务的划分不够精确，可以使用微任务和宏任务
 
 [事件循环详解](https://juejin.cn/post/7020710294083092493)
 
@@ -543,14 +575,35 @@ async function asyncF() {
 await后面接一个promise对象，返回这个对象的结果
 
 ## 5.4 异步&promise
+
+### 5.4.1 promise状态
 - pending（进行中）
 - fulfilled（已成功）
 - rejected（已失败）
 
+### 5.4.2 promise方法
+【promise.all】
 
 
-## 5.4 事件代理
+## 5.5 事件代理
 把一个元素响应事件（click、keydown......）的函数委托到另一个元素，在冒泡阶段完成。事件委托，会把一个或者一组元素的事件委托到它的父层或者更外层元素上，真正绑定事件的是外层元素，而不是目标元素
+
+## 5.6 setTimeout
+
+```js
+var id = setTimeout(func,1000);
+clearTimeout(id);
+```
+
+返回一个id标识符，在**大约**1000ms后执行func函数（在全局作用域执行）
+
+为什么是大约？JS是单线程，其他代码的运行可能会阻塞该进程
+
+## 5.7 setInterval
+每个多少毫秒执行一次。谨慎使用：回调函数进程的阻塞可能导致回调函数堆积
+
+【使用timeout实现interval】
+
 
 # 6 类
 
@@ -677,16 +730,16 @@ function mynew(Func,...args){
 
 ES6：直接用extends
 
-## 6.5 assign
-
-### 解构赋值
 
 # 7 优化
 
 ## 7.1 节流
+阻止一些回调函数的不断触发。
+
 定义：**n 秒内**只运行一次，若在 n 秒内重复触发，只有一次生效
 
 【手写】
+
 
 ## 7.2 防抖
 定义：**n 秒后**在执行该事件，若在 n 秒内被重复触发，则重新计时
@@ -759,6 +812,14 @@ ES6：直接用extends
     refA = null; // 解决办法
     console.log(refA, 'refA'); // 解除引用
     ```
+
+## 9.4 存储方式
+
+### 9.4.1 cookie
+
+### 9.4.2 localStorage
+
+### 9.4.3 sessionStorage
 
 # 10 严格模式
 

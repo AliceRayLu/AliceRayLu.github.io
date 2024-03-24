@@ -21,11 +21,29 @@ toc_number: false
 
 ## 单屏
 
+## 组件通信方式
+
+## diff算法
+
+## Vue3和Vue2
+
+## computed和method
+
 # React
 
 ## hooks
 
+### state和props
+
 ## 函数式组件和类式组件
+
+## 虚拟dom
+
+## 组件通信
+
+## diff算法
+
+## 生命周期
 
 
 # Vue VS React
