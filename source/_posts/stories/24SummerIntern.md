@@ -10,7 +10,7 @@ category: Stories
 |Google / SE summer intern / Shanghai | 12.16 |12.19（补充学历成绩等信息，面试时间）12.26（收到recruiter邮件）|1.15| 1.17 | 1.24挂 |
 |Microsoft / SWE intern / Shanghai or Beijing |2.2 |2.14（填写问卷） |     |    |    |
 |vivo / frontend intern / Nanjing     | 2.21  |  2.25（填写测评） |        |         |          |
-|美团 / 前端实习 / Shanghai or Beijing | 2.26 | 3.8（参与3.9笔试） | 3.25 |         |         |
+|美团 / 前端实习 / Shanghai or Beijing | 2.26 | 3.8（参与3.9笔试） | 3.25 |  3.26 |         |
 |网易雷火 / web前端实习 / Hangzhou    |  2.27   |       |    |    |      |
 |腾讯 / web前端 / ？    | 2.28  |   3.11（腾讯云捞）    |  3.12（腾讯云）3.25（信息安全）|      |      |
 |Morgan Stanley/ IT技术部实习 / Shanghai | 2.29 | 3.1（fast track预约面试时间）3.8（online assessment） | 3.6电面 |      |      |
@@ -18,7 +18,7 @@ category: Stories
 |小米 / 前端开发 / Nanjing            | 3.4 |   |     |     |       |
 |拼多多 / 前端 / Shanghai             | 3.4 | 3.24笔试 |    |   |   |
 |京东 / 前端 / Shanghai or Beijing    | 3.4 |   |    |     |     |
-|携程 / 前端 / Shanghai               | 3.4 | 3.11（3.13笔试）|  3.20  |     |     |
+|携程 / 前端 / Shanghai               | 3.4 | 3.11（3.13笔试）|  3.20  |  3.27   |     |
 |蚂蚁 / 前端 / Shanghai       | 3.8  |  3.14简历挂   |    |     |     |
 |恒生 / 前端 / Hangzhou               | 3.8  |    |    |     |     |
 |快手 / 前端 / Hangzhou or Beijing   | 3.14 |    |   |   |  |
@@ -54,8 +54,6 @@ google一般都是最早开始暑期实习招聘的，2023年是12月14号开始
 
 # Microsoft
 
-# vivo
-
 
 # Morgan Stanley
 
@@ -82,9 +80,30 @@ Algorithm：linked list(head node), BST, time complexity of operations
 
 另一部分是两道easy级别的算法题，没想到算法题那么简单，一个小时就提交了前面的选择题，不能回去改了，早知道多花点时间好好考虑选择题了呜呜。
 
+## 一面
+根据简历侃大山，聊了一堆无关前端的内容。为什么选前端，简历写包括其他语言。
+
+然后先开始问项目，说了微信小程序，就开始问微信小程序的生命周期函数。然后使用vue做过的项目？最有意义的项目？深度参与的项目？
+
+有关生命周期，vue生命周期，react生命周期，父子组件的生命周期函数执行顺序；axios封装。
+
+computed&watch
+
+js基础，promise解决什么问题，有哪些方法，浏览器轮询event loop。
+
+有关组件通信，父子组件，子组件向父组件传递。
+
+计算机网络相关：网络模型，网络协议，三次握手，四次挥手
+
+学的最好的专业课？
+
+用js写快速排序，冒泡排序
+
+## 二面
+
 # 腾讯
 
-## 腾讯云一面
+## 腾讯云
 上来先写两个题：一个题在原型上重写数组的find方法，使用一个滑动窗口求一个特殊规则形成数组的值
 
 什么是http？http报文格式？什么是闭包？闭包的优缺点。
@@ -92,6 +111,16 @@ Algorithm：linked list(head node), BST, time complexity of operations
 有没有使用过异步，有哪些异步方法
 
 为什么选择前端？
+
+## 腾讯信息安全
+讲一讲印象最深的项目，难点，解决方案
+
+http和https，追问非对称加密，每个过程？
+
+vuex的使用？没用过：讲父子组件和子组件通信
+
+做题：LRU cache 允许用别的语言，就用c++了笑。（面试官绷不住了，说前两天面了一个也是用c++的，笑死）双链表+哈希表
+
 
 # 携程
 

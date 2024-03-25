@@ -739,12 +739,36 @@ ES6：直接用extends
 定义：**n 秒内**只运行一次，若在 n 秒内重复触发，只有一次生效
 
 【手写】
-
+```js
+function throttle(fn,delay){
+    var prev = null;
+    return function(){
+        var args = arguments;
+        var now = Date.now();
+        if(now-prev > delay){
+            fn.apply(this,args);
+            prev = now;
+        }
+    }
+}
+```
 
 ## 7.2 防抖
 定义：**n 秒后**在执行该事件，若在 n 秒内被重复触发，则重新计时
 
 【手写】
+```js
+function(func,delay){
+    let timer = null;
+    return function(){
+        let args = arguments;
+        clearTimeout(timer);
+        timer = setTimeout(() => {
+            fn.apply(this,args);
+        },delay);
+    }
+}
+```
 
 # 8 ES6 新特性
 
