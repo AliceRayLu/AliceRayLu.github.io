@@ -840,10 +840,40 @@ function(func,delay){
 ## 9.4 存储方式
 
 ### 9.4.1 cookie
+保持登陆状态 => http无状态
+
+cookie在每次请求中都会被发送
+
+每个域名下Cookie的数量不能超过20个，每个Cookie的大小不能超过4kb
+
+【cookie安全】
+
+带有secure属性只能被https协议发送。如果带有httponly属性不能被js操纵，只能是服务端cookie
+
+【过期时间】
+
+不设置默认为会话周期，即浏览器关闭后cookie失效
+
+max-age以秒为单位，区别于http的max-age，http以正负表示
+
+【总结-cookie字段】
+
 
 ### 9.4.2 localStorage
 
+不会过期，每个域5MB
+
+【存满了之后？】
+- 报错 try-catch
+- 使用其他域的存储空间
+- 使用一些淘汰机制？
+
 ### 9.4.3 sessionStorage
+当前会话结束后即被清除，每个域5MB
+
+【跨标签页同源sessionStorage访问】
+
+使用localStorage？
 
 # 10 严格模式
 

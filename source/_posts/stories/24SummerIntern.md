@@ -14,7 +14,7 @@ category: Stories
 |网易雷火 / web前端实习 / Hangzhou    |  2.27   |       |    |    |      |
 |腾讯 / web前端 / ？    | 2.28  |   3.11（腾讯云捞）    |  3.12（腾讯云）3.25（信息安全）|      |      |
 |Morgan Stanley/ IT技术部实习 / Shanghai | 2.29 | 3.1（fast track预约面试时间）3.8（online assessment） | 3.6电面 |      |      |
-|Mihoyo / 前端 / Shanghai     | 2.29 | 3.17笔试  |  3.27    |       |           |
+|Mihoyo / 前端 / Shanghai     | 2.29 | 3.17笔试  | 4.1(本来约3.27，面试官有事改时间) |       |           |
 |小米 / 前端开发 / Nanjing            | 3.4 |   |     |     |       |
 |拼多多 / 前端 / Shanghai             | 3.4 | 3.24笔试 |    |   |   |
 |京东 / 前端 / Shanghai or Beijing    | 3.4 |   |    |     |     |
@@ -100,6 +100,14 @@ js基础，promise解决什么问题，有哪些方法，浏览器轮询event lo
 用js写快速排序，冒泡排序
 
 ## 二面
+
+上来聊了很久的项目，问了些关于协作沟通性能优化的思考。
+
+然后写了一道算法题[最小栈](https://leetcode.cn/problems/bao-han-minhan-shu-de-zhan-lcof/description/)（结果我f**ked in my head没写出来蠢哭了）
+
+面试官看我用c++考了一道指针题，结果还答错了，属实是自己给自己挖坑跳了。。。
+
+总结：美团的两位面试官还是很nice的，面试体验也很好，（下次还来 x）
 
 # 腾讯
 
