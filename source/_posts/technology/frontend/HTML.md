@@ -6,8 +6,23 @@ toc_number: false
 ---
 
 # 1 HTML5新特性
+- 加入语义化标签
+- 加入媒体标签：`audio, video`
+- 表单form
+- dom查询操作：`querySelector`
+- web存储:localStorage, sessionStorage
+- 其他：draggable
 
 # 2 语义化标签
+
+- `<header></header>`  头部
+- `<nav></nav>`  导航栏
+- `<section></section>`  区块（有语义化的div）
+- `<main></main>`  主要区域
+- `<article></article>`  主要内容
+- `<aside></aside>`  侧边栏
+- `<footer></footer>`  底部
+
 
 # 3 块级元素与行内元素
 
