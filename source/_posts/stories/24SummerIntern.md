@@ -10,13 +10,13 @@ category: Stories
 |Google / SE summer intern / Shanghai | 12.16 |12.19（补充学历成绩等信息，面试时间）12.26（收到recruiter邮件）|1.15| 1.17 | 1.24挂 |
 |Microsoft / SWE intern / Shanghai or Beijing |2.2 |2.14（填写问卷） |     |    |    |
 |vivo / frontend intern / Nanjing     | 2.21  |  2.25（填写测评） |        |         |          |
-|美团 / 前端实习 / Shanghai or Beijing | 2.26 | 3.8（参与3.9笔试） | 3.25 |  3.26 | 3.27挂 |
+|美团 / 前端实习 / Shanghai or Beijing | 2.26 | 3.8（参与3.9笔试） | 3.25（美团平台）4.2（美团到店） |  3.26 | 3.27挂 |
 |网易雷火 / web前端实习 / Hangzhou    |  2.27   |       |    |    |      |
 |腾讯 / web前端 / ？    | 2.28  |   3.11（腾讯云捞）    |  3.12（腾讯云）3.25（信息安全）|      |      |
 |Morgan Stanley/ IT技术部实习 / Shanghai | 2.29 | 3.1（fast track预约面试时间）3.8（online assessment） | 3.6电面 |      |      |
 |Mihoyo / 前端 / Shanghai     | 2.29 | 3.17笔试  | 4.1(本来约3.27，面试官有事改时间) |       |           |
 |小米 / 前端开发 / Nanjing            | 3.4 |   |     |     |       |
-|拼多多 / 前端 / Shanghai             | 3.4 | 3.24笔试 |    |   |   |
+|拼多多 / 前端 / Shanghai             | 3.4 | 3.24笔试 | 4.7 |   |   |
 |京东 / 前端 / Shanghai or Beijing    | 3.4 |   |    |     |     |
 |携程 / 前端 / Shanghai               | 3.4 | 3.11（3.13笔试）|  3.20  |  3.27   |     |
 |蚂蚁 / 前端 / Shanghai       | 3.8  |  3.14简历挂   |    |     |     |
@@ -25,7 +25,7 @@ category: Stories
 |百度 / AI前端 / Beijing or Shanghai | 3.15 |    |    |   |   |
 |华为 / 终端BG软件部 / Shanghai or Nanjing|3.17 |  |   |    |   |
 |淘天 / 前端(淘宝买菜) / Hangzhou     | 3.18 |    |     |     |     |
-|SAP / developer intern / Shanghai   | 3.18 |    |      |     |    |
+|SAP / developer intern / Shanghai   | 3.18 （4.1笔试） |    |      |     |    |
 |哔哩哔哩 / 前端 / Shanghai           | 3.23 |     |      |     |    |
 |小红书 / 前端 / Shanghai             | 3.23 |     |      |      |    |
 
@@ -188,3 +188,17 @@ vuex的使用？没用过：讲父子组件和子组件通信
 单选和不定项包括了操作系统、前端基础、计算机网络等一些杂糅的内容。编程题1道签到题，1道贪心，1道简易数学题枚举？
 
 最后提前交卷了。。。
+
+## 一面
+
+1. 基础数据结构知识
+    - 队列、栈，使用队列实现栈，使用栈实现队列
+    - 哈希表和数组的区别，哈希表冲突如何解决
+2. 计算机网络：http原理；如何保持长连接
+3. 计算机操作系统：进程和线程，死锁，资源，如何解决死锁
+4. js相关
+    - js基本数据类型，symbol有什么用；
+    - 如何用堆栈存储变量；垃圾清除算法（循环引用的解决方案？）
+    - 数组常用的方法有哪些，手写reduce
+5. css：flex:1缩写原理
+6. 最长无重复字符的算法题

@@ -32,11 +32,23 @@ less sass
 
 # 3 CSS3新特性
 
-# 4 居中对齐
+# 4 盒模型
 
-## 4.1 水平居中
+## 4.1 标准盒模型与IE盒模型
 
-## 4.2 垂直居中
+标准盒模型的宽度以及高度只计算实际内容content的宽高，IE盒模型的宽高是除了margin之外所有border（包含）以内的元素宽高
+
+使用box-sizing属性改变盒模型类型，默认为标准
+
+```css
+box-sizing: border-box; /* 使用ie盒模型 */
+```
+
+## 4.2 居中对齐
+
+### 4.2.1 水平居中
+
+### 4.2.2 垂直居中
 
 # 5 像素大小
 
@@ -74,6 +86,11 @@ absolute和fixed会脱离文档流
 
 flex-direction
 
+### 7.4.1 flex:1;
+- flex-grow:0; 将该行多余的空间全部分给这个元素
+- flex-shrink:1; 超出部分按比例分配到每个元素进行挤压
+- flex-basis: auto; 计算多余空间
+
 ## 7.5 BFC
 
 ## 7.6 文字溢出
@@ -89,6 +106,8 @@ flex-direction
 ## transition
 
 ## transform
+
+使用transform来改变元素位置属性，不会像position那样触发回流（重新布局计算），可以优化性能。
 
 ## translate
 
