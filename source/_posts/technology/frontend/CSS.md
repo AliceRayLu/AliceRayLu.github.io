@@ -87,9 +87,9 @@ absolute和fixed会脱离文档流
 flex-direction
 
 ### 7.4.1 flex:1;
-- flex-grow:0; 将该行多余的空间全部分给这个元素
+- flex-grow:1; 将该行多余的空间按比例分给这个元素
 - flex-shrink:1; 超出部分按比例分配到每个元素进行挤压
-- flex-basis: auto; 计算多余空间
+- flex-basis: 0%; 计算多余空间
 
 ## 7.5 BFC
 
