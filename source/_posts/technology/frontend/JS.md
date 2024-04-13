@@ -132,6 +132,14 @@ let jas = `${val} use`
 ### 1.2.6 Symbol
 用于标记唯一对象，不可以使用`new Symbol()`
 
+【创建方法】
+- `const s = Symbol("foo")`这种方法创建的即便描述一样也会被认为是不同的symbol
+- `const s = Symbol.for("foo")`这种方法创建的会注册在全局symbol表中，相同的描述会被视为同一个
+
+【应用】
+- 程序中的唯一标识符（代替状态常量）
+- 类中私有属性/方法，不会被外部api访问
+
 ## 1.3 类型转换
 - Number()
 - parseInt() / parseInt(object,base)[指定底数]
@@ -766,7 +774,7 @@ function throttle(fn,delay){
 
 【手写】
 ```js
-function(func,delay){
+function(fn,delay){
     let timer = null;
     return function(){
         let args = arguments;
@@ -779,6 +787,8 @@ function(func,delay){
 ```
 
 # 8 ES6 新特性
+
+除了以下罗列的以外，还包括set，map，promise
 
 ## 8.1 Generator
 
@@ -919,6 +929,13 @@ max-age以秒为单位，区别于http的max-age，http以正负表示
 高度：innerheight, outerheight
 
 https://zhuanlan.zhihu.com/p/141845423
+
+## 11.2 图片懒加载
+
+### 11.2.1 手动获取图片是否显示
+
+### 11.2.2 IntersectObservable
+
 
 
 # Q & A

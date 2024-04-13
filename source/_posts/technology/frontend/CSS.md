@@ -105,6 +105,12 @@ flex-direction
 
 ## transition
 
+【包含属性】
+- transition-property
+- transition-duration
+- transition-timing-function
+- transition-delay
+
 ## transform
 
 使用transform来改变元素位置属性，不会像position那样触发回流（重新布局计算），可以优化性能。

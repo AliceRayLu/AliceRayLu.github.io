@@ -1,5 +1,5 @@
 ---
-title: c++高级程序设计(22Fall)
+title: c++复习总结
 date: 2024-02-26
 category: [Knowledge,C++]
 ---
@@ -12,6 +12,12 @@ category: [Knowledge,C++]
 - 11：重大更新，包括auto/for/lambda/智能指针/nullptr/template等
 - 14：型 Lambda 表达式、返回类型推导、二进制字面量、数字分隔符、弃用属性
 - 17：结构化绑定、if constexpr、std::optional、std::variant、std::string_view、并行算法
+
+# difference between c/c++
+- c++ has OOP & template
+- c++ use `new` & `delete` instead of `malloc` and `free`
+- c++ has smart pointers which are safer
+- c++ allows function overload
 
 # inline & define & template
 ## inline
@@ -121,17 +127,26 @@ the difference between pointer and reference
 
 ## 智能指针
 
+RAII：Resource Acquisition Is Initialization
+
 # 左值和右值
 
 # 面向对象
 
 ## 普通继承与虚继承
 
+## 构造函数
+
+### 拷贝构造函数
+
+### explicit
+forbid implicit type conversion
+
 ## 析构函数
 
 ## 操作符重载
 
-## 拷贝构造函数
+
 
 ## 覆盖与重载
 
@@ -181,3 +196,21 @@ a class that can't be instantiated. Must include at least **one pure virtual fun
 ## struct内存
 
 ## struct & union
+
+# how to optimize performance
+
+- compile options: `-O2` `-O3`
+- avoid useless memory operation like `new` `delete`
+- choose better data structure and algorithm
+- use multi-thread
+- use inline function and const expression
+- use smart pointer
+
+
+# static
+
+- hide global variable or global function：make it only visible in the source file
+- keep variable longer
+- In Class: 
+    - static variable: shared among all the instances
+    - static member function: can be accessed without instanciate a class(can only visit static variables)
