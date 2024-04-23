@@ -42,6 +42,8 @@ category: [Knowledge,C++]
 ## 宏
 宏包括`#define`，`#ifndef ... #endif`（避免重复定义头文件）, `#ifdef .. #else .. #endif`(条件宏)，`#undef`取消宏
 
+在编译阶段进行简单的文本替换
+
 ```cpp
 #define MAXT 999
 #define add(x,y) x+y

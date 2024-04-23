@@ -12,19 +12,18 @@ category: Stories
 |vivo / frontend intern / Nanjing     | 2.21  |  2.25（填写测评） |        |         |          |
 |美团 / 前端实习 / Shanghai or Beijing | 2.26 | 3.8（参与3.9笔试） | 3.25（美团平台）4.2（美团到店） |  3.26（美团平台）4.10（美团到店） | 3.27美团平台挂 4.11 offer |
 |网易雷火 / web前端实习 / Hangzhou    |  2.27   |       |    |    |      |
-|腾讯 / web前端 / ？    | 2.28  |   3.11（腾讯云捞）    |  3.12（腾讯云）3.25（信息安全）|      |      |
+|腾讯 / web前端 / ？    | 2.28  |   3.11（腾讯云捞）    |  3.12（腾讯云）3.25（信息安全）4.18（企业微信）|      |      |
 |Morgan Stanley/ IT技术部实习 / Shanghai | 2.29 | 3.1（fast track预约面试时间）3.8（online assessment） | 3.6电面 |  4.15（AC面） |      |
 |Mihoyo / 前端 / Shanghai     | 2.29 | 3.17笔试  | 4.1(本来约3.27，面试官有事改时间) | 4.10 |  4.11挂  |
 |小米 / 前端开发 / Nanjing            | 3.4 |   |     |     |   4.12简历挂    |
-|拼多多 / 前端 / Shanghai             | 3.4 | 3.24笔试 | 4.7 | 4.14（拒绝二面）  |   |
+|拼多多 / 前端 / Shanghai             | 3.4 | 3.24笔试 | 4.7 | 4.14（拒绝二面）  |  据说有四面？ |
 |京东 / 前端 / Shanghai or Beijing    | 3.4 | 4.2  |  4.8  |     |  日常实习拒   |
 |携程 / 前端 / Shanghai               | 3.4 | 3.11（3.13笔试）|  3.20  |  3.27   |  默拒  |
 |蚂蚁 / 前端 / Shanghai       | 3.8  |  3.14简历挂   |    |     |     |
 |恒生 / 前端 / Hangzhou               | 3.8  |    |    |     |     |
 |华为 / 终端云服务部 / Shanghai or Nanjing| 3.17 | 4.10笔试 |   |    |   |
-|淘天 / 前端(淘宝买菜) / Hangzhou     | 3.18 |  | 4.10 |     |     |
+|淘天 / 前端 / Hangzhou     | 3.18 |  | 4.10 |  4.18   |  4.23hr面   |
 |SAP / developer intern / Shanghai   | 3.18 |  4.1笔试  |      |     |  hr面拒  |
-|哔哩哔哩 / 前端 / Shanghai           | 3.23 |     |      |     |    |
 
 # 信息来源
 大部分企业都会在官方“xx招聘”公众号上发布暑期实习的相关内容，对于国内的一些企业辅导员或校方也会发布信息，及时关注这些信息，注意截止的一些时间点，越早投递越好。
@@ -69,6 +68,12 @@ db: index, primary key, foreign key, inner/outer join
 Algorithm：linked list(head node), BST, time complexity of operations 
 
 ## AC面
+
+30min编程+45min技术面一+45min技术面二，一下午结束
+
+两道很难的编程题，合起来就做出来一道，一下子心凉了。。。
+
+后续两轮面试问题中规中矩
 
 # 美团
 
