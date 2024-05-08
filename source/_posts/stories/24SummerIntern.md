@@ -12,8 +12,8 @@ category: Stories
 |vivo / frontend intern / Nanjing     | 2.21  |  2.25（填写测评） |        |         |          |
 |美团 / 前端实习 / Shanghai or Beijing | 2.26 | 3.8（参与3.9笔试） | 3.25（美团平台）4.2（美团到店） |  3.26（美团平台）4.10（美团到店） | 3.27美团平台挂 4.11 offer |
 |网易雷火 / web前端实习 / Hangzhou    |  2.27   |       |    |    |      |
-|腾讯 / web前端 / ？    | 2.28  |   3.11（腾讯云捞）    |  3.12（腾讯云）3.25（信息安全）4.18（企业微信）|      |      |
-|Morgan Stanley/ IT技术部实习 / Shanghai | 2.29 | 3.1（fast track预约面试时间）3.8（online assessment） | 3.6电面 |  4.15（AC面） |      |
+|腾讯 / web前端 / ？    | 2.28  |   3.11（腾讯云捞）    |  3.12（腾讯云）3.25（信息安全）4.18（企业微信-放弃）|      |      |
+|Morgan Stanley/ IT技术部实习 / Shanghai | 2.29 | 3.1（fast track预约面试时间）3.8（online assessment） | 3.6电面 |  4.15（AC面） |   4.24（oc）   |
 |Mihoyo / 前端 / Shanghai     | 2.29 | 3.17笔试  | 4.1(本来约3.27，面试官有事改时间) | 4.10 |  4.11挂  |
 |小米 / 前端开发 / Nanjing            | 3.4 |   |     |     |   4.12简历挂    |
 |拼多多 / 前端 / Shanghai             | 3.4 | 3.24笔试 | 4.7 | 4.14（拒绝二面）  |  据说有四面？ |
