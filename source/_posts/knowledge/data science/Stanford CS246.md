@@ -25,8 +25,19 @@ reduce：整合各个map的计算结果得到最终结果
 
 核心思想：RDD-
 
-### 1.2.3 Colab0-Spark Python tutorial
+### 1.2.3 Spark Python tutorial
+
+colab0
+
+see [PySpark Tutorial]()
 
 ## 1.3 Colab1: wordCount
 
 - 环境配置问题：看上去包openjdk-8-jdk-headless 已经不再维护了，软件列表中无法找到并安装，因此手动将版本改为11 *（注意：改完后一定也要把对应的JAVA_HOME环境变量的路径改了，否则无法找到java）*
+- 个人习惯拆分任务，然后先编写注释，随后实现代码，colab自动关联AI代码提示就直接把活全部干了哈哈哈哈
+- 学习dataframe的方式：和pandas对比类推
+
+# Lec2: Frequent Itemsets Mining
+
+
+## hw1

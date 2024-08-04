@@ -107,7 +107,7 @@ let jas = `${val} use`
 - `toLowerCase()`/`toUpperCase()`：全小写，全大写
 
 #### 1.2.4.3 查询
-- `chatAt(pos)`
+- `charAt(pos)`
 - `indexOf(string)`
 - `startWith(string)`
 - `includes(string)`

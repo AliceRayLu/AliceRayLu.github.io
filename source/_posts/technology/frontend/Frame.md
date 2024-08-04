@@ -5,6 +5,8 @@ category: [Technology,Frontend]
 toc_number: false
 ---
 
+面试时经常喜欢提问对比性问题，比如列表元素，在vue中不加key的反应和react中不加key的反应，涉及到框架底层的渲染机制
+
 # Vue
 
 ## 渲染流程
