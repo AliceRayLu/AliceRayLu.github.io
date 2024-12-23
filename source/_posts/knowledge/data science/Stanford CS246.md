@@ -39,5 +39,10 @@ see [PySpark Tutorial]()
 
 # Lec2: Frequent Itemsets Mining
 
+## Definition
+
+> 什么是frequent itemsets？
+
+把一起出现的物品放入一个桶中，某几样物品一起出现的桶超过了给定的阈值，就认为这些物品的集合是frequent itemset
 
 ## hw1
