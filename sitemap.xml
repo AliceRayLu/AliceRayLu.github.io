@@ -2,18 +2,81 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
-    <loc>https://aliceraylu.github.io/2024/01/14/stories/24SummerIntern/</loc>
+    <loc>https://aliceraylu.github.io/2024/12/23/stories/2024Summary/</loc>
     
-    <lastmod>2024-02-22</lastmod>
+    <lastmod>2024-12-23</lastmod>
     
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
-    <loc>https://aliceraylu.github.io/2024/01/14/technology/frontend/HTTPbasic/</loc>
+    <loc>https://aliceraylu.github.io/2024/12/23/technology/device%20usage/Github%20Copilot%20WSL%E4%BD%BF%E7%94%A8/</loc>
     
-    <lastmod>2024-02-17</lastmod>
+    <lastmod>2024-12-23</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://aliceraylu.github.io/2024/01/14/stories/24SummerIntern/</loc>
+    
+    <lastmod>2024-12-23</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://aliceraylu.github.io/2024/08/04/knowledge/data%20science/PySpark%20Tutorial/</loc>
+    
+    <lastmod>2024-12-23</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://aliceraylu.github.io/2024/09/29/knowledge/machine%20learning/transformer/</loc>
+    
+    <lastmod>2024-12-23</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://aliceraylu.github.io/2024/04/27/knowledge/db/%E6%95%B0%E6%8D%AE%E5%BA%93%E6%A0%B8%E5%BF%83%E6%A6%82%E5%BF%B5/</loc>
+    
+    <lastmod>2024-09-12</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://aliceraylu.github.io/2024/07/24/knowledge/data%20science/Stanford%20CS246/</loc>
+    
+    <lastmod>2024-08-22</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://aliceraylu.github.io/2024/02/27/technology/frontend/JS/</loc>
+    
+    <lastmod>2024-08-03</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://aliceraylu.github.io/2024/03/05/technology/frontend/Frame/</loc>
+    
+    <lastmod>2024-08-03</lastmod>
     
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
@@ -22,7 +85,97 @@
   <url>
     <loc>https://aliceraylu.github.io/2024/01/19/knowledge/algorithm/%E7%AE%97%E6%B3%95%E5%A4%8D%E4%B9%A0%E6%A1%86%E6%9E%B6/</loc>
     
-    <lastmod>2024-02-16</lastmod>
+    <lastmod>2024-07-14</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://aliceraylu.github.io/2024/04/27/knowledge/machine%20learning/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0%E6%A0%B8%E5%BF%83%E6%A6%82%E5%BF%B5/</loc>
+    
+    <lastmod>2024-05-16</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://aliceraylu.github.io/2024/04/27/knowledge/computer%20network/%E8%AE%A1%E7%BD%91%E6%A0%B8%E5%BF%83%E6%A6%82%E5%BF%B5/</loc>
+    
+    <lastmod>2024-05-15</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://aliceraylu.github.io/2024/04/27/knowledge/os/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E6%A0%B8%E5%BF%83%E6%A6%82%E5%BF%B5/</loc>
+    
+    <lastmod>2024-05-15</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://aliceraylu.github.io/2024/04/29/knowledge/machine%20learning/CS224n/</loc>
+    
+    <lastmod>2024-05-10</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://aliceraylu.github.io/2024/01/19/technology/frontend/roadmap/</loc>
+    
+    <lastmod>2024-05-03</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://aliceraylu.github.io/2024/02/26/knowledge/c++/c++%E9%AB%98%E7%A8%8B/</loc>
+    
+    <lastmod>2024-04-13</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://aliceraylu.github.io/2024/03/09/technology/frontend/CSS/</loc>
+    
+    <lastmod>2024-04-09</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://aliceraylu.github.io/2024/01/14/technology/frontend/HTTP/</loc>
+    
+    <lastmod>2024-04-08</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://aliceraylu.github.io/2024/03/09/technology/frontend/HTML/</loc>
+    
+    <lastmod>2024-03-27</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://aliceraylu.github.io/2024/03/20/technology/frontend/git/</loc>
+    
+    <lastmod>2024-03-21</lastmod>
     
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
@@ -32,15 +185,6 @@
     <loc>https://aliceraylu.github.io/2023/10/30/knowledge/machine%20learning/Umich%20EECS%20498-007/</loc>
     
     <lastmod>2024-02-07</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://aliceraylu.github.io/2024/01/19/technology/frontend/roadmap/</loc>
-    
-    <lastmod>2024-01-22</lastmod>
     
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
@@ -193,7 +337,7 @@
 
   <url>
     <loc>https://aliceraylu.github.io/</loc>
-    <lastmod>2024-02-22</lastmod>
+    <lastmod>2024-12-23</lastmod>
     <changefreq>daily</changefreq>
     <priority>1.0</priority>
   </url>
@@ -203,98 +347,98 @@
   
   <url>
     <loc>https://aliceraylu.github.io/categories/Stories/</loc>
-    <lastmod>2024-02-22</lastmod>
+    <lastmod>2024-12-23</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://aliceraylu.github.io/categories/Technology/</loc>
-    <lastmod>2024-02-22</lastmod>
+    <lastmod>2024-12-23</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://aliceraylu.github.io/categories/Knowledge/</loc>
-    <lastmod>2024-02-22</lastmod>
+    <lastmod>2024-12-23</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://aliceraylu.github.io/categories/Technology/Blog/</loc>
-    <lastmod>2024-02-22</lastmod>
+    <lastmod>2024-12-23</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://aliceraylu.github.io/categories/Technology/LaTex/</loc>
-    <lastmod>2024-02-22</lastmod>
+    <lastmod>2024-12-23</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://aliceraylu.github.io/categories/Technology/Device-Usage/</loc>
-    <lastmod>2024-02-22</lastmod>
+    <lastmod>2024-12-23</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://aliceraylu.github.io/categories/Technology/Frontend/</loc>
-    <lastmod>2024-02-22</lastmod>
+    <lastmod>2024-12-23</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://aliceraylu.github.io/categories/Knowledge/Algorithm/</loc>
-    <lastmod>2024-02-22</lastmod>
+    <lastmod>2024-12-23</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://aliceraylu.github.io/categories/Knowledge/C/</loc>
-    <lastmod>2024-02-22</lastmod>
+    <lastmod>2024-12-23</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://aliceraylu.github.io/categories/Knowledge/Data-Science/</loc>
-    <lastmod>2024-02-22</lastmod>
+    <lastmod>2024-12-23</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://aliceraylu.github.io/categories/Knowledge/Machine-Learning/</loc>
-    <lastmod>2024-02-22</lastmod>
+    <lastmod>2024-12-23</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://aliceraylu.github.io/categories/Knowledge/Computer-Network/</loc>
-    <lastmod>2024-02-22</lastmod>
+    <lastmod>2024-12-23</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://aliceraylu.github.io/categories/Knowledge/Operating-Systems/</loc>
-    <lastmod>2024-02-22</lastmod>
+    <lastmod>2024-12-23</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://aliceraylu.github.io/categories/Knowledge/Data-Base/</loc>
-    <lastmod>2024-02-22</lastmod>
+    <lastmod>2024-12-23</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
