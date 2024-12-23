@@ -4,7 +4,10 @@ date: 2024-08-04
 category: [Knowledge, Data Science]
 ---
 
-# 1 
+spark是大数据处理框架，包括Spark RDD、Spark SQL、 Spark Streaming，MLlib，GraphX几大部分，
+通常用于处理各种大数据任务。Spark基于内存计算，可以极大提升计算速度。
+
+# 1 Spark存储与数据
 
 
 # 2 DataFrame
