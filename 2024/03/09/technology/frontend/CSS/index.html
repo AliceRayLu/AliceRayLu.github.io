@@ -1,0 +1,101 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"><meta name="description" content="【前端八股】CSS"><meta name="keywords" content=""><meta name="author" content="A.R.L"><meta name="copyright" content="A.R.L"><title>【前端八股】CSS | A.R.L's Blog</title><link rel="shortcut icon" href="/bitbug_favicon.ico"><link rel="stylesheet" href="/css/index.css?version=1.9.1"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/font-awesome@latest/css/font-awesome.min.css?version=1.9.1"><meta name="format-detection" content="telephone=no"><meta http-equiv="x-dns-prefetch-control" content="on"><link rel="dns-prefetch" href="https://cdn.jsdelivr.net"><link rel="dns-prefetch" href="https://www.google-analytics.com"><script>(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+ga('create', 'UA-283151977-1', 'auto');
+ga('send', 'pageview');</script><script async src="https://www.googletagmanager.com/gtag/js?id=G-MJTECTPJVQ"></script><script>window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-MJTECTPJVQ');</script><meta http-equiv="Cache-Control" content="no-transform"><meta http-equiv="Cache-Control" content="no-siteapp"><script>var GLOBAL_CONFIG = { 
+  root: '/',
+  algolia: undefined,
+  localSearch: undefined,
+  copy: {
+    success: 'Copy successfully',
+    error: 'Copy error',
+    noSupport: 'The browser does not support'
+  },
+  hexoVersion: '6.3.0'
+} </script><meta name="generator" content="Hexo 6.3.0"><link rel="alternate" href="/atom.xml" title="A.R.L's Blog" type="application/atom+xml">
+</head><body><i class="fa fa-arrow-right" id="toggle-sidebar" aria-hidden="true"></i><div id="sidebar" data-display="true"><div class="toggle-sidebar-info text-center"><span data-toggle="Toggle article">Toggle site</span><hr></div><div class="sidebar-toc"><div class="sidebar-toc__title">Catalog</div><div class="sidebar-toc__progress"><span class="progress-notice">You've read</span><span class="progress-num">0</span><span class="progress-percentage">%</span><div class="sidebar-toc__progress-bar"></div></div><div class="sidebar-toc__content"><ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#1-css%E9%80%89%E6%8B%A9%E5%99%A8"><span class="toc-text"> 1 CSS选择器</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#11-%E9%80%89%E6%8B%A9%E5%99%A8%E4%BC%98%E5%85%88%E7%BA%A7"><span class="toc-text"> 1.1 选择器优先级</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#12-%E5%A4%8D%E5%90%88%E9%80%89%E6%8B%A9%E5%99%A8"><span class="toc-text"> 1.2 复合选择器</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#2-%E9%A2%84%E5%A4%84%E7%90%86%E5%99%A8"><span class="toc-text"> 2 预处理器</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#3-css3%E6%96%B0%E7%89%B9%E6%80%A7"><span class="toc-text"> 3 CSS3新特性</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#4-%E7%9B%92%E6%A8%A1%E5%9E%8B"><span class="toc-text"> 4 盒模型</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#41-%E6%A0%87%E5%87%86%E7%9B%92%E6%A8%A1%E5%9E%8B%E4%B8%8Eie%E7%9B%92%E6%A8%A1%E5%9E%8B"><span class="toc-text"> 4.1 标准盒模型与IE盒模型</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#42-%E5%B1%85%E4%B8%AD%E5%AF%B9%E9%BD%90"><span class="toc-text"> 4.2 居中对齐</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#421-%E6%B0%B4%E5%B9%B3%E5%B1%85%E4%B8%AD"><span class="toc-text"> 4.2.1 水平居中</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#422-%E5%9E%82%E7%9B%B4%E5%B1%85%E4%B8%AD"><span class="toc-text"> 4.2.2 垂直居中</span></a></li></ol></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#5-%E5%83%8F%E7%B4%A0%E5%A4%A7%E5%B0%8F"><span class="toc-text"> 5 像素大小</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#51-px"><span class="toc-text"> 5.1 px</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#52-emrem"><span class="toc-text"> 5.2 em&#x2F;rem</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#53-vwvh"><span class="toc-text"> 5.3 vw&#x2F;vh</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#6-position"><span class="toc-text"> 6 position</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#7-%E5%B8%83%E5%B1%80"><span class="toc-text"> 7 布局</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#71-%E4%B8%A4%E6%A0%8F%E5%B8%83%E5%B1%80"><span class="toc-text"> 7.1 两栏布局</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#72-%E4%B8%89%E6%A0%8F%E5%B8%83%E5%B1%80"><span class="toc-text"> 7.2 三栏布局</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#73-grid%E5%B8%83%E5%B1%80"><span class="toc-text"> 7.3 grid布局</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#74-flex"><span class="toc-text"> 7.4 flex</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#741-flex1"><span class="toc-text"> 7.4.1 flex:1;</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#75-bfc"><span class="toc-text"> 7.5 BFC</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#76-%E6%96%87%E5%AD%97%E6%BA%A2%E5%87%BA"><span class="toc-text"> 7.6 文字溢出</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#8-%E5%9B%9E%E6%B5%81%E4%B8%8E%E9%87%8D%E7%BB%98"><span class="toc-text"> 8 回流与重绘</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#9-%E5%8A%A8%E7%94%BB"><span class="toc-text"> 9 动画</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#transition"><span class="toc-text"> transition</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#transform"><span class="toc-text"> transform</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#translate"><span class="toc-text"> translate</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#animation"><span class="toc-text"> animation</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#10-%E6%80%A7%E8%83%BD%E4%BC%98%E5%8C%96"><span class="toc-text"> 10 性能优化</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#11-css%E5%85%BC%E5%AE%B9%E4%B8%8D%E5%90%8C%E6%B5%8F%E8%A7%88%E5%99%A8"><span class="toc-text"> 11 CSS兼容不同浏览器</span></a></li></ol></div></div><div class="author-info hide"><div class="author-info__avatar text-center"><img src="/img/avatar.png"></div><div class="author-info__name text-center">A.R.L</div><div class="author-info__description text-center">Nothing holds still.</div><hr><div class="author-info-articles"><a class="author-info-articles__archives article-meta" href="/archives"><span class="pull-left">Articles</span><span class="pull-right">28</span></a><a class="author-info-articles__categories article-meta" href="/categories"><span class="pull-left">Categories</span><span class="pull-right">14</span></a></div></div></div><div id="content-outer"><div id="top-container" style="background-image: url(https://github.com/AliceRayLu/AliceRayLu.github.io/blob/main/source/pics/back1.jpg?raw=true)"><div id="page-header"><span class="pull-left"> <a id="site-name" href="/">A.R.L's Blog</a></span><i class="fa fa-bars toggle-menu pull-right" aria-hidden="true"></i><span class="pull-right menus">   <a class="site-page" href="/">Home</a><a class="site-page" href="/archives">Archives</a><a class="site-page" href="/categories">Categories</a><a class="site-page" href="/about">About</a></span><span class="pull-right"></span></div><div id="post-info"><div id="post-title">【前端八股】CSS</div><div id="post-meta"><time class="post-meta__date"><i class="fa fa-calendar" aria-hidden="true"></i> 2024-03-09</time><span class="post-meta__separator">|</span><i class="fa fa-inbox post-meta__icon" aria-hidden="true"></i><a class="post-meta__categories" href="/categories/Technology/">Technology</a><i class="fa fa-angle-right" aria-hidden="true"></i><i class="fa fa-inbox post-meta__icon" aria-hidden="true"></i><a class="post-meta__categories" href="/categories/Technology/Frontend/">Frontend</a></div></div></div><div class="layout" id="content-inner"><article id="post"><div class="article-container" id="post-content"><h1 id="1-css选择器"><a class="markdownIt-Anchor" href="#1-css选择器"></a> 1 CSS选择器</h1>
+<p>id选择器（#box），选择id为box的元素</p>
+<p>类选择器（.one），选择类名为one的所有元素</p>
+<p>标签选择器（div），选择标签为div的所有元素</p>
+<p>后代选择器（#box div），选择id为box元素内部所有的div元素</p>
+<p>子选择器（.one&gt;one_1），选择父元素为.one的所有.one_1的元素</p>
+<p>相邻同胞选择器（.one+.two），选择紧接在.one之后的所有.two元素</p>
+<p>群组选择器（div,p），选择div、p的所有元素</p>
+<h2 id="11-选择器优先级"><a class="markdownIt-Anchor" href="#11-选择器优先级"></a> 1.1 选择器优先级</h2>
+<p>内联 &gt; id选择器 &gt; 类选择器 &gt; 标签选择器</p>
+<h2 id="12-复合选择器"><a class="markdownIt-Anchor" href="#12-复合选择器"></a> 1.2 复合选择器</h2>
+<h1 id="2-预处理器"><a class="markdownIt-Anchor" href="#2-预处理器"></a> 2 预处理器</h1>
+<p>less sass</p>
+<h1 id="3-css3新特性"><a class="markdownIt-Anchor" href="#3-css3新特性"></a> 3 CSS3新特性</h1>
+<h1 id="4-盒模型"><a class="markdownIt-Anchor" href="#4-盒模型"></a> 4 盒模型</h1>
+<h2 id="41-标准盒模型与ie盒模型"><a class="markdownIt-Anchor" href="#41-标准盒模型与ie盒模型"></a> 4.1 标准盒模型与IE盒模型</h2>
+<p>标准盒模型的宽度以及高度只计算实际内容content的宽高，IE盒模型的宽高是除了margin之外所有border（包含）以内的元素宽高</p>
+<p>使用box-sizing属性改变盒模型类型，默认为标准</p>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="attribute">box-sizing</span>: border-box; <span class="comment">/* 使用ie盒模型 */</span></span><br></pre></td></tr></table></figure>
+<h2 id="42-居中对齐"><a class="markdownIt-Anchor" href="#42-居中对齐"></a> 4.2 居中对齐</h2>
+<h3 id="421-水平居中"><a class="markdownIt-Anchor" href="#421-水平居中"></a> 4.2.1 水平居中</h3>
+<h3 id="422-垂直居中"><a class="markdownIt-Anchor" href="#422-垂直居中"></a> 4.2.2 垂直居中</h3>
+<h1 id="5-像素大小"><a class="markdownIt-Anchor" href="#5-像素大小"></a> 5 像素大小</h1>
+<h2 id="51-px"><a class="markdownIt-Anchor" href="#51-px"></a> 5.1 px</h2>
+<h2 id="52-emrem"><a class="markdownIt-Anchor" href="#52-emrem"></a> 5.2 em/rem</h2>
+<h2 id="53-vwvh"><a class="markdownIt-Anchor" href="#53-vwvh"></a> 5.3 vw/vh</h2>
+<h1 id="6-position"><a class="markdownIt-Anchor" href="#6-position"></a> 6 position</h1>
+<ul>
+<li><code>relative</code>：相对于默认位置的偏移</li>
+<li><code>absolute</code>：相对于父级元素的偏移</li>
+<li><code>fixed</code>：相对于浏览器窗口是固定的位置</li>
+</ul>
+<p>absolute和fixed会脱离文档流</p>
+<h1 id="7-布局"><a class="markdownIt-Anchor" href="#7-布局"></a> 7 布局</h1>
+<h2 id="71-两栏布局"><a class="markdownIt-Anchor" href="#71-两栏布局"></a> 7.1 两栏布局</h2>
+<ul>
+<li>设置左侧固定宽度，float:left，右栏使用margin-left撑出空间</li>
+<li>使用flex布局：父元素使用display：flex，左边栏固定宽度，右边栏flex：1</li>
+</ul>
+<h2 id="72-三栏布局"><a class="markdownIt-Anchor" href="#72-三栏布局"></a> 7.2 三栏布局</h2>
+<ul>
+<li>两边使用 float，中间使用 margin</li>
+<li>两边使用 absolute，中间使用 margin</li>
+<li>display: table 实现</li>
+<li>flex实现</li>
+<li>grid网格布局</li>
+</ul>
+<h2 id="73-grid布局"><a class="markdownIt-Anchor" href="#73-grid布局"></a> 7.3 grid布局</h2>
+<h2 id="74-flex"><a class="markdownIt-Anchor" href="#74-flex"></a> 7.4 flex</h2>
+<p>flex-direction</p>
+<h3 id="741-flex1"><a class="markdownIt-Anchor" href="#741-flex1"></a> 7.4.1 flex:1;</h3>
+<ul>
+<li>flex-grow:1; 将该行多余的空间按比例分给这个元素</li>
+<li>flex-shrink:1; 超出部分按比例分配到每个元素进行挤压</li>
+<li>flex-basis: 0%; 计算多余空间</li>
+</ul>
+<h2 id="75-bfc"><a class="markdownIt-Anchor" href="#75-bfc"></a> 7.5 BFC</h2>
+<h2 id="76-文字溢出"><a class="markdownIt-Anchor" href="#76-文字溢出"></a> 7.6 文字溢出</h2>
+<h1 id="8-回流与重绘"><a class="markdownIt-Anchor" href="#8-回流与重绘"></a> 8 回流与重绘</h1>
+<p>回流：布局引擎会根据各种样式计算每个盒子在页面上的大小与位置</p>
+<p>重绘：当计算好盒模型的位置、大小及其他属性后，浏览器根据每个盒子特性进行绘制</p>
+<h1 id="9-动画"><a class="markdownIt-Anchor" href="#9-动画"></a> 9 动画</h1>
+<h2 id="transition"><a class="markdownIt-Anchor" href="#transition"></a> transition</h2>
+<p>【包含属性】</p>
+<ul>
+<li>transition-property</li>
+<li>transition-duration</li>
+<li>transition-timing-function</li>
+<li>transition-delay</li>
+</ul>
+<h2 id="transform"><a class="markdownIt-Anchor" href="#transform"></a> transform</h2>
+<p>使用transform来改变元素位置属性，不会像position那样触发回流（重新布局计算），可以优化性能。</p>
+<h2 id="translate"><a class="markdownIt-Anchor" href="#translate"></a> translate</h2>
+<h2 id="animation"><a class="markdownIt-Anchor" href="#animation"></a> animation</h2>
+<h1 id="10-性能优化"><a class="markdownIt-Anchor" href="#10-性能优化"></a> 10 性能优化</h1>
+<h1 id="11-css兼容不同浏览器"><a class="markdownIt-Anchor" href="#11-css兼容不同浏览器"></a> 11 CSS兼容不同浏览器</h1>
+</div></article><nav id="pagination"><div class="prev-post pull-left"><a href="/2024/03/20/technology/frontend/git/"><i class="fa fa-chevron-left">  </i><span>git命令记忆</span></a></div><div class="next-post pull-right"><a href="/2024/03/09/technology/frontend/HTML/"><span>【前端八股】HTML</span><i class="fa fa-chevron-right"></i></a></div></nav></div></div><footer class="footer-bg" style="background-image: url(https://github.com/AliceRayLu/AliceRayLu.github.io/blob/main/source/pics/back1.jpg?raw=true)"><div class="layout" id="footer"><div class="copyright">&copy;2023 - 2025 By A.R.L</div><div class="footer_custom_text">本站图片资源托管于Github, 网速限制可能无法正确加载</div></div></footer><i class="fa fa-arrow-up" id="go-up" aria-hidden="true"></i><script src="https://cdn.jsdelivr.net/npm/animejs@latest/lib/anime.min.js"></script><script src="https://cdn.jsdelivr.net/npm/jquery@latest/dist/jquery.min.js"></script><script src="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@latest/dist/jquery.fancybox.min.js"></script><script src="https://cdn.jsdelivr.net/npm/velocity-animate@latest/velocity.min.js"></script><script src="https://cdn.jsdelivr.net/npm/velocity-ui-pack@latest/velocity.ui.min.js"></script><script src="/js/utils.js?version=1.9.1"></script><script src="/js/fancybox.js?version=1.9.1"></script><script src="/js/sidebar.js?version=1.9.1"></script><script src="/js/copy.js?version=1.9.1"></script><script src="/js/fireworks.js?version=1.9.1"></script><script src="/js/transition.js?version=1.9.1"></script><script src="/js/scroll.js?version=1.9.1"></script><script src="/js/head.js?version=1.9.1"></script><link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/katex@latest/dist/katex.min.css"><script src="https://cdn.jsdelivr.net/npm/katex-copytex@latest/dist/katex-copytex.min.js"></script><link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/katex-copytex@latest/dist/katex-copytex.min.css"><script src="/js/katex.js"></script><script>if(/Android|webOS|iPhone|iPod|iPad|BlackBerry/i.test(navigator.userAgent)) {
+  $('#nav').addClass('is-mobile')
+  $('footer').addClass('is-mobile')
+  $('#top-container').addClass('is-mobile')
+}</script></body></html>

@@ -1,0 +1,157 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"><meta name="description" content="c++复习总结"><meta name="keywords" content=""><meta name="author" content="A.R.L"><meta name="copyright" content="A.R.L"><title>c++复习总结 | A.R.L's Blog</title><link rel="shortcut icon" href="/bitbug_favicon.ico"><link rel="stylesheet" href="/css/index.css?version=1.9.1"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/font-awesome@latest/css/font-awesome.min.css?version=1.9.1"><meta name="format-detection" content="telephone=no"><meta http-equiv="x-dns-prefetch-control" content="on"><link rel="dns-prefetch" href="https://cdn.jsdelivr.net"><link rel="dns-prefetch" href="https://www.google-analytics.com"><script>(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+ga('create', 'UA-283151977-1', 'auto');
+ga('send', 'pageview');</script><script async src="https://www.googletagmanager.com/gtag/js?id=G-MJTECTPJVQ"></script><script>window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-MJTECTPJVQ');</script><meta http-equiv="Cache-Control" content="no-transform"><meta http-equiv="Cache-Control" content="no-siteapp"><script>var GLOBAL_CONFIG = { 
+  root: '/',
+  algolia: undefined,
+  localSearch: undefined,
+  copy: {
+    success: 'Copy successfully',
+    error: 'Copy error',
+    noSupport: 'The browser does not support'
+  },
+  hexoVersion: '6.3.0'
+} </script><meta name="generator" content="Hexo 6.3.0"><link rel="alternate" href="/atom.xml" title="A.R.L's Blog" type="application/atom+xml">
+</head><body><i class="fa fa-arrow-right" id="toggle-sidebar" aria-hidden="true"></i><div id="sidebar" data-display="true"><div class="toggle-sidebar-info text-center"><span data-toggle="Toggle article">Toggle site</span><hr></div><div class="sidebar-toc"><div class="sidebar-toc__title">Catalog</div><div class="sidebar-toc__progress"><span class="progress-notice">You've read</span><span class="progress-num">0</span><span class="progress-percentage">%</span><div class="sidebar-toc__progress-bar"></div></div><div class="sidebar-toc__content"><ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#c981114%E7%89%B9%E6%80%A7"><span class="toc-number">1.</span> <span class="toc-text"> c++98&#x2F;11&#x2F;14特性</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#difference-between-cc"><span class="toc-number">2.</span> <span class="toc-text"> difference between c&#x2F;c++</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#inline-define-template"><span class="toc-number">3.</span> <span class="toc-text"> inline &amp; define &amp; template</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#inline"><span class="toc-number">3.1.</span> <span class="toc-text"> inline</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%AE%8F"><span class="toc-number">3.2.</span> <span class="toc-text"> 宏</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#inline%E5%92%8Cdefine"><span class="toc-number">3.3.</span> <span class="toc-text"> inline和define</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#template"><span class="toc-number">3.4.</span> <span class="toc-text"> template</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#const"><span class="toc-number">4.</span> <span class="toc-text"> const</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%B8%B8%E9%87%8F"><span class="toc-number">4.1.</span> <span class="toc-text"> 常量</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%8C%87%E9%92%88%E5%B8%B8%E9%87%8F%E5%92%8C%E5%B8%B8%E9%87%8F%E6%8C%87%E9%92%88"><span class="toc-number">4.2.</span> <span class="toc-text"> 指针常量和常量指针</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%87%BD%E6%95%B0%E4%B8%AD%E4%BD%BF%E7%94%A8"><span class="toc-number">4.3.</span> <span class="toc-text"> 函数中使用</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%B1%BB%E4%B8%AD%E4%BD%BF%E7%94%A8"><span class="toc-number">4.4.</span> <span class="toc-text"> 类中使用</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#const%E8%BD%AC%E4%B8%BA%E9%9D%9Econst%E7%B1%BB%E5%9E%8B"><span class="toc-number">4.5.</span> <span class="toc-text"> const转为非const类型</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E6%8C%87%E9%92%88"><span class="toc-number">5.</span> <span class="toc-text"> 指针</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%8C%87%E9%92%88%E5%92%8C%E5%BC%95%E7%94%A8"><span class="toc-number">5.1.</span> <span class="toc-text"> 指针和引用</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%99%BA%E8%83%BD%E6%8C%87%E9%92%88"><span class="toc-number">5.2.</span> <span class="toc-text"> 智能指针</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E5%B7%A6%E5%80%BC%E5%92%8C%E5%8F%B3%E5%80%BC"><span class="toc-number">6.</span> <span class="toc-text"> 左值和右值</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1"><span class="toc-number">7.</span> <span class="toc-text"> 面向对象</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%99%AE%E9%80%9A%E7%BB%A7%E6%89%BF%E4%B8%8E%E8%99%9A%E7%BB%A7%E6%89%BF"><span class="toc-number">7.1.</span> <span class="toc-text"> 普通继承与虚继承</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%9E%84%E9%80%A0%E5%87%BD%E6%95%B0"><span class="toc-number">7.2.</span> <span class="toc-text"> 构造函数</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%8B%B7%E8%B4%9D%E6%9E%84%E9%80%A0%E5%87%BD%E6%95%B0"><span class="toc-number">7.2.1.</span> <span class="toc-text"> 拷贝构造函数</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#explicit"><span class="toc-number">7.2.2.</span> <span class="toc-text"> explicit</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%9E%90%E6%9E%84%E5%87%BD%E6%95%B0"><span class="toc-number">7.3.</span> <span class="toc-text"> 析构函数</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%93%8D%E4%BD%9C%E7%AC%A6%E9%87%8D%E8%BD%BD"><span class="toc-number">7.4.</span> <span class="toc-text"> 操作符重载</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E8%A6%86%E7%9B%96%E4%B8%8E%E9%87%8D%E8%BD%BD"><span class="toc-number">7.5.</span> <span class="toc-text"> 覆盖与重载</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#c%E5%A4%9A%E6%80%81"><span class="toc-number">8.</span> <span class="toc-text"> c++多态</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E8%99%9A%E5%87%BD%E6%95%B0"><span class="toc-number">9.</span> <span class="toc-text"> 虚函数</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E9%9D%99%E6%80%81%E5%8A%A8%E6%80%81%E7%BB%91%E5%AE%9A"><span class="toc-number">9.1.</span> <span class="toc-text"> 静态&#x2F;动态绑定</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%BA%AF%E8%99%9A%E5%87%BD%E6%95%B0"><span class="toc-number">9.2.</span> <span class="toc-text"> 纯虚函数</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%8A%BD%E8%B1%A1%E7%B1%BB"><span class="toc-number">9.3.</span> <span class="toc-text"> 抽象类</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#stack-heap"><span class="toc-number">10.</span> <span class="toc-text"> stack &amp; heap</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#struct"><span class="toc-number">11.</span> <span class="toc-text"> struct</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#struct-class"><span class="toc-number">11.1.</span> <span class="toc-text"> struct &amp; class</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#struct%E5%86%85%E5%AD%98"><span class="toc-number">11.2.</span> <span class="toc-text"> struct内存</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#struct-union"><span class="toc-number">11.3.</span> <span class="toc-text"> struct &amp; union</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#how-to-optimize-performance"><span class="toc-number">12.</span> <span class="toc-text"> how to optimize performance</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#static"><span class="toc-number">13.</span> <span class="toc-text"> static</span></a></li></ol></div></div><div class="author-info hide"><div class="author-info__avatar text-center"><img src="/img/avatar.png"></div><div class="author-info__name text-center">A.R.L</div><div class="author-info__description text-center">Nothing holds still.</div><hr><div class="author-info-articles"><a class="author-info-articles__archives article-meta" href="/archives"><span class="pull-left">Articles</span><span class="pull-right">28</span></a><a class="author-info-articles__categories article-meta" href="/categories"><span class="pull-left">Categories</span><span class="pull-right">14</span></a></div></div></div><div id="content-outer"><div id="top-container" style="background-image: url(https://github.com/AliceRayLu/AliceRayLu.github.io/blob/main/source/pics/back1.jpg?raw=true)"><div id="page-header"><span class="pull-left"> <a id="site-name" href="/">A.R.L's Blog</a></span><i class="fa fa-bars toggle-menu pull-right" aria-hidden="true"></i><span class="pull-right menus">   <a class="site-page" href="/">Home</a><a class="site-page" href="/archives">Archives</a><a class="site-page" href="/categories">Categories</a><a class="site-page" href="/about">About</a></span><span class="pull-right"></span></div><div id="post-info"><div id="post-title">c++复习总结</div><div id="post-meta"><time class="post-meta__date"><i class="fa fa-calendar" aria-hidden="true"></i> 2024-02-26</time><span class="post-meta__separator">|</span><i class="fa fa-inbox post-meta__icon" aria-hidden="true"></i><a class="post-meta__categories" href="/categories/Knowledge/">Knowledge</a><i class="fa fa-angle-right" aria-hidden="true"></i><i class="fa fa-inbox post-meta__icon" aria-hidden="true"></i><a class="post-meta__categories" href="/categories/Knowledge/C/">C++</a></div></div></div><div class="layout" id="content-inner"><article id="post"><div class="article-container" id="post-content"><p>原始的课堂笔记丢了，本文档补充记录一些复习重点。</p>
+<h1 id="c981114特性"><a class="markdownIt-Anchor" href="#c981114特性"></a> c++98/11/14特性</h1>
+<ul>
+<li>98：最初版本的c++，包括STL等</li>
+<li>11：重大更新，包括auto/for/lambda/智能指针/nullptr/template等</li>
+<li>14：型 Lambda 表达式、返回类型推导、二进制字面量、数字分隔符、弃用属性</li>
+<li>17：结构化绑定、if constexpr、std::optional、std::variant、std::string_view、并行算法</li>
+</ul>
+<h1 id="difference-between-cc"><a class="markdownIt-Anchor" href="#difference-between-cc"></a> difference between c/c++</h1>
+<ul>
+<li>c++ has OOP &amp; template</li>
+<li>c++ use <code>new</code> &amp; <code>delete</code> instead of <code>malloc</code> and <code>free</code></li>
+<li>c++ has smart pointers which are safer</li>
+<li>c++ allows function overload</li>
+</ul>
+<h1 id="inline-define-template"><a class="markdownIt-Anchor" href="#inline-define-template"></a> inline &amp; define &amp; template</h1>
+<h2 id="inline"><a class="markdownIt-Anchor" href="#inline"></a> inline</h2>
+<p>实际调用的时候，把inline函数放回原来的位置，不会产生参数的传递，在汇编上也不会有其他的冗余操作，编译系统将为inline函数创建一段代码，在调用点，以相应的代码替换</p>
+<p>【作用】</p>
+<ul>
+<li>增加程序<strong>可读性</strong></li>
+<li>提高程序<strong>运行效率</strong></li>
+<li>补充宏定义不能进行<strong>类型检查</strong>的缺陷</li>
+</ul>
+<p>【问题】</p>
+<ul>
+<li>增大目标代码</li>
+<li>病态换页（内存抖动）</li>
+<li>降低指令快取装置的命中率</li>
+</ul>
+<p>【建议】</p>
+<ul>
+<li>使用<strong>频率高的小代码</strong>内联</li>
+<li>内联函数定义放在头文件中</li>
+<li>不含有复杂的结构控制</li>
+<li>不允许递归做内联函数</li>
+</ul>
+<h2 id="宏"><a class="markdownIt-Anchor" href="#宏"></a> 宏</h2>
+<p>宏包括<code>#define</code>，<code>#ifndef ... #endif</code>（避免重复定义头文件）, <code>#ifdef .. #else .. #endif</code>(条件宏)，<code>#undef</code>取消宏</p>
+<p>在编译阶段进行简单的文本替换</p>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">define</span> MAXT 999</span></span><br><span class="line"><span class="meta">#<span class="keyword">define</span> add(x,y) x+y</span></span><br></pre></td></tr></table></figure>
+<h2 id="inline和define"><a class="markdownIt-Anchor" href="#inline和define"></a> inline和define</h2>
+<ul>
+<li>#define没有类型，相当于是泛型，可能导致出现漏洞</li>
+<li>inline类型写死</li>
+</ul>
+<h2 id="template"><a class="markdownIt-Anchor" href="#template"></a> template</h2>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">template</span>&lt;<span class="keyword">typename</span> T&gt;</span></span><br><span class="line"><span class="function"><span class="type">void</span> <span class="title">swap</span><span class="params">(T&amp; a,T&amp; b)</span></span>&#123;</span><br><span class="line">    ...</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>模板的实例化：显式实例化、隐式实例化、特化</p>
+<p>【define与template】<br />
+define仅仅是字符串替换，不含类型检查</p>
+<h1 id="const"><a class="markdownIt-Anchor" href="#const"></a> const</h1>
+<p>参考这篇博客的<a target="_blank" rel="noopener" href="https://blog.csdn.net/eric_jo/article/details/4138548">总结</a></p>
+<h2 id="常量"><a class="markdownIt-Anchor" href="#常量"></a> 常量</h2>
+<p><code>const int t = 1</code>或者<code>int const t = 1</code>是一样的，都表示一个常量，必须声明时赋值</p>
+<p><code>extended const int t = 1</code>使用extended可以不进行初始化，变量作用于扩大至全局,编译时会分配内存</p>
+<h2 id="指针常量和常量指针"><a class="markdownIt-Anchor" href="#指针常量和常量指针"></a> 指针常量和常量指针</h2>
+<p><code>const char* p</code>：指针指向的内容不可变</p>
+<p><code>char* const p</code>：指针本身是常量不可变</p>
+<p><code>const char* const p</code>：指针本身不可变且指向的内容不可变</p>
+<h2 id="函数中使用"><a class="markdownIt-Anchor" href="#函数中使用"></a> 函数中使用</h2>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// as parameter</span></span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">func</span><span class="params">(<span class="type">const</span> <span class="type">int</span>&amp; t)</span></span></span><br><span class="line"><span class="function"></span></span><br><span class="line"><span class="function"><span class="comment">// as return value</span></span></span><br><span class="line"><span class="function"><span class="type">const</span> <span class="type">int</span> <span class="title">func</span><span class="params">(<span class="type">int</span> t)</span></span></span><br><span class="line"><span class="function"><span class="type">const</span> <span class="type">int</span>* <span class="title">func</span><span class="params">(<span class="type">int</span> t)</span></span></span><br></pre></td></tr></table></figure>
+<h2 id="类中使用"><a class="markdownIt-Anchor" href="#类中使用"></a> 类中使用</h2>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// const attribute: can&#x27;t change</span></span><br><span class="line"><span class="keyword">class</span> <span class="title class_">A</span>&#123;</span><br><span class="line">    <span class="type">const</span> <span class="type">int</span> t;</span><br><span class="line">    <span class="built_in">A</span>(<span class="type">int</span> x):<span class="built_in">t</span>(x)&#123;</span><br><span class="line">        <span class="comment">// can only be initialized this way</span></span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="type">void</span> <span class="title">func</span><span class="params">()</span><span class="type">const</span></span>;<span class="comment">// member function with const: can&#x27;t change any attribute variable &amp; can&#x27;t use non-const function &amp; can access const attribute</span></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="comment">// const class: can&#x27;t use any not const function</span></span><br><span class="line"><span class="type">const</span> A aaa;</span><br><span class="line">aaa.<span class="built_in">func</span>(); <span class="comment">//correct</span></span><br></pre></td></tr></table></figure>
+<h2 id="const转为非const类型"><a class="markdownIt-Anchor" href="#const转为非const类型"></a> const转为非const类型</h2>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">const_cast</span>&lt;<span class="type">int</span>*&gt;(p);<span class="comment">// 通常用于指针</span></span><br></pre></td></tr></table></figure>
+<h1 id="指针"><a class="markdownIt-Anchor" href="#指针"></a> 指针</h1>
+<h2 id="指针和引用"><a class="markdownIt-Anchor" href="#指针和引用"></a> 指针和引用</h2>
+<p>the difference between pointer and reference</p>
+<ul>
+<li>pointer is an address, reference is an alias which is the same as the original variable(sizeof)</li>
+<li>pointers can point to pointers, but reference can’t</li>
+<li>pointers can be initialized later, but reference must be initialized while declaring.</li>
+<li>pointers can point to NULL, reference can’t</li>
+<li>pointers can be changed, but reference can’t</li>
+</ul>
+<h2 id="智能指针"><a class="markdownIt-Anchor" href="#智能指针"></a> 智能指针</h2>
+<p>RAII：Resource Acquisition Is Initialization</p>
+<h1 id="左值和右值"><a class="markdownIt-Anchor" href="#左值和右值"></a> 左值和右值</h1>
+<h1 id="面向对象"><a class="markdownIt-Anchor" href="#面向对象"></a> 面向对象</h1>
+<h2 id="普通继承与虚继承"><a class="markdownIt-Anchor" href="#普通继承与虚继承"></a> 普通继承与虚继承</h2>
+<h2 id="构造函数"><a class="markdownIt-Anchor" href="#构造函数"></a> 构造函数</h2>
+<h3 id="拷贝构造函数"><a class="markdownIt-Anchor" href="#拷贝构造函数"></a> 拷贝构造函数</h3>
+<h3 id="explicit"><a class="markdownIt-Anchor" href="#explicit"></a> explicit</h3>
+<p>forbid implicit type conversion</p>
+<h2 id="析构函数"><a class="markdownIt-Anchor" href="#析构函数"></a> 析构函数</h2>
+<h2 id="操作符重载"><a class="markdownIt-Anchor" href="#操作符重载"></a> 操作符重载</h2>
+<h2 id="覆盖与重载"><a class="markdownIt-Anchor" href="#覆盖与重载"></a> 覆盖与重载</h2>
+<p>【覆盖】</p>
+<p>子类中重写覆盖父类中的方法，必须严格继承父类方法的名字、参数类型、返回值。</p>
+<p>【重载】</p>
+<p>仅仅函数名相同，参数类型不同。重载的函数必须在同样的范围中。</p>
+<h1 id="c多态"><a class="markdownIt-Anchor" href="#c多态"></a> c++多态</h1>
+<p>分为<strong>静态多态</strong>和<strong>动态多态</strong></p>
+<p>【静态多态】主要表现为<strong>函数重载</strong>，编译时即确定函数类型</p>
+<p>【动态多态】主要表现为<strong>虚函数</strong>，在程序运行时才确定参数类型（相关概念：纯虚函数、抽象类）</p>
+<h1 id="虚函数"><a class="markdownIt-Anchor" href="#虚函数"></a> 虚函数</h1>
+<h2 id="静态动态绑定"><a class="markdownIt-Anchor" href="#静态动态绑定"></a> 静态/动态绑定</h2>
+<p>动态绑定：编译器在编译阶段不知道对象的实际类型，在运行时才能确定</p>
+<h2 id="纯虚函数"><a class="markdownIt-Anchor" href="#纯虚函数"></a> 纯虚函数</h2>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">virtual</span> <span class="type">int</span> <span class="title">f</span><span class="params">()</span> </span>= <span class="number">0</span>;</span><br></pre></td></tr></table></figure>
+<h2 id="抽象类"><a class="markdownIt-Anchor" href="#抽象类"></a> 抽象类</h2>
+<p>a class that can’t be instantiated. Must include at least <strong>one pure virtual function</strong>.</p>
+<h1 id="stack-heap"><a class="markdownIt-Anchor" href="#stack-heap"></a> stack &amp; heap</h1>
+<p>【栈】</p>
+<p>由编译器自动分配管理释放，用来存储函数参数和局部变量，从高地址向低地址增长。栈的大小是有限的。</p>
+<p>【堆】</p>
+<p>由程序员管理分配和释放，用来存放程序中的动态内存，程序结束由操作系统自动回收，从低地址向高地址生长。堆的大小相对较大，内存分配方式比较灵活。但是容易产生内存碎片。</p>
+<h1 id="struct"><a class="markdownIt-Anchor" href="#struct"></a> struct</h1>
+<h2 id="struct-class"><a class="markdownIt-Anchor" href="#struct-class"></a> struct &amp; class</h2>
+<h2 id="struct内存"><a class="markdownIt-Anchor" href="#struct内存"></a> struct内存</h2>
+<h2 id="struct-union"><a class="markdownIt-Anchor" href="#struct-union"></a> struct &amp; union</h2>
+<h1 id="how-to-optimize-performance"><a class="markdownIt-Anchor" href="#how-to-optimize-performance"></a> how to optimize performance</h1>
+<ul>
+<li>compile options: <code>-O2</code> <code>-O3</code></li>
+<li>avoid useless memory operation like <code>new</code> <code>delete</code></li>
+<li>choose better data structure and algorithm</li>
+<li>use multi-thread</li>
+<li>use inline function and const expression</li>
+<li>use smart pointer</li>
+</ul>
+<h1 id="static"><a class="markdownIt-Anchor" href="#static"></a> static</h1>
+<ul>
+<li>hide global variable or global function：make it only visible in the source file</li>
+<li>keep variable longer</li>
+<li>In Class:
+<ul>
+<li>static variable: shared among all the instances</li>
+<li>static member function: can be accessed without instanciate a class(can only visit static variables)</li>
+</ul>
+</li>
+</ul>
+</div></article><nav id="pagination"><div class="prev-post pull-left"><a href="/2024/02/27/technology/frontend/JS/"><i class="fa fa-chevron-left">  </i><span>【前端八股】JavaScript</span></a></div><div class="next-post pull-right"><a href="/2024/01/19/knowledge/algorithm/%E7%AE%97%E6%B3%95%E5%A4%8D%E4%B9%A0%E6%A1%86%E6%9E%B6/"><span>算法复习框架</span><i class="fa fa-chevron-right"></i></a></div></nav></div></div><footer class="footer-bg" style="background-image: url(https://github.com/AliceRayLu/AliceRayLu.github.io/blob/main/source/pics/back1.jpg?raw=true)"><div class="layout" id="footer"><div class="copyright">&copy;2023 - 2025 By A.R.L</div><div class="footer_custom_text">本站图片资源托管于Github, 网速限制可能无法正确加载</div></div></footer><i class="fa fa-arrow-up" id="go-up" aria-hidden="true"></i><script src="https://cdn.jsdelivr.net/npm/animejs@latest/lib/anime.min.js"></script><script src="https://cdn.jsdelivr.net/npm/jquery@latest/dist/jquery.min.js"></script><script src="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@latest/dist/jquery.fancybox.min.js"></script><script src="https://cdn.jsdelivr.net/npm/velocity-animate@latest/velocity.min.js"></script><script src="https://cdn.jsdelivr.net/npm/velocity-ui-pack@latest/velocity.ui.min.js"></script><script src="/js/utils.js?version=1.9.1"></script><script src="/js/fancybox.js?version=1.9.1"></script><script src="/js/sidebar.js?version=1.9.1"></script><script src="/js/copy.js?version=1.9.1"></script><script src="/js/fireworks.js?version=1.9.1"></script><script src="/js/transition.js?version=1.9.1"></script><script src="/js/scroll.js?version=1.9.1"></script><script src="/js/head.js?version=1.9.1"></script><link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/katex@latest/dist/katex.min.css"><script src="https://cdn.jsdelivr.net/npm/katex-copytex@latest/dist/katex-copytex.min.js"></script><link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/katex-copytex@latest/dist/katex-copytex.min.css"><script src="/js/katex.js"></script><script>if(/Android|webOS|iPhone|iPod|iPad|BlackBerry/i.test(navigator.userAgent)) {
+  $('#nav').addClass('is-mobile')
+  $('footer').addClass('is-mobile')
+  $('#top-container').addClass('is-mobile')
+}</script></body></html>

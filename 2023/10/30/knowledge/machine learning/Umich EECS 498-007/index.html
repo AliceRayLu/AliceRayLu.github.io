@@ -1,0 +1,59 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"><meta name="description" content="Umich EECS 498-007"><meta name="keywords" content=""><meta name="author" content="A.R.L"><meta name="copyright" content="A.R.L"><title>Umich EECS 498-007 | A.R.L's Blog</title><link rel="shortcut icon" href="/bitbug_favicon.ico"><link rel="stylesheet" href="/css/index.css?version=1.9.1"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/font-awesome@latest/css/font-awesome.min.css?version=1.9.1"><meta name="format-detection" content="telephone=no"><meta http-equiv="x-dns-prefetch-control" content="on"><link rel="dns-prefetch" href="https://cdn.jsdelivr.net"><link rel="dns-prefetch" href="https://www.google-analytics.com"><script>(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+ga('create', 'UA-283151977-1', 'auto');
+ga('send', 'pageview');</script><script async src="https://www.googletagmanager.com/gtag/js?id=G-MJTECTPJVQ"></script><script>window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-MJTECTPJVQ');</script><meta http-equiv="Cache-Control" content="no-transform"><meta http-equiv="Cache-Control" content="no-siteapp"><script>var GLOBAL_CONFIG = { 
+  root: '/',
+  algolia: undefined,
+  localSearch: undefined,
+  copy: {
+    success: 'Copy successfully',
+    error: 'Copy error',
+    noSupport: 'The browser does not support'
+  },
+  hexoVersion: '6.3.0'
+} </script><meta name="generator" content="Hexo 6.3.0"><link rel="alternate" href="/atom.xml" title="A.R.L's Blog" type="application/atom+xml">
+</head><body><i class="fa fa-arrow-right" id="toggle-sidebar" aria-hidden="true"></i><div id="sidebar" data-display="true"><div class="toggle-sidebar-info text-center"><span data-toggle="Toggle article">Toggle site</span><hr></div><div class="sidebar-toc"><div class="sidebar-toc__title">Catalog</div><div class="sidebar-toc__progress"><span class="progress-notice">You've read</span><span class="progress-num">0</span><span class="progress-percentage">%</span><div class="sidebar-toc__progress-bar"></div></div><div class="sidebar-toc__content"><ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#lec-2-image-classification"><span class="toc-text"> Lec 2: Image Classification</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#a1-pytorch-knn"><span class="toc-text"> A1: Pytorch &amp; KNN</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#pytorch-101"><span class="toc-text"> Pytorch 101</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#1-tensor-basic"><span class="toc-text"> 1 Tensor Basic</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#2-tensor-index"><span class="toc-text"> 2 Tensor Index</span></a></li></ol></li></ol></li></ol></div></div><div class="author-info hide"><div class="author-info__avatar text-center"><img src="/img/avatar.png"></div><div class="author-info__name text-center">A.R.L</div><div class="author-info__description text-center">Nothing holds still.</div><hr><div class="author-info-articles"><a class="author-info-articles__archives article-meta" href="/archives"><span class="pull-left">Articles</span><span class="pull-right">28</span></a><a class="author-info-articles__categories article-meta" href="/categories"><span class="pull-left">Categories</span><span class="pull-right">14</span></a></div></div></div><div id="content-outer"><div id="top-container" style="background-image: url(https://github.com/AliceRayLu/AliceRayLu.github.io/blob/main/source/pics/back1.jpg?raw=true)"><div id="page-header"><span class="pull-left"> <a id="site-name" href="/">A.R.L's Blog</a></span><i class="fa fa-bars toggle-menu pull-right" aria-hidden="true"></i><span class="pull-right menus">   <a class="site-page" href="/">Home</a><a class="site-page" href="/archives">Archives</a><a class="site-page" href="/categories">Categories</a><a class="site-page" href="/about">About</a></span><span class="pull-right"></span></div><div id="post-info"><div id="post-title">Umich EECS 498-007</div><div id="post-meta"><time class="post-meta__date"><i class="fa fa-calendar" aria-hidden="true"></i> 2023-10-30</time><span class="post-meta__separator">|</span><i class="fa fa-inbox post-meta__icon" aria-hidden="true"></i><a class="post-meta__categories" href="/categories/Knowledge/">Knowledge</a><i class="fa fa-angle-right" aria-hidden="true"></i><i class="fa fa-inbox post-meta__icon" aria-hidden="true"></i><a class="post-meta__categories" href="/categories/Knowledge/Machine-Learning/">Machine Learning</a></div></div></div><div class="layout" id="content-inner"><article id="post"><div class="article-container" id="post-content"><p>课程主页：🔗https://web.eecs.umich.edu/~justincj/teaching/eecs498/WI2022/</p>
+<p>在课程主页可以找到2019年的youtube课程录屏以及6项hw/Assignments。通过google colab打开完成作业。</p>
+<p>这篇博客记录一些课堂笔记和作业笔记。可以在<a href="">这个仓库</a>中找到本人的作业实现</p>
+<blockquote>
+<p>正在施工建设中…</p>
+</blockquote>
+<h2 id="lec-2-image-classification"><a class="markdownIt-Anchor" href="#lec-2-image-classification"></a> Lec 2: Image Classification</h2>
+<p>常用数据集：</p>
+<ul>
+<li><strong>CIFAR-10</strong> &amp; <strong>CIFAR-100</strong><br />
+图像尺寸：32*32<br />
+CIFAR-10有10类图像，每类6000张。总共分为50000张训练图片和10000张测试图片。<br />
+CIFAR-100有100类图像，每类600张，包括500张训练图片和100张测试图片。</li>
+<li><strong>ImageNet</strong><br />
+最著名图像数据集，有1000类图像分类，数据量较大，有miniImageNet</li>
+<li><strong>MNIST</strong><br />
+手写数字图像集<br />
+图像尺寸：28*28<br />
+50000张训练图片，10000张测试图片</li>
+</ul>
+<h2 id="a1-pytorch-knn"><a class="markdownIt-Anchor" href="#a1-pytorch-knn"></a> A1: Pytorch &amp; KNN</h2>
+<h3 id="pytorch-101"><a class="markdownIt-Anchor" href="#pytorch-101"></a> Pytorch 101</h3>
+<h4 id="1-tensor-basic"><a class="markdownIt-Anchor" href="#1-tensor-basic"></a> 1 Tensor Basic</h4>
+<p>创建tensor使用python数组形式</p>
+<figure class="highlight py"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> torch</span><br><span class="line"></span><br><span class="line">a = torch.tensor([[<span class="number">0</span>,<span class="number">1</span>,<span class="number">2</span>],[<span class="number">3</span>,<span class="number">4</span>,<span class="number">5</span>]])</span><br><span class="line"><span class="built_in">print</span>(a.dim())</span><br><span class="line"><span class="built_in">print</span>(a.shape)</span><br><span class="line"><span class="built_in">print</span>(a.size())</span><br><span class="line"><span class="built_in">print</span>(a[<span class="number">1</span>,<span class="number">1</span>])</span><br></pre></td></tr></table></figure>
+<p>输出结果</p>
+<blockquote>
+<p>2<br />
+torch.Size([2,3])<br />
+torch.Size([2,3])<br />
+4</p>
+</blockquote>
+<p><code>shape</code>是属性，<code>size()</code>是方法，返回的结果相同，可以使用<code>shape[1]</code>获取具体某一个维度大小</p>
+<h4 id="2-tensor-index"><a class="markdownIt-Anchor" href="#2-tensor-index"></a> 2 Tensor Index</h4>
+</div></article><nav id="pagination"><div class="prev-post pull-left"><a href="/2024/01/05/knowledge/machine%20learning/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/"><i class="fa fa-chevron-left">  </i><span>NJU SE 机器学习</span></a></div><div class="next-post pull-right"><a href="/2023/10/08/technology/device%20usage/RD%20Client%E8%B8%A9%E5%9D%91%E5%AE%9E%E5%BD%95/"><span>IOS RD client连接到win10</span><i class="fa fa-chevron-right"></i></a></div></nav></div></div><footer class="footer-bg" style="background-image: url(https://github.com/AliceRayLu/AliceRayLu.github.io/blob/main/source/pics/back1.jpg?raw=true)"><div class="layout" id="footer"><div class="copyright">&copy;2023 - 2025 By A.R.L</div><div class="footer_custom_text">本站图片资源托管于Github, 网速限制可能无法正确加载</div></div></footer><i class="fa fa-arrow-up" id="go-up" aria-hidden="true"></i><script src="https://cdn.jsdelivr.net/npm/animejs@latest/lib/anime.min.js"></script><script src="https://cdn.jsdelivr.net/npm/jquery@latest/dist/jquery.min.js"></script><script src="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@latest/dist/jquery.fancybox.min.js"></script><script src="https://cdn.jsdelivr.net/npm/velocity-animate@latest/velocity.min.js"></script><script src="https://cdn.jsdelivr.net/npm/velocity-ui-pack@latest/velocity.ui.min.js"></script><script src="/js/utils.js?version=1.9.1"></script><script src="/js/fancybox.js?version=1.9.1"></script><script src="/js/sidebar.js?version=1.9.1"></script><script src="/js/copy.js?version=1.9.1"></script><script src="/js/fireworks.js?version=1.9.1"></script><script src="/js/transition.js?version=1.9.1"></script><script src="/js/scroll.js?version=1.9.1"></script><script src="/js/head.js?version=1.9.1"></script><link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/katex@latest/dist/katex.min.css"><script src="https://cdn.jsdelivr.net/npm/katex-copytex@latest/dist/katex-copytex.min.js"></script><link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/katex-copytex@latest/dist/katex-copytex.min.css"><script src="/js/katex.js"></script><script>if(/Android|webOS|iPhone|iPod|iPad|BlackBerry/i.test(navigator.userAgent)) {
+  $('#nav').addClass('is-mobile')
+  $('footer').addClass('is-mobile')
+  $('#top-container').addClass('is-mobile')
+}</script></body></html>

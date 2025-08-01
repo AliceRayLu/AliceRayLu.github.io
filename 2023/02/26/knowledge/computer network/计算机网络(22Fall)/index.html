@@ -1,0 +1,1560 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"><meta name="description" content="计算机网络(22Fall)"><meta name="keywords" content=""><meta name="author" content="A.R.L"><meta name="copyright" content="A.R.L"><title>计算机网络(22Fall) | A.R.L's Blog</title><link rel="shortcut icon" href="/bitbug_favicon.ico"><link rel="stylesheet" href="/css/index.css?version=1.9.1"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/font-awesome@latest/css/font-awesome.min.css?version=1.9.1"><meta name="format-detection" content="telephone=no"><meta http-equiv="x-dns-prefetch-control" content="on"><link rel="dns-prefetch" href="https://cdn.jsdelivr.net"><link rel="dns-prefetch" href="https://www.google-analytics.com"><script>(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+ga('create', 'UA-283151977-1', 'auto');
+ga('send', 'pageview');</script><script async src="https://www.googletagmanager.com/gtag/js?id=G-MJTECTPJVQ"></script><script>window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-MJTECTPJVQ');</script><meta http-equiv="Cache-Control" content="no-transform"><meta http-equiv="Cache-Control" content="no-siteapp"><script>var GLOBAL_CONFIG = { 
+  root: '/',
+  algolia: undefined,
+  localSearch: undefined,
+  copy: {
+    success: 'Copy successfully',
+    error: 'Copy error',
+    noSupport: 'The browser does not support'
+  },
+  hexoVersion: '6.3.0'
+} </script><meta name="generator" content="Hexo 6.3.0"><link rel="alternate" href="/atom.xml" title="A.R.L's Blog" type="application/atom+xml">
+</head><body><i class="fa fa-arrow-right" id="toggle-sidebar" aria-hidden="true"></i><div id="sidebar" data-display="true"><div class="toggle-sidebar-info text-center"><span data-toggle="Toggle article">Toggle site</span><hr></div><div class="sidebar-toc"><div class="sidebar-toc__title">Catalog</div><div class="sidebar-toc__progress"><span class="progress-notice">You've read</span><span class="progress-num">0</span><span class="progress-percentage">%</span><div class="sidebar-toc__progress-bar"></div></div><div class="sidebar-toc__content"><ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C2022"><span class="toc-number">1.</span> <span class="toc-text"> 计算机网络（2022）</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%BD%91%E7%BB%9C%E5%9F%BA%E6%9C%AC%E7%9F%A5%E8%AF%86"><span class="toc-number">1.1.</span> <span class="toc-text"> 网络基本知识</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%BD%91%E7%BB%9C%E5%88%86%E7%B1%BB"><span class="toc-number">1.1.1.</span> <span class="toc-text"> 网络分类</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%BD%91%E7%BB%9C%E8%AE%BE%E5%A4%87"><span class="toc-number">1.1.2.</span> <span class="toc-text"> 网络设备</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%90%8D%E8%AF%8D%E8%A7%A3%E9%87%8A%E6%94%B6%E9%9B%86"><span class="toc-number">1.1.3.</span> <span class="toc-text"> 名词解释收集</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%BD%91%E7%BB%9C%E6%8B%93%E6%89%91"><span class="toc-number">1.1.4.</span> <span class="toc-text"> 网络拓扑</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%BD%91%E7%BB%9C%E7%B1%BB%E5%9E%8B"><span class="toc-number">1.1.5.</span> <span class="toc-text"> 网络类型</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#osi%E4%B8%83%E5%B1%82%E6%A8%A1%E5%9E%8B"><span class="toc-number">1.2.</span> <span class="toc-text"> OSI七层模型</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1-physical"><span class="toc-number">1.2.1.</span> <span class="toc-text"> 1-Physical</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#11-lan-%E4%BB%8B%E8%B4%A8"><span class="toc-number">1.2.1.1.</span> <span class="toc-text"> 1.1 LAN 介质</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#12-5-4-3-2-1-rule"><span class="toc-number">1.2.1.2.</span> <span class="toc-text"> 1.2 5-4-3-2-1 rule</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#13-%E6%95%B0%E6%8D%AE%E9%80%9A%E4%BF%A1"><span class="toc-number">1.2.1.3.</span> <span class="toc-text"> 1.3 数据通信</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-data-link"><span class="toc-number">1.2.2.</span> <span class="toc-text"> 2-Data Link</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#21-llc"><span class="toc-number">1.2.2.1.</span> <span class="toc-text"> 2.1 LLC</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#22-mac"><span class="toc-number">1.2.2.2.</span> <span class="toc-text"> 2.2 MAC</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#23-wireless-lan"><span class="toc-number">1.2.2.3.</span> <span class="toc-text"> 2.3 Wireless LAN</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#ieee-80211%E5%88%86%E7%B1%BB"><span class="toc-number">1.2.2.3.1.</span> <span class="toc-text"> IEEE 802.11分类</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#%E6%A8%A1%E5%BC%8F"><span class="toc-number">1.2.2.3.2.</span> <span class="toc-text"> 模式</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#%E8%BF%9E%E6%8E%A5%E8%BF%87%E7%A8%8B"><span class="toc-number">1.2.2.3.3.</span> <span class="toc-text"> 连接过程</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#frames"><span class="toc-number">1.2.2.3.4.</span> <span class="toc-text"> Frames</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#csmaca"><span class="toc-number">1.2.2.3.5.</span> <span class="toc-text"> CSMA&#x2F;CA</span></a></li></ol></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-network"><span class="toc-number">1.2.3.</span> <span class="toc-text"> 3-network</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#31-ip-packet"><span class="toc-number">1.2.3.1.</span> <span class="toc-text"> 3.1 IP packet</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#32-ip-address"><span class="toc-number">1.2.3.2.</span> <span class="toc-text"> 3.2 IP address</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#33-subnet"><span class="toc-number">1.2.3.3.</span> <span class="toc-text"> 3.3 subnet</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#%E5%AD%90%E7%BD%91%E6%8E%A9%E7%A0%81"><span class="toc-number">1.2.3.3.1.</span> <span class="toc-text"> 子网掩码</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#%E5%AD%90%E7%BD%91%E5%88%92%E5%88%86"><span class="toc-number">1.2.3.3.2.</span> <span class="toc-text"> 子网划分</span></a></li></ol></li><li class="toc-item toc-level-4"><a class="toc-link" href="#34-%E7%AC%AC%E4%B8%89%E5%B1%82%E8%AE%BE%E5%A4%87-router"><span class="toc-number">1.2.3.4.</span> <span class="toc-text"> 3.4 第三层设备-Router</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#35-arp-protocol"><span class="toc-number">1.2.3.5.</span> <span class="toc-text"> 3.5 ARP protocol</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#36-network-services"><span class="toc-number">1.2.3.6.</span> <span class="toc-text"> 3.6 network services</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#37-%E5%8F%AF%E8%B7%AF%E7%94%B1%E5%8D%8F%E8%AE%AE%E5%92%8C%E8%B7%AF%E7%94%B1%E5%8D%8F%E8%AE%AE"><span class="toc-number">1.2.3.7.</span> <span class="toc-text"> 3.7 可路由协议和路由协议</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#%E5%8F%AF%E8%B7%AF%E7%94%B1vs%E4%B8%8D%E5%8F%AF%E8%B7%AF%E7%94%B1"><span class="toc-number">1.2.3.7.1.</span> <span class="toc-text"> 可路由VS不可路由</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#%E8%B7%AF%E7%94%B1%E5%8D%8F%E8%AE%AErouting-protocol"><span class="toc-number">1.2.3.7.2.</span> <span class="toc-text"> 路由协议(routing protocol)</span></a></li></ol></li><li class="toc-item toc-level-4"><a class="toc-link" href="#38-vlsm"><span class="toc-number">1.2.3.8.</span> <span class="toc-text"> 3.8 VLSM</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#39-icmp"><span class="toc-number">1.2.3.9.</span> <span class="toc-text"> 3.9 ICMP</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#4-transport"><span class="toc-number">1.2.4.</span> <span class="toc-text"> 4-transport</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#41-port"><span class="toc-number">1.2.4.1.</span> <span class="toc-text"> 4.1 port</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#42-tcp"><span class="toc-number">1.2.4.2.</span> <span class="toc-text"> 4.2 TCP</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#properties"><span class="toc-number">1.2.4.2.1.</span> <span class="toc-text"> properties</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#%E6%8A%A5%E5%A4%B4%E6%A0%BC%E5%BC%8F"><span class="toc-number">1.2.4.2.2.</span> <span class="toc-text"> 报头格式</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#flow-control"><span class="toc-number">1.2.4.2.3.</span> <span class="toc-text"> flow control</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#connection-management"><span class="toc-number">1.2.4.2.4.</span> <span class="toc-text"> connection management</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#stop-and-wait-protocol"><span class="toc-number">1.2.4.2.5.</span> <span class="toc-text"> stop-and-wait protocol</span></a></li></ol></li><li class="toc-item toc-level-4"><a class="toc-link" href="#43-udp"><span class="toc-number">1.2.4.3.</span> <span class="toc-text"> 4.3 UDP</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#properties-2"><span class="toc-number">1.2.4.3.1.</span> <span class="toc-text"> properties</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#%E4%BD%BF%E7%94%A8udp%E7%9A%84%E5%8D%8F%E8%AE%AE"><span class="toc-number">1.2.4.3.2.</span> <span class="toc-text"> 使用udp的协议</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#%E6%8A%A5%E5%A4%B4%E6%A0%BC%E5%BC%8F-2"><span class="toc-number">1.2.4.3.3.</span> <span class="toc-text"> 报头格式</span></a></li></ol></li><li class="toc-item toc-level-4"><a class="toc-link" href="#44-socket"><span class="toc-number">1.2.4.4.</span> <span class="toc-text"> 4.4 Socket</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#45-natpat"><span class="toc-number">1.2.4.5.</span> <span class="toc-text"> 4.5 NAT&amp;PAT</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#5-sessionpresentationapplication"><span class="toc-number">1.2.5.</span> <span class="toc-text"> 5 session&amp;presentation&amp;application</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#51-session"><span class="toc-number">1.2.5.1.</span> <span class="toc-text"> 5.1 session</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#52-presentation"><span class="toc-number">1.2.5.2.</span> <span class="toc-text"> 5.2 presentation</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#53-application"><span class="toc-number">1.2.5.3.</span> <span class="toc-text"> 5.3 application</span></a></li></ol></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#tcpip%E5%9B%9B%E5%B1%82%E6%A8%A1%E5%9E%8B"><span class="toc-number">1.3.</span> <span class="toc-text"> TCP&#x2F;IP四层模型</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%90%84%E5%B1%82%E5%8D%8F%E8%AE%AE%E9%9B%86%E5%90%88"><span class="toc-number">1.4.</span> <span class="toc-text"> 各层协议集合</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#data-link-layer"><span class="toc-number">1.4.1.</span> <span class="toc-text"> Data link layer</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#network-layer"><span class="toc-number">1.4.2.</span> <span class="toc-text"> Network layer</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#arp"><span class="toc-number">1.4.2.1.</span> <span class="toc-text"> ARP</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#ipinternet-protocol"><span class="toc-number">1.4.2.2.</span> <span class="toc-text"> IP(Internet Protocol)</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#icmp"><span class="toc-number">1.4.2.3.</span> <span class="toc-text"> ICMP</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E8%B7%AF%E7%94%B1%E5%8D%8F%E8%AE%AE"><span class="toc-number">1.4.2.4.</span> <span class="toc-text"> 路由协议</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#transport-layer"><span class="toc-number">1.4.3.</span> <span class="toc-text"> Transport layer</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#tcpudp"><span class="toc-number">1.4.3.1.</span> <span class="toc-text"> TCP&amp;UDP</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#application-layer"><span class="toc-number">1.4.4.</span> <span class="toc-text"> Application layer</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E8%B7%AF%E7%94%B1%E5%99%A8%E5%8F%8A%E7%9B%B8%E5%BA%94%E5%8D%8F%E8%AE%AE"><span class="toc-number">1.5.</span> <span class="toc-text"> 路由器及相应协议</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%B7%AF%E7%94%B1%E5%99%A8%E5%86%85%E9%83%A8%E7%BB%93%E6%9E%84"><span class="toc-number">1.5.1.</span> <span class="toc-text"> 路由器内部结构</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%B7%AF%E7%94%B1%E5%99%A8%E5%90%AF%E5%8A%A8%E8%BF%87%E7%A8%8B"><span class="toc-number">1.5.2.</span> <span class="toc-text"> 路由器启动过程</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%B7%AF%E7%94%B1%E5%99%A8%E6%95%B0%E6%8D%AE%E4%BC%A0%E8%BE%93"><span class="toc-number">1.5.3.</span> <span class="toc-text"> 路由器数据传输</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#ip%E5%9C%B0%E5%9D%80%E5%88%86%E9%85%8D%E5%8D%8F%E8%AE%AE"><span class="toc-number">1.5.4.</span> <span class="toc-text"> ip地址分配协议</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#rarp"><span class="toc-number">1.5.4.1.</span> <span class="toc-text"> RARP</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#bootp"><span class="toc-number">1.5.4.2.</span> <span class="toc-text"> BOOTP</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#dhcp"><span class="toc-number">1.5.4.3.</span> <span class="toc-text"> DHCP</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#routing-protocols"><span class="toc-number">1.5.5.</span> <span class="toc-text"> routing protocols</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E9%9D%99%E6%80%81%E8%B7%AF%E7%94%B1"><span class="toc-number">1.5.5.1.</span> <span class="toc-text"> 静态路由</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%8A%A8%E6%80%81%E8%B7%AF%E7%94%B1"><span class="toc-number">1.5.5.2.</span> <span class="toc-text"> 动态路由</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#rip"><span class="toc-number">1.5.5.2.1.</span> <span class="toc-text"> RIP</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#igrpeigrp"><span class="toc-number">1.5.5.2.2.</span> <span class="toc-text"> IGRP&amp;EIGRP</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#ospf"><span class="toc-number">1.5.5.2.3.</span> <span class="toc-text"> OSPF</span></a></li></ol></li></ol></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%B1%80%E5%9F%9F%E7%BD%91%E4%BA%A4%E6%8D%A2%E4%B8%8Evlan"><span class="toc-number">1.6.</span> <span class="toc-text"> 局域网交换与VLAN</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#switching"><span class="toc-number">1.6.1.</span> <span class="toc-text"> switching</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%AF%B9%E7%A7%B0%E4%BA%A4%E6%8D%A2%E9%9D%9E%E5%AF%B9%E7%A7%B0%E4%BA%A4%E6%8D%A2"><span class="toc-number">1.6.1.1.</span> <span class="toc-text"> 对称交换&amp;非对称交换</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%86%85%E5%AD%98%E7%BC%93%E5%86%B2"><span class="toc-number">1.6.1.2.</span> <span class="toc-text"> 内存缓冲</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E4%BA%A4%E6%8D%A2%E6%96%B9%E6%B3%95"><span class="toc-number">1.6.1.3.</span> <span class="toc-text"> 交换方法</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%90%84%E5%B1%82%E4%BA%A4%E6%8D%A2"><span class="toc-number">1.6.1.4.</span> <span class="toc-text"> 各层交换</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#spanning-tree-protocol"><span class="toc-number">1.6.2.</span> <span class="toc-text"> Spanning-Tree Protocol</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%86%B3%E5%AE%9A%E9%A1%BA%E5%BA%8F"><span class="toc-number">1.6.2.1.</span> <span class="toc-text"> 决定顺序</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#bpdu"><span class="toc-number">1.6.2.2.</span> <span class="toc-text"> BPDU</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#5%E7%A7%8D%E7%8A%B6%E6%80%81"><span class="toc-number">1.6.2.3.</span> <span class="toc-text"> 5种状态</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#stp%E6%94%B6%E6%95%9B%E6%AD%A5%E9%AA%A4"><span class="toc-number">1.6.2.4.</span> <span class="toc-text"> STP收敛步骤</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#vlan"><span class="toc-number">1.6.3.</span> <span class="toc-text"> VLAN</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#trunk-linkaccess-link"><span class="toc-number">1.6.3.1.</span> <span class="toc-text"> trunk link&amp;access link</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#implementation"><span class="toc-number">1.6.3.2.</span> <span class="toc-text"> implementation</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#static"><span class="toc-number">1.6.3.2.1.</span> <span class="toc-text"> static</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#dynamic"><span class="toc-number">1.6.3.2.2.</span> <span class="toc-text"> dynamic</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#port-centric"><span class="toc-number">1.6.3.2.3.</span> <span class="toc-text"> port-centric</span></a></li></ol></li></ol></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%B9%BF%E5%9F%9F%E7%BD%91-wan"><span class="toc-number">1.7.</span> <span class="toc-text"> 广域网-WAN</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%AE%BE%E5%A4%87"><span class="toc-number">1.7.1.</span> <span class="toc-text"> 设备</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#circuits"><span class="toc-number">1.7.2.</span> <span class="toc-text"> Circuits</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#switched-virtual-circuitssvc"><span class="toc-number">1.7.2.1.</span> <span class="toc-text"> Switched Virtual Circuits(SVC)</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#permanent-virtual-circuitspvc"><span class="toc-number">1.7.2.2.</span> <span class="toc-text"> Permanent Virtual Circuits(PVC)</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#wan-and-osi"><span class="toc-number">1.7.3.</span> <span class="toc-text"> WAN and OSI</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#physical-layer"><span class="toc-number">1.7.3.1.</span> <span class="toc-text"> physical layer</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#data-link-layer-2"><span class="toc-number">1.7.3.2.</span> <span class="toc-text"> data link layer</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#accessing-methods"><span class="toc-number">1.7.4.</span> <span class="toc-text"> Accessing methods</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#ppp"><span class="toc-number">1.7.4.1.</span> <span class="toc-text"> PPP</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#components"><span class="toc-number">1.7.4.1.1.</span> <span class="toc-text"> components</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#%E4%BC%9A%E8%AF%9D%E5%BB%BA%E7%AB%8B%E5%92%8C%E7%BB%88%E6%AD%A2"><span class="toc-number">1.7.4.1.2.</span> <span class="toc-text"> 会话建立和终止</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#pap"><span class="toc-number">1.7.4.1.3.</span> <span class="toc-text"> PAP</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#chap"><span class="toc-number">1.7.4.1.4.</span> <span class="toc-text"> CHAP</span></a></li></ol></li><li class="toc-item toc-level-4"><a class="toc-link" href="#hdlc"><span class="toc-number">1.7.4.2.</span> <span class="toc-text"> HDLC</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#isdn"><span class="toc-number">1.7.4.3.</span> <span class="toc-text"> ISDN</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#%E4%B8%A4%E7%A7%8D%E4%BF%A1%E9%81%93"><span class="toc-number">1.7.4.3.1.</span> <span class="toc-text"> 两种信道</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#%E4%B8%A4%E7%A7%8D%E8%AE%BF%E9%97%AE%E6%96%B9%E5%BC%8F"><span class="toc-number">1.7.4.3.2.</span> <span class="toc-text"> 两种访问方式</span></a></li></ol></li><li class="toc-item toc-level-4"><a class="toc-link" href="#adsl"><span class="toc-number">1.7.4.4.</span> <span class="toc-text"> ADSL</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#dsl"><span class="toc-number">1.7.4.4.1.</span> <span class="toc-text"> DSL</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#dmt"><span class="toc-number">1.7.4.4.2.</span> <span class="toc-text"> DMT</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#%E4%B8%80%E4%BA%9B%E8%AE%BE%E5%A4%87"><span class="toc-number">1.7.4.4.3.</span> <span class="toc-text"> 一些设备</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#%E7%AC%AC%E4%BA%8C%E4%BB%A3adsl"><span class="toc-number">1.7.4.4.4.</span> <span class="toc-text"> 第二代ADSL</span></a></li></ol></li><li class="toc-item toc-level-4"><a class="toc-link" href="#sonet%E5%90%8C%E6%AD%A5%E5%85%89%E7%BA%A4%E7%BD%91"><span class="toc-number">1.7.4.5.</span> <span class="toc-text"> SONET同步光纤网</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#hfc"><span class="toc-number">1.7.4.6.</span> <span class="toc-text"> HFC</span></a></li></ol></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%BD%91%E7%BB%9C%E5%AE%89%E5%85%A8"><span class="toc-number">1.8.</span> <span class="toc-text"> 网络安全</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%9B%9B%E7%A7%8D%E5%A8%81%E8%83%81"><span class="toc-number">1.8.1.</span> <span class="toc-text"> 四种威胁</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%81%B6%E6%84%8F%E7%A8%8B%E5%BA%8F"><span class="toc-number">1.8.2.</span> <span class="toc-text"> 恶意程序</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%AF%86%E9%92%A5"><span class="toc-number">1.8.3.</span> <span class="toc-text"> 密钥</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%95%B0%E5%AD%97%E7%AD%BE%E5%90%8D"><span class="toc-number">1.8.4.</span> <span class="toc-text"> 数字签名</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E9%98%B2%E7%81%AB%E5%A2%99"><span class="toc-number">1.8.5.</span> <span class="toc-text"> 防火墙</span></a></li></ol></li></ol></li></ol></div></div><div class="author-info hide"><div class="author-info__avatar text-center"><img src="/img/avatar.png"></div><div class="author-info__name text-center">A.R.L</div><div class="author-info__description text-center">Nothing holds still.</div><hr><div class="author-info-articles"><a class="author-info-articles__archives article-meta" href="/archives"><span class="pull-left">Articles</span><span class="pull-right">28</span></a><a class="author-info-articles__categories article-meta" href="/categories"><span class="pull-left">Categories</span><span class="pull-right">14</span></a></div></div></div><div id="content-outer"><div id="top-container" style="background-image: url(https://github.com/AliceRayLu/AliceRayLu.github.io/blob/main/source/pics/back1.jpg?raw=true)"><div id="page-header"><span class="pull-left"> <a id="site-name" href="/">A.R.L's Blog</a></span><i class="fa fa-bars toggle-menu pull-right" aria-hidden="true"></i><span class="pull-right menus">   <a class="site-page" href="/">Home</a><a class="site-page" href="/archives">Archives</a><a class="site-page" href="/categories">Categories</a><a class="site-page" href="/about">About</a></span><span class="pull-right"></span></div><div id="post-info"><div id="post-title">计算机网络(22Fall)</div><div id="post-meta"><time class="post-meta__date"><i class="fa fa-calendar" aria-hidden="true"></i> 2023-02-26</time><span class="post-meta__separator">|</span><i class="fa fa-inbox post-meta__icon" aria-hidden="true"></i><a class="post-meta__categories" href="/categories/Knowledge/">Knowledge</a><i class="fa fa-angle-right" aria-hidden="true"></i><i class="fa fa-inbox post-meta__icon" aria-hidden="true"></i><a class="post-meta__categories" href="/categories/Knowledge/Computer-Network/">Computer Network</a></div></div></div><div class="layout" id="content-inner"><article id="post"><div class="article-container" id="post-content"><h1 id="计算机网络2022"><a class="markdownIt-Anchor" href="#计算机网络2022"></a> 计算机网络（2022）</h1>
+<p>非上课笔记版，课后复习整理重点版</p>
+<p>名词解释重点标出</p>
+<h2 id="网络基本知识"><a class="markdownIt-Anchor" href="#网络基本知识"></a> 网络基本知识</h2>
+<h3 id="网络分类"><a class="markdownIt-Anchor" href="#网络分类"></a> 网络分类</h3>
+<ul>
+<li>广域网（WAN-wide area network）</li>
+<li>城域网（MAN）</li>
+<li>局域网（LAN-local area network）</li>
+<li>个人区域网（PAN）</li>
+</ul>
+<h3 id="网络设备"><a class="markdownIt-Anchor" href="#网络设备"></a> 网络设备</h3>
+<ul>
+<li>
+<p><strong>交换机</strong>(switch)【划分冲突域，不能阻断广播域】</p>
+<p>多端口网桥，交换机使用硬件转发</p>
+<p>通过reduce traffic和increase bandwidth缓解拥塞</p>
+</li>
+<li>
+<p><strong>集线器</strong>(hub)【有多个端口，发给所有端口】</p>
+<p>重新生成，重定时网络信号</p>
+</li>
+<li>
+<p><strong>中继器</strong>(repeater)【只有2个端口，一端口入，另一端口出】</p>
+<p>延长网络：整理、放大、重发信号（不划分冲突）</p>
+</li>
+<li>
+<p><strong>网桥</strong>(bridge)【划分冲突域】</p>
+<p>过滤信息，有一张mac表决定转发到不同网段，收集并在段之间传递数据包</p>
+<p>网桥使用软件包转发</p>
+</li>
+<li>
+<p><a href="siyuan://blocks/20221124204504-5ry1owq">路由器(router)</a>【划分冲突域，阻断广播域】</p>
+<p>流量调节，网段划分，选择最佳报文转发路径</p>
+</li>
+<li>
+<p><strong>网卡</strong>(NIC)</p>
+<p>拥有mac地址（<strong>物理地址，48位</strong>），用于控制网络上主机的数据通信</p>
+<p>封装帧&amp;识别帧（第二层），帮助主机接入网络，发送接收比特信号（第一层）</p>
+</li>
+</ul>
+<p>【网络设备划分】</p>
+<ul>
+<li>
+<p>按照作用范围划分</p>
+<ul>
+<li>局域网设备：hub, bridge, switch, router, NIC</li>
+<li>广域网设备：router, modem</li>
+</ul>
+</li>
+<li>
+<p>按照OSI模型划分</p>
+<ul>
+<li>第一层：hub, repeater, NIC</li>
+<li>第二层：bridge, switch, NIC</li>
+<li>第三层：router</li>
+</ul>
+</li>
+</ul>
+<h3 id="名词解释收集"><a class="markdownIt-Anchor" href="#名词解释收集"></a> <strong>名词解释收集</strong></h3>
+<ul>
+<li>
+<p>ISP：internet service provider, 网络服务供应商</p>
+<p>WISP: wireless internet service provider</p>
+</li>
+<li>
+<p>NAP：network access point, 网络接入点</p>
+</li>
+<li>
+<p>DTE：数据终端设备，Data Terminal Equipment</p>
+<p>DCE：数据通信设备/数据回路终端，Data Circuit-terminating Equipment</p>
+</li>
+<li>
+<p>Mbps: 一秒传输几百万比特</p>
+</li>
+<li>
+<p>OSI：open systems interconnection</p>
+</li>
+<li>
+<p><strong>RFC</strong>：request for comment请求评论，包含关于Internet所有重要文件文字资料，包括大量网络标准</p>
+</li>
+<li>
+<p><a href="siyuan://blocks/20221124210409-1gt0foc">EMI</a>：电磁干扰（Electro-Magnetic Interference）</p>
+</li>
+<li>
+<p><a href="siyuan://blocks/20221124210409-1gt0foc">RFI</a>：射频干扰（Radio Frequency Interference）</p>
+</li>
+<li>
+<p><a href="siyuan://blocks/20230106152938-cn05bhp">ILD</a>：注入式激光二极管 (injection laser diode)</p>
+</li>
+<li>
+<p>LED：发光二极管（light-emitting diode）</p>
+</li>
+<li>
+<p>IEEE：Institute of Electrical and Electronics Engineers，美国电气和电子工程师协会</p>
+<p>UL—Underwriters Laboratories美国保险商安全标准</p>
+<p>EIA—Electronic Industries Alliance电子工业协会</p>
+<p>TIA—Telecommunications Industry Association美国通信工业协会</p>
+<p>ANSI—American National Standards Institute美国国家标准学会</p>
+<p><a href="siyuan://blocks/20230204162625-e3jy4wu">ARIN</a>：american registry for internet numbers</p>
+<p>ISO：international standardization organization</p>
+</li>
+<li>
+<p><a href="siyuan://blocks/20230126162401-lrtfz85">NRZ</a>：不归零制码</p>
+<p>RZ：归零制码</p>
+<p>AMI：双极性传号交替反转码</p>
+</li>
+<li>
+<p><a href="siyuan://blocks/20230126170209-rb1bda4">多路复用技术</a></p>
+<ul>
+<li>TDM：time division multiplexing时分复用</li>
+<li>FDM：frequency division multiplexing频分复用</li>
+<li>WDM：wavelength division multipexing波分复用</li>
+<li>CDM：code division multiplexing码分复用/CDMA：code division multiple access码分多址，各个用户使用不同码型</li>
+</ul>
+</li>
+<li>
+<p><a href="siyuan://blocks/20230129141636-z556cqj">LLC</a>：logical link control逻辑信号控制</p>
+<p><a href="siyuan://blocks/20221124210953-p4the2e">MAC</a>：media access control介质接入控制</p>
+</li>
+<li>
+<p><a href="siyuan://blocks/20230129154216-0o2rvvq">FDDI</a>：fiber distributed data interface光纤分布式数据接口</p>
+</li>
+<li>
+<p><a href="siyuan://blocks/20230129154053-ft7rpf8">CSMA/CD</a>：carrier sense multiple access with collision detection带冲突检测的载波侦听多路接入</p>
+<p><a href="siyuan://blocks/20230204152633-5re3i38">CSMA/CA</a>：carrier sense multiple access with collision avoidance带冲突避免的载波侦听多路接入</p>
+</li>
+<li>
+<p><a href="siyuan://blocks/20230129164912-9lhmp0p">FCS</a>：frame check sequence帧校验序列</p>
+<p>CRC：cyclic redundancy check循环冗余校验</p>
+</li>
+<li>
+<p><a href="siyuan://blocks/20230129163749-85wkhdu">SAP</a>：service access point服务接入点</p>
+<p>DSAP：destination目的服务接入点</p>
+<p>SSAP：source源服务接入点</p>
+</li>
+<li>
+<p><a href="siyuan://blocks/20230129164903-pc72kaq">OUI</a>：organizational unique identifier网卡或接口制造商唯一标识</p>
+</li>
+<li>
+<p><a href="siyuan://blocks/20230129171044-3dgc70q">DSSS</a>：direct sequence spread spectrum直接序列扩频</p>
+</li>
+<li>
+<p><a href="siyuan://blocks/20230129171622-vrapg7j">OFDM</a>：Orthogonal Frequency Division Multiplexing正交频分多路复用技术</p>
+</li>
+<li>
+<p><a href="siyuan://blocks/20230129172156-3230ony">BSS</a>：basic service set基础服务集</p>
+<p>BS：base station基站</p>
+<p>AP：access point接入点</p>
+<p>SSID：service set identifier服务集标识系统</p>
+<p>DS：distributed system分布式系统</p>
+<p>ESS：extended service set</p>
+</li>
+<li>
+<p><a href="siyuan://blocks/20230106151536-x30nhig">ip地址分配协议</a></p>
+<p>RARP：reverse address resolution protocol逆向地址解析协议</p>
+<p>BOOTP：BOOTstrap protocol自举协议</p>
+<p>DHCP：dynamic host configuration protocol动态主机配置协议</p>
+</li>
+<li>
+<p><a href="siyuan://blocks/20230206123006-g4dqp6t">ARP</a>：address resolution protocol地址解析协议</p>
+</li>
+<li>
+<p><a href="siyuan://blocks/20230206132625-oss6v4s">routing protocols</a></p>
+<p>IGP: Interior Gateway Protocols (RIP, IGRP,<br />
+EIGRP, OSPF)内部网关协议</p>
+<p>EGP: Exterior Gateway Protocols (EGP, BGP)外部网关协议</p>
+<p>BGP：border gateway protocol边界网关协议</p>
+<p>RIP：(Route Information Protocol) 路由信息协议</p>
+<p>IGRP：(Interior Gateway Route Protocol) 内部网关路由选择协议</p>
+<p>EIGRP：(Enhanced IGRP) 增强网关路由选择协议</p>
+<p>OSPF：(Open Shortest Path First) 开放最短路径优先</p>
+<p>DVP: Distance-Vector Protocols (RIP, IGRP)距离矢量协议</p>
+<p>LSP: Link State Protocols (OSPF)链路状态协议</p>
+</li>
+<li>
+<p><a href="siyuan://blocks/20230206141554-1f522el">VLSM</a>：variable-length subnet mask可变长子网掩码</p>
+</li>
+<li>
+<p>CIDR：无类别域间路由，Classless Inter-Domain Routing</p>
+<p>CIDR把几个标准网络合成一个大网络</p>
+</li>
+<li>
+<p><a href="siyuan://blocks/20230206142506-qfzyrws">ICMP</a>：internet control message protocol因特网控制报文协议</p>
+<p>PING：packet internet groper因特网包探索器</p>
+</li>
+<li>
+<p><a href="siyuan://blocks/20230208154815-pemmxf5">TCP</a>：transmission control protocol传输控制协议</p>
+<p>MSS：maximum segment size最大报文段长度</p>
+<p>TPDU：transport protocol data unit传输协议数据单元</p>
+<p>UDP：user datagram protocol用户数据报协议</p>
+</li>
+<li>
+<p><a href="siyuan://blocks/20230208162121-8b2he5o">ARQ</a>：automatic repeat request自动响应重传</p>
+</li>
+<li>
+<p><a href="siyuan://blocks/20230208175629-xgpb1wd">NAT</a>：network address translator网络地址转换</p>
+<p>PAT：port address translator端口地址转换</p>
+</li>
+<li>
+<p><a href="siyuan://blocks/20230209203657-916klxs">session layer applications</a></p>
+</li>
+<li>
+<p><a href="siyuan://blocks/20230209204046-9k25rlc">ASCII</a>: American Standard Code for Information Interchange</p>
+<p>EBCDIC: Extended Binary Coded Decimal Interchange Code</p>
+</li>
+<li>
+<p><a href="siyuan://blocks/20230210154123-z57zyg2">POST</a>：power on self test加电自检</p>
+</li>
+<li>
+<p><a href="siyuan://blocks/20230206135453-2ytgp2i">SPF</a>：shortest path first最短路径优先</p>
+</li>
+<li>
+<p><a href="siyuan://blocks/20230206141534-cntijru">IETF</a>：internet engineering task force互联网工程任务组</p>
+</li>
+<li>
+<p><a href="siyuan://blocks/20230213232352-lpnobs4">NBMA</a>：non-broadcast multi-access非广播多路接入</p>
+</li>
+<li>
+<p><a href="siyuan://blocks/20230216154951-f9xlffe">BPDU</a>：bridge protocol data unit桥接协议数据单元</p>
+</li>
+<li>
+<p><a href="siyuan://blocks/20230218135044-1pam87e">ISL</a>：inter-switch link</p>
+</li>
+<li>
+<p><a href="siyuan://blocks/20230218143043-6ddvqru">CSU</a>：channel service unit信道服务单元</p>
+<p>DSU：data service unit数据服务单元</p>
+</li>
+<li>
+<p><a href="siyuan://blocks/20230218143812-krbnljk">SVC</a>：switched virtual circuit交换虚拟环路</p>
+<p>PVC：permanent virtual circuit永久虚拟环路</p>
+</li>
+</ul>
+<h3 id="网络拓扑"><a class="markdownIt-Anchor" href="#网络拓扑"></a> 网络拓扑</h3>
+<p>总线型，环形，星形……</p>
+<p>可靠性最高的拓扑：网形拓扑</p>
+<h3 id="网络类型"><a class="markdownIt-Anchor" href="#网络类型"></a> 网络类型</h3>
+<ul>
+<li>
+<p>双绞线以太网（10BASE-T）：使用UTP</p>
+</li>
+<li>
+<p>快速以太网（100BASE-T）</p>
+<ul>
+<li>100BASE-TX, 100-BASE-T4, 100BASE-T2: 100Mb/s, twisted pair</li>
+<li>100BASE-FX: 速率同，使用光纤</li>
+</ul>
+</li>
+<li>
+<p>1000BASE-T，utp</p>
+<ul>
+<li>1000BASE-LX: 多模光纤/单模光纤，长波激光信号源</li>
+<li>1000BASE-SX: 多模光纤，短波</li>
+<li>1000BASE-CX: 铜缆coaxial</li>
+<li>1000BASE-ZX: 单模光纤</li>
+</ul>
+</li>
+</ul>
+<h2 id="osi七层模型"><a class="markdownIt-Anchor" href="#osi七层模型"></a> OSI七层模型</h2>
+<h3 id="1-physical"><a class="markdownIt-Anchor" href="#1-physical"></a> 1-Physical</h3>
+<h4 id="11-lan-介质"><a class="markdownIt-Anchor" href="#11-lan-介质"></a> 1.1 LAN 介质</h4>
+<p>两种干扰：<a href="siyuan://blocks/20230106153313-wwsvlf3">EMI，RFI</a></p>
+<ul>
+<li>
+<p><mark>twisted pair</mark>【短距离100m】【10-100Mbps】</p>
+<ul>
+<li>
+<p><strong>STP &amp; ScTP</strong>: shielded twisted pair &amp; screened twisted pair</p>
+<p>比utp抗干扰能力强，但是重量大价格贵，屏蔽层必须接地</p>
+<p>stp和sctp的connector都是自己独有的</p>
+</li>
+<li>
+<p><strong>UTP</strong>: unshielded twisted pair【最便宜】</p>
+<p><mark>RJ-45 Connector</mark>: 减少noise</p>
+<p>缺点：容易受到电子噪音和干扰影响，支持的长度短</p>
+<p>UTP分类与规格：七类线</p>
+<ul>
+<li>straight cable：以太网线？同类设备</li>
+<li>rollover cable: console线</li>
+<li>crossover cable: 连接交换机</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<p><strong>coaxial</strong> 【远距离500m】【比光缆便宜，比twisted pair贵】</p>
+<p>BNC Connector</p>
+<p>优点：可以在没有中继器的情况下传输较远距离</p>
+</li>
+<li>
+<p><strong>fiber-optic</strong>【更长距离】【最贵】【快】</p>
+<p>Multimode Connector：接口不容易损坏</p>
+<ul>
+<li>single mode(单模光纤): WAN【3000m】, fast, 直径小(less dispersion能量损耗)【使用<a href="siyuan://blocks/20230106153754-3dccot2">ILD</a>和<a href="siyuan://blocks/20230106153803-7vy6zzh">LED</a>发射】</li>
+<li>multimode(多模光纤): LAN【2000m】，直径大</li>
+</ul>
+</li>
+</ul>
+<h4 id="12-5-4-3-2-1-rule"><a class="markdownIt-Anchor" href="#12-5-4-3-2-1-rule"></a> 1.2 5-4-3-2-1 rule</h4>
+<p><img src="%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C(22Fall)/image-20230106164334-fjlo74j.png" alt="image.png" /></p>
+<p>1个大冲突域：4个中继器/集线器将网络分为5段，3段网络，2段链路</p>
+<h4 id="13-数据通信"><a class="markdownIt-Anchor" href="#13-数据通信"></a> 1.3 数据通信</h4>
+<ul>
+<li>
+<p>信号</p>
+<p>模拟信号：连续波</p>
+<p>数字信号：离散值</p>
+</li>
+<li>
+<p>传输速率</p>
+<p>无噪信道：C = W log<sub>2</sub> L (bps)【W：带宽Hz，L：表示数据的信号电平数量】</p>
+<p>噪声信道：C = W log<sub>2</sub> (1+S/N)【S/N信噪比】</p>
+</li>
+<li>
+<p>波特率/比特率：波特率表示信号每秒钟变化次数，比特率表示每秒钟传输二进制位数</p>
+</li>
+</ul>
+<p>【重点：数据编码方式】</p>
+<ul>
+<li>
+<p><mark>单极性编码</mark>：零电平-0，正电平-1</p>
+<p>缺点：分辨结束和开始，需要时钟同步，连续信号累加</p>
+</li>
+<li>
+<p>极化编码</p>
+<ul>
+<li>
+<p><mark>不归零制码</mark>(NRZ)</p>
+<ul>
+<li>电平编码：负电平-0，正电平-1（缺点同单极性）</li>
+<li>反相编码：电平一次翻转-1，无电平变化-0（有限同步）</li>
+</ul>
+</li>
+<li>
+<p><mark>归零制码</mark>(RZ)：负电平-0，正电平-1，比特中位跳变零电平</p>
+<p>优点：本身带有同步信息，不易出错</p>
+<p>缺点：占用带宽</p>
+</li>
+<li>
+<p>双相位编码</p>
+<ul>
+<li>
+<p><mark>曼切斯特码</mark>：每位中间一个跳变（低到高-0，高到低-1）</p>
+<p>比RZ码效率高</p>
+</li>
+<li>
+<p><mark>差分曼切斯特</mark>：每位位前跳变表示数据（有跳变-0，无跳变-1），位中跳变表示时钟</p>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<p>双极性编码</p>
+<ul>
+<li>双极性传号交替反转码(AMI)：零电平-0，正负电平跃迁-1</li>
+</ul>
+</li>
+</ul>
+<p>【多路复用】</p>
+<ul>
+<li>
+<p>TDM：time division multiplexing时分复用</p>
+</li>
+<li>
+<p>FDM：frequency division multiplexing频分复用</p>
+</li>
+<li>
+<p>WDM：wavelength division multipexing波分复用</p>
+</li>
+<li>
+<p>CDM：code division multiplexing码分复用</p>
+<ul>
+<li>CDMA：code division multiple access码分多址，各个用户使用不同码型</li>
+</ul>
+</li>
+</ul>
+<p>【通信方式】</p>
+<ul>
+<li>单工：信号单向传输</li>
+<li>半双工：信号可以双向传输，但是不可以同时</li>
+<li>全双工：信号可以同时双向传输</li>
+</ul>
+<h3 id="2-data-link"><a class="markdownIt-Anchor" href="#2-data-link"></a> 2-Data Link</h3>
+<p>主要任务：差错通知，网络拓扑，<strong>流控制</strong></p>
+<p>frame：封装形式（协议数据单元PDU：protocol data unit）</p>
+<p>【LLC和MAC构成网卡驱动程序】</p>
+<h4 id="21-llc"><a class="markdownIt-Anchor" href="#21-llc"></a> 2.1 LLC</h4>
+<p>【IEEE 802.2】</p>
+<p>transitions up to the network layer（向上到网络层的过渡）；逻辑上标示不同协议类型并封装他们</p>
+<p>提供三种服务：</p>
+<ul>
+<li><a href="siyuan://blocks/20230206125054-ong93dw">无连接</a>无应答：以太网标准服务（可靠连接，实时任务，局域网）</li>
+<li>无连接有应答：wifi【IEEE 802.11】</li>
+<li><a href="siyuan://blocks/20230206124657-al67r0m">面向连接</a>带应答：蓝牙</li>
+</ul>
+<p>【封装】</p>
+<p><img src="%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C(22Fall)/image-20230129163748-1nrenx1.png" alt="image.png" /></p>
+<p>SAP：service access point服务接入点，LLC通过SAP和network layer传输数据，data link和network通信接口</p>
+<p>DSAP：destination目的服务接入点</p>
+<p>SSAP：source源服务接入点</p>
+<h4 id="22-mac"><a class="markdownIt-Anchor" href="#22-mac"></a> 2.2 MAC</h4>
+<p>【IEEE 802.3】</p>
+<p>transitions down to media（向下到介质层的过渡）；定义如何在物理线缆上传输帧；处理物理寻址；定义网络拓扑；定义线缆规章</p>
+<p>MAC协议：用来确定共享介质环境中哪台计算机允许传输数据</p>
+<ul>
+<li>
+<p>不确定的（先来先服务）</p>
+<p>Ethernet：逻辑总线，物理星形或扩展星形拓扑</p>
+<p><mark>CSMA/CD</mark>：带冲突检测的载波侦听多路接入——先侦听线路，空闲发送数据，否则等待；发送数据同时侦听线路，检测到冲突广播拥塞信号，后退算法决定哪个设备再次接入。</p>
+</li>
+<li>
+<p>确定的（轮流）</p>
+<p>token ring：逻辑环形/物理星形拓扑【IEEE 802.5】</p>
+<p>FDDI：逻辑环形/物理双环形拓扑</p>
+</li>
+</ul>
+<p><mark>【Frame format】</mark></p>
+<p><img src="%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C(22Fall)/image-20230129161417-5xvmc6c.png" alt="image.png" /></p>
+<ul>
+<li>
+<p>preamble：前7字节10101010，最后一个字节10101011</p>
+</li>
+<li>
+<p>dest&amp;source：源mac地址和目的mac地址（48位-网卡）</p>
+<p>mac地址格式：前24位OUI，后24位制造商分配，通常写为12位16进制表示</p>
+<p>广播地址：FFFF.FFFF.FFFF</p>
+<p>广播发生情况：目的mac地址未知/目的地是全体主机</p>
+</li>
+<li>
+<p>length：data的字节数</p>
+</li>
+<li>
+<p>data：最少46Bytes，最多1500Bytes(MTU: maximal transfer unit)</p>
+</li>
+<li>
+<p>FCS：帧校验序列，数据链路层mac协议尾部字段，是一段4字节的循环冗余校验码（CRC）</p>
+</li>
+</ul>
+<h4 id="23-wireless-lan"><a class="markdownIt-Anchor" href="#23-wireless-lan"></a> 2.3 Wireless LAN</h4>
+<h5 id="ieee-80211分类"><a class="markdownIt-Anchor" href="#ieee-80211分类"></a> IEEE 802.11分类</h5>
+<ul>
+<li>
+<p>802.11【Wi-Fi】</p>
+<p>DSSS：direct sequence spread spectrum直接序列扩频，在发射端扩展信号的频谱，而在接收端用相同的扩频码序列进行解扩【1-2Mbps】（802.11/802.11b）</p>
+</li>
+<li>
+<p><strong>802.11b</strong></p>
+<p>11Mbps</p>
+<p>also support 802.11 for 1 and 2 Mbps data rates for DSSS only</p>
+<p>operating within 2.4GHz</p>
+</li>
+<li>
+<p><strong>802.11a</strong></p>
+<p>54bps【standard 20-26bps】</p>
+<p>operating in 5GHz</p>
+</li>
+<li>
+<p><strong>802.11g</strong></p>
+<p>OFDM：orthogonal frequency division multiplexing正交频分多路复用技术（802.11g）</p>
+</li>
+<li>
+<p><strong>802.11n</strong></p>
+<p>next generation WLAN</p>
+<p>108bps【theoretically 500-600Mbps】</p>
+</li>
+<li>
+<p>802.1q</p>
+<p>见<a href="siyuan://blocks/20230216172324-pji302l">VLAN</a></p>
+</li>
+</ul>
+<h5 id="模式"><a class="markdownIt-Anchor" href="#模式"></a> 模式</h5>
+<ul>
+<li>
+<p>infrastructure mode：基础建设模式</p>
+<p><mark>Base Service Set(BSS)</mark>: Base Station(BS)【Access Point(AP)】+hosts</p>
+<p>AP：Service Set Identifier(SSID)+a channel</p>
+<p>Extended Service Set: 多个BSS通过DS(distributed system)连接</p>
+</li>
+<li>
+<p>ad-hoc mode：蓝牙</p>
+</li>
+</ul>
+<h5 id="连接过程"><a class="markdownIt-Anchor" href="#连接过程"></a> 连接过程</h5>
+<ul>
+<li>active scanning: 探针请求(probe request)【包括SSID】，AP回应</li>
+<li>passive scanning: 监听beacon management frames</li>
+</ul>
+<h5 id="frames"><a class="markdownIt-Anchor" href="#frames"></a> Frames</h5>
+<ul>
+<li>
+<p>control frames</p>
+</li>
+<li>
+<p>management frames</p>
+</li>
+<li>
+<p>data frames</p>
+<p><img src="%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C(22Fall)/image-20230204152425-1wiy462.png" alt="image.png" /></p>
+<p><img src="%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C(22Fall)/image-20230204152448-du3ka7c.png" alt="image.png" /></p>
+</li>
+</ul>
+<h5 id="csmaca"><a class="markdownIt-Anchor" href="#csmaca"></a> <mark>CSMA/CA</mark></h5>
+<p>wireless使用CSMA/CA：站只能知道nearby station的传输情况，无法检测，只能避免</p>
+<ul>
+<li>
+<p>hidden station problem</p>
+<p>两个站点同时给另一个站点发送</p>
+</li>
+<li>
+<p>exposed station problem</p>
+<p>周围站点传输影响空闲站点传输</p>
+</li>
+</ul>
+<p>原理：发送数据前以控制短帧刺激接收站发送应答短帧，周围站点监听到避免发送</p>
+<p>过程：</p>
+<ol>
+<li>A向B发送RTS（Request To Send）帧，A周围的站点在一定时间内不发送数据，以保证CTS帧返回给A；</li>
+<li>B向A回答CTS（Clear To Send）帧，B周围的站点在一定时间内不发送数据，以保证A发送完数据；</li>
+<li>A开始发送</li>
+<li>若控制帧RTS或CTS发生冲突，采用二进制指数后退算法等待随机时间，再重新开始。</li>
+</ol>
+<h3 id="3-network"><a class="markdownIt-Anchor" href="#3-network"></a> <strong>3-network</strong></h3>
+<p>PDU：packet</p>
+<h4 id="31-ip-packet"><a class="markdownIt-Anchor" href="#31-ip-packet"></a> 3.1 <mark>IP packet</mark></h4>
+<p>ip协议是routed protocol，network layer 协议，IPX协议簇（某网络操作系统协议）相当于ip协议</p>
+<p><img src="%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C(22Fall)/image-20230204160237-om3qtvq.png" alt="image.png" /></p>
+<ul>
+<li>
+<p>版本：IPv4-0100，IPv6-0110</p>
+</li>
+<li>
+<p>首部长度：单位-4字节，min-5，max-15</p>
+</li>
+<li>
+<p>总长度：首部和数据之和，max-65535bytes(2<sup>16</sup>)</p>
+</li>
+<li>
+<p>标识(identification)：数据报标识，用于数据报分片-计数器</p>
+</li>
+<li>
+<p>标志：0/MF/DF，3位，MF=0表示最后一个分片</p>
+</li>
+<li>
+<p>片偏移：单位-8字节，某片在原分组中的相对位置</p>
+</li>
+<li>
+<p>生存时间TTL(Time to Live)：数据报在网络中可通过的路由器数的最大值。min-1, max-255(2<sup>8</sup>-1)</p>
+</li>
+<li>
+<p>协议：数据报携带数据使用协议</p>
+<p>一般是传输层协议，比如<strong>6 TCP，17 UDP</strong>；但也可能是网络层协议，比如<strong>1 ICMP</strong>；也可能是应用层协议，比如<strong>89 OSPF</strong></p>
+</li>
+<li>
+<p>首部检验和：只检验首部</p>
+<p><img src="%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C(22Fall)/image-20230204162503-d6t8rh4.png" alt="image.png" /></p>
+</li>
+<li>
+<p>源地址&amp;目的地址：4字节ip地址</p>
+</li>
+</ul>
+<h4 id="32-ip-address"><a class="markdownIt-Anchor" href="#32-ip-address"></a> 3.2 IP address</h4>
+<p>Network ID &amp; Host ID【network id is assigned by ARIN】</p>
+<p>【分类】</p>
+<p><img src="%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C(22Fall)/image-20230204163145-7tnhq46.png" alt="image.png" /></p>
+<p>可分配主机数目：2<sup>n</sup>-2(全0-网段地址，全1-广播）</p>
+<p><mark>私有地址</mark>：</p>
+<p><img src="%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C(22Fall)/image-20230204163742-r6asq4d.png" alt="image.png" /></p>
+<p>解决ip地址耗尽的方法：NAT，CIDR，IPv6(加16位地址）</p>
+<p><strong>【组播ip地址】D类地址</strong></p>
+<h4 id="33-subnet"><a class="markdownIt-Anchor" href="#33-subnet"></a> 3.3 <mark>subnet</mark></h4>
+<p>子网由网络管理员在本地分配</p>
+<p><img src="%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C(22Fall)/image-20230205220523-tymh1ii.png" alt="image.png" /></p>
+<p>subnet借位数：min-2，max-(host位数-2)【至少剩下两位给主机，只保留1位取0与网段冲突，取1与广播地址冲突】</p>
+<p>划分子网造成地址浪费</p>
+<p><img src="%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C(22Fall)/image-20230205225721-ush07xk.png" alt="image.png" /></p>
+<h5 id="子网掩码"><a class="markdownIt-Anchor" href="#子网掩码"></a> 子网掩码</h5>
+<p>用于计算子网地址，子网掩码与ip地址做按位与运算得出子网地址</p>
+<ul>
+<li>class A: 255.0.0.0</li>
+<li>class B: 255.255.0.0</li>
+<li>class C: 255.255.255.0</li>
+</ul>
+<h5 id="子网划分"><a class="markdownIt-Anchor" href="#子网划分"></a> <mark>子网划分</mark></h5>
+<ol>
+<li>确定哪类网（A/B/C）</li>
+<li>多少个子网，多少个主机-确定借位数</li>
+<li>计算子网掩码</li>
+<li>确定主机可用地址范围</li>
+</ol>
+<p>可用子网 = 可能子网 - 2</p>
+<p>可用主机 = 可能主机 - 2</p>
+<h4 id="34-第三层设备-router"><a class="markdownIt-Anchor" href="#34-第三层设备-router"></a> 3.4 第三层设备-Router</h4>
+<p>【path determination】</p>
+<p>【interface/port】每个接口必须有一个独立的网段地址</p>
+<p><a href="siyuan://blocks/20230106151536-x30nhig">【ip地址分配】</a></p>
+<ul>
+<li>
+<p>静态分配(static sddressing)：手动分配</p>
+</li>
+<li>
+<p>动态分配(dynamic addressing)</p>
+<p>RARP：reverse address resolution priotocol</p>
+<p>BOOTP: BOOTstrap Protocol</p>
+<p>DHCP: dynamic host configuration protocol</p>
+</li>
+</ul>
+<h4 id="35-arp-protocol"><a class="markdownIt-Anchor" href="#35-arp-protocol"></a> 3.5 ARP protocol</h4>
+<p>将MAC地址对应到ip地址</p>
+<p><strong>原理：</strong></p>
+<p>每个主机维护一个本地ARP表（MAC地址和IP地址一一对应）【存在RAM中】</p>
+<p>如果不存在目的ip地址，发送广播，目的主机发现ip地址与自身匹配，发送响应-源主机加入ARP表</p>
+<p><strong>与不在一个网段通信：</strong></p>
+<ul>
+<li>default gateway(默认网关): 网段路由接口ip</li>
+<li>proxy ARP(代理ARP): 中间设备（如路由器）代表目的端发送ARP应答</li>
+</ul>
+<h4 id="36-network-services"><a class="markdownIt-Anchor" href="#36-network-services"></a> 3.6 network services</h4>
+<ul>
+<li>
+<p><strong>面向连接</strong>的网络服务（connection oriented network service)：在传输数据前发送者和接收者之间建立连接</p>
+<ul>
+<li>环交换（circuit switched)：必须有一条通路（All packets travel sequentially across the same channel, or more commonly, across the same virtual circuit.）</li>
+</ul>
+</li>
+<li>
+<p><strong>无连接</strong>（connectionless)：分别对待每一个包（不同路径，不同顺序）【<strong>ip是一个无连接系统</strong>】</p>
+<ul>
+<li>包交换(packet switched)</li>
+</ul>
+</li>
+</ul>
+<h4 id="37-可路由协议和路由协议"><a class="markdownIt-Anchor" href="#37-可路由协议和路由协议"></a> 3.7 可路由协议和路由协议</h4>
+<p>routed protocols：direct user traffic</p>
+<p>routing protocols：maintain tables</p>
+<h5 id="可路由vs不可路由"><a class="markdownIt-Anchor" href="#可路由vs不可路由"></a> 可路由VS不可路由</h5>
+<ul>
+<li>routed/routable protocol：提供对第三层网络层的支持，可以被路由器转发</li>
+<li>non-routable protocol：不支持网络层，不可以被路由器转发（如NetBEUI）</li>
+</ul>
+<h5 id="路由协议routing-protocol"><a class="markdownIt-Anchor" href="#路由协议routing-protocol"></a> 路由协议(routing protocol)</h5>
+<p>用于路由器之间的协议，动态获取路由信息，添加到路由表中</p>
+<p>具体内容见<a href="siyuan://blocks/20230206122851-4p2pz3g">路由器相应协议</a>部分</p>
+<h4 id="38-vlsm"><a class="markdownIt-Anchor" href="#38-vlsm"></a> 3.8 <mark>VLSM</mark></h4>
+<p>classful routing有类路由：一个网络只能使用一个子网掩码</p>
+<p>VLSM支持使用0号子网</p>
+<p><strong>分配示例</strong>：先分配给需要最多host数目的子网，依次往下分配给host第二多的子网，每一次分配都是在上一次没有分配的子网下开始进行的</p>
+<p><img src="%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C(22Fall)/image-20230207215848-ljmub3v.png" alt="image.png" /></p>
+<p>Perth需要6位给host, 192.168.10.0/26 (255.255.255.192)【<strong>00</strong>00 0000】</p>
+<p>KL需要5位host, 192.168.10.64/27 (255.255.255.224)【<strong>010</strong>0 0000】</p>
+<p>Sydney需要4位host, 192.168.10. 96/28 (255.255.255.240)【<strong>0110</strong> 0000】</p>
+<p>Singapore也4位, 192.168.10.112/28 (255.255.255.240)【<strong>0111</strong> 0000】</p>
+<p><strong>WAN link需要2个ip地址</strong>, 192.168.10.128/30, 分配完新加坡就从128开始</p>
+<p>【支持VLSM的protocol】</p>
+<ul>
+<li>OSPF</li>
+<li>Integrated Intermediate System to Intermediate System (Integrated IS-IS)</li>
+<li>EIGRP</li>
+<li>RIP v2</li>
+<li>static routing</li>
+</ul>
+<p>【路由聚合】借位数减少，路由表中条目减少</p>
+<p><img src="%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C(22Fall)/image-20230207230221-rui92m9.png" alt="image.png" /></p>
+<h4 id="39-icmp"><a class="markdownIt-Anchor" href="#39-icmp"></a> 3.9 ICMP</h4>
+<p>允许主机或者路由器报告差错情况，提供异常情况报告</p>
+<p>只是ip层协议，数据报首部加上ICMP报文组成ip数据报发送</p>
+<p>【报文格式】</p>
+<p><img src="%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C(22Fall)/image-20230207230835-gfx1zmb.png" alt="image.png" /></p>
+<p>【类型】</p>
+<ul>
+<li>
+<p>差错报告报文</p>
+<p><img src="%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C(22Fall)/image-20230207231325-dmmcpo2.png" alt="image.png" /></p>
+<p>【不发送ICMP特例】</p>
+<ul>
+<li>ICMP 差错报告报文</li>
+<li>第一个分片的数据报片的所有后续数据报片</li>
+<li>具有多播地址的数据报</li>
+<li>具有特殊地址（如127.0.0.0或0.0.0.0）<br /></li>
+</ul>
+</li>
+<li>
+<p>查询报文</p>
+</li>
+</ul>
+<p><mark>【PING】</mark></p>
+<p>利用ICMP回送请求和回送回答报文实现，用来测试主机之间连通性</p>
+<p><strong>应用层直接使用网络层</strong>，不需要通过传输层</p>
+<h3 id="4-transport"><a class="markdownIt-Anchor" href="#4-transport"></a> <strong>4-transport</strong></h3>
+<p>PDU：segment</p>
+<p>【functions】</p>
+<ul>
+<li>将上层应用的数据分段</li>
+<li>建立端到端的操作</li>
+<li>将段从一台主机发送到另一台</li>
+<li><strong>flow control</strong> and <strong>reliability</strong></li>
+</ul>
+<h4 id="41-port"><a class="markdownIt-Anchor" href="#41-port"></a> 4.1 port</h4>
+<p>标准RFC1700</p>
+<p>0~255：public端口给固定应用</p>
+<p>0~1023：well-known端口</p>
+<p>【著名端口】</p>
+<p>TCP 21端口：FTP 文件传输服务</p>
+<p>TCP 22端口：SSH secure shell安全外壳协议，对密码进行加密传输验证</p>
+<p>TCP 23端口：TELNET 终端仿真服务</p>
+<p>TCP 25端口：SMTP 简单邮件传输服务</p>
+<p><strong>UDP 53端口</strong>：DNS 域名解析服务</p>
+<p>67：Bootstrap protocol server</p>
+<p>UDP 68：DHCP</p>
+<p>UDP 69：TFTP</p>
+<p><strong>TCP 80端口</strong>：HTTP 超文本传输服务</p>
+<p>89：ospf</p>
+<p>TCP 109/110端口：POP3 “邮局协议版本3”使用的端口</p>
+<p>UDP 161/162：SNMP</p>
+<p><strong>TCP 443端口</strong>：HTTPS 加密的超文本传输服务</p>
+<p>UDP 520：RIP</p>
+<h4 id="42-tcp"><a class="markdownIt-Anchor" href="#42-tcp"></a> 4.2 <mark>TCP</mark></h4>
+<h5 id="properties"><a class="markdownIt-Anchor" href="#properties"></a> properties</h5>
+<ul>
+<li>reliable可靠的</li>
+<li>connection oriented面向连接的</li>
+<li>重传所有丢失的或错误的报文【stop-and-wait protocol】</li>
+<li>使用确认acknowledgments</li>
+<li>提供<strong>流控制</strong></li>
+</ul>
+<h5 id="报头格式"><a class="markdownIt-Anchor" href="#报头格式"></a> 报头格式</h5>
+<p><img src="%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C(22Fall)/image-20230208162446-24xj70e.png" alt="image.png" /></p>
+<ul>
+<li>
+<p>端口号各占2字节</p>
+</li>
+<li>
+<p>序号：每个字节一个序号，值代表第一个字节序号</p>
+</li>
+<li>
+<p>确认号：希望收到对方下一个报文段数据的第一个字节序号</p>
+</li>
+<li>
+<p>数据偏移：TCP 报文段的数据起始处距TCP 报文段的起始处的长度</p>
+</li>
+<li>
+<p>保留字段：以后使用，目前置0</p>
+</li>
+<li>
+<p>6位标志位</p>
+<ul>
+<li>URG：1-紧急指针字段有效</li>
+<li>ACK：1-确认号有效</li>
+<li>PSH：1-尽快交付，不等待缓存填满</li>
+<li>RST：1-释放连接重新建立连接</li>
+<li>SYN：1-连接请求或连接接受报文</li>
+<li>FIN：1-数据发送完毕，释放连接</li>
+</ul>
+</li>
+<li>
+<p>窗口：让对方设置发送窗口依据，单位字节</p>
+</li>
+<li>
+<p>检验和：检验包括首部和数据</p>
+</li>
+<li>
+<p>紧急指针：指出本报文段中紧急数据有多少字节</p>
+</li>
+<li>
+<p>选项与填充：</p>
+<p>MSS(maximum segment size)：告诉对方缓存能够接受的报文数据字段最大长度，单位字节</p>
+<p>填充：使整个首部长度是4字节整数倍</p>
+</li>
+</ul>
+<h5 id="flow-control"><a class="markdownIt-Anchor" href="#flow-control"></a> flow control</h5>
+<ul>
+<li>
+<p><mark>sliding window滑动窗口</mark></p>
+<p><strong>ARQ</strong>：automatic repeat request自动响应重传</p>
+<p><img src="%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C(22Fall)/image-20230208171624-j82zrjt.png" alt="image.png" /></p>
+</li>
+<li>
+<p>congestion avoidance</p>
+</li>
+</ul>
+<h5 id="connection-management"><a class="markdownIt-Anchor" href="#connection-management"></a> connection management</h5>
+<ul>
+<li>
+<p><strong>3次握手建立连接</strong></p>
+<p><img src="%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C(22Fall)/image-20230220103840-ksc7j5d.png" alt="image.png" /></p>
+<ol>
+<li>
+<p>server监听，client发送TCP segment [SYN=1,ACK=0]</p>
+</li>
+<li>
+<p>Server checks if exists service process monitoring the port</p>
+<ul>
+<li>不存在，发送TCP segment [RST=1]</li>
+<li>存在，决定接受[SYN=1,ACK=1]还是拒绝连接</li>
+</ul>
+</li>
+<li>
+<p>client发送TCP segment [SYN=0,ACK=1]</p>
+</li>
+</ol>
+</li>
+<li>
+<p>4次握手释放连接</p>
+<p><img src="%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C(22Fall)/image-20230220103817-vylk2yy.png" alt="image.png" /></p>
+<ol>
+<li>
+<p>client发送给server，[FIN=1,seq=u]</p>
+</li>
+<li>
+<p>server发送给client [ACK=1,seq=v]</p>
+</li>
+<li>
+<p>server发送给client [FIN=1,ACK=1]</p>
+</li>
+<li>
+<p>client发送给server [ACK=1]</p>
+<p>在彻底关闭连接之前，client必须等待2MSL时间：确保ACK可以发送到server</p>
+</li>
+</ol>
+</li>
+</ul>
+<h5 id="stop-and-wait-protocol"><a class="markdownIt-Anchor" href="#stop-and-wait-protocol"></a> stop-and-wait protocol</h5>
+<ul>
+<li>Each segment and ACK must have ID</li>
+<li>The resend-time must be more than average-travel-time *2</li>
+<li>效率低</li>
+</ul>
+<p><img src="%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C(22Fall)/image-20230208170213-815uq1v.png" alt="image.png" /></p>
+<h4 id="43-udp"><a class="markdownIt-Anchor" href="#43-udp"></a> 4.3 UDP</h4>
+<p>报头小，no delay, no congestion control</p>
+<p>适用于对速率敏感的场合</p>
+<h5 id="properties-2"><a class="markdownIt-Anchor" href="#properties-2"></a> properties</h5>
+<ul>
+<li>unreliable不可靠</li>
+<li>无连接，无确认，无流控制</li>
+</ul>
+<h5 id="使用udp的协议"><a class="markdownIt-Anchor" href="#使用udp的协议"></a> 使用udp的协议</h5>
+<ul>
+<li>RIP</li>
+<li>DNS</li>
+<li>SNMP</li>
+<li>TFTP</li>
+<li>DHCP</li>
+</ul>
+<h5 id="报头格式-2"><a class="markdownIt-Anchor" href="#报头格式-2"></a> 报头格式</h5>
+<p><img src="%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C(22Fall)/image-20230208175115-vs3vwpf.png" alt="image.png" /></p>
+<p>udp最小8字节（仅包含首部）</p>
+<p>检验和包括首部和数据</p>
+<p>【ip数据报检验和只检查首部，tcp和udp都检查首部和数据】</p>
+<h4 id="44-socket"><a class="markdownIt-Anchor" href="#44-socket"></a> 4.4 Socket</h4>
+<ol>
+<li>表达形式：ip地址+端口号</li>
+<li>套接字对（source, destination）【point-to-point full-duplex点对点全双工】</li>
+<li><strong>TCP不支持组播和广播</strong></li>
+</ol>
+<h4 id="45-natpat"><a class="markdownIt-Anchor" href="#45-natpat"></a> 4.5 NAT&amp;PAT</h4>
+<p>RFC 1631</p>
+<ul>
+<li>静态NAT：ip地址内网和外网一对一映射，保持不变</li>
+<li>动态NAT：ip转换随机，先来先服务</li>
+</ul>
+<p>PAT：对外出数据包的源端口进行转化，使内部网络所有主机可以共享<strong>一个</strong>合法外部ip地址</p>
+<h3 id="5-sessionpresentationapplication"><a class="markdownIt-Anchor" href="#5-sessionpresentationapplication"></a> 5 session&amp;presentation&amp;application</h3>
+<h4 id="51-session"><a class="markdownIt-Anchor" href="#51-session"></a> 5.1 session</h4>
+<p>interhost communication</p>
+<p>【Dialog Control】</p>
+<ul>
+<li>Two-Way Alternate (TWA)</li>
+<li>Two-Way Simultaneous (TWS)</li>
+</ul>
+<p>【checkpoint】校验点</p>
+<p>恢复通信，dialogue seperation</p>
+<p><mark>【Applications】</mark></p>
+<ul>
+<li>Network File System (NFS)</li>
+<li>Structured Query Language (SQL)</li>
+<li>Remote-Procedure Call (RPC)</li>
+<li>AppleTalk Session Protocol (ASP)</li>
+<li>DNA Session Control Protocol (SCP)</li>
+</ul>
+<h4 id="52-presentation"><a class="markdownIt-Anchor" href="#52-presentation"></a> 5.2 presentation</h4>
+<p>将数据以接收设备可以理解的方式呈现</p>
+<ul>
+<li>
+<p>data formatting</p>
+<ul>
+<li>
+<p>ASCII: American Standard Code for Information Interchange</p>
+<p>MIME：multipurpose internet mail extensions多用途互联网邮件扩展类型</p>
+</li>
+<li>
+<p>EBCDIC: Extended Binary Coded Decimal Interchange Code广义二进制编码的十进制交换码</p>
+</li>
+<li>
+<p>GIF: Graphic Interchange Format图形交换格式</p>
+</li>
+<li>
+<p>JPEG: Joint Photographic Experts Group联合图像专家组</p>
+</li>
+</ul>
+</li>
+<li>
+<p>data compression</p>
+</li>
+<li>
+<p>data encryption</p>
+</li>
+</ul>
+<h4 id="53-application"><a class="markdownIt-Anchor" href="#53-application"></a> 5.3 application</h4>
+<p>一些应用详见<a href="siyuan://blocks/20221124205431-8do7ken">协议集合</a></p>
+<h2 id="tcpip四层模型"><a class="markdownIt-Anchor" href="#tcpip四层模型"></a> TCP/IP四层模型</h2>
+<p>OSI 1-2  &lt;—&gt; network access</p>
+<p>OSI 3     &lt;—&gt; Internet</p>
+<p>OSI 4     &lt;—&gt; transport</p>
+<p>OSI 5-7  &lt;—&gt; application</p>
+<blockquote>
+<p>OSI模型和tcp/ip模型的异同点</p>
+</blockquote>
+<p>相同：</p>
+<ul>
+<li>两种模型都体现了分层设计的思想，都是下层服务上层</li>
+<li>两种模型都有网络层、传输层和应用层</li>
+</ul>
+<p>不同：</p>
+<ul>
+<li>层数不同</li>
+<li>TCP/IP支持跨层封装，但是OSI不支持，只允许相邻层之间的交互。</li>
+<li>TCP/IP<strong>只支持IP网络协议</strong>，而 OSI支持多种网络层协议</li>
+<li>OSI是理论上的标准，<strong>TCP/IP是事实上的标准</strong></li>
+</ul>
+<h2 id="各层协议集合"><a class="markdownIt-Anchor" href="#各层协议集合"></a> 各层协议集合</h2>
+<h3 id="data-link-layer"><a class="markdownIt-Anchor" href="#data-link-layer"></a> Data link layer</h3>
+<p>MAC</p>
+<h3 id="network-layer"><a class="markdownIt-Anchor" href="#network-layer"></a> <mark>N</mark><mark>etwork layer</mark></h3>
+<h4 id="arp"><a class="markdownIt-Anchor" href="#arp"></a> ARP</h4>
+<p>data link &amp; network layer，<a href="siyuan://blocks/20230206123006-g4dqp6t">address resolution protocol</a></p>
+<h4 id="ipinternet-protocol"><a class="markdownIt-Anchor" href="#ipinternet-protocol"></a> IP(Internet Protocol)</h4>
+<p><a href="siyuan://blocks/20230204160036-5fusoz4">网络层协议</a></p>
+<h4 id="icmp"><a class="markdownIt-Anchor" href="#icmp"></a> ICMP</h4>
+<p><a href="siyuan://blocks/20230206142506-qfzyrws">internet control message protocol</a></p>
+<h4 id="路由协议"><a class="markdownIt-Anchor" href="#路由协议"></a> 路由协议</h4>
+<p>见下方路由器及相应协议</p>
+<h3 id="transport-layer"><a class="markdownIt-Anchor" href="#transport-layer"></a> Transport layer</h3>
+<h4 id="tcpudp"><a class="markdownIt-Anchor" href="#tcpudp"></a> TCP&amp;UDP</h4>
+<p>transport layer</p>
+<p>TCP(Transmission Control Protocol)</p>
+<p>UDP(User Datagram Protocol)</p>
+<h3 id="application-layer"><a class="markdownIt-Anchor" href="#application-layer"></a> Application layer</h3>
+<ul>
+<li>
+<p>Telnet：连接远程主机</p>
+</li>
+<li>
+<p>FTP: file transfer protocol（使用tcp）</p>
+</li>
+<li>
+<p>TFTP: Trivial file transfer protocol（使用udp）</p>
+</li>
+<li>
+<p>SMTP: simple mail transfer protocol(tcp)</p>
+</li>
+<li>
+<p>SNMP: Simple Network Management Protocol简单网络管理协议</p>
+</li>
+<li>
+<p>HTTP: hypertext transfer protocol</p>
+<p>HTML: hypertext markup language</p>
+<p>URL: universal resource locator</p>
+<p>css: cascading style sheet</p>
+</li>
+<li>
+<p>POP：post office protocol（tcp）</p>
+</li>
+<li>
+<p>DNS：domain name system 域名系统</p>
+<p>TLD: top level domain顶级域名</p>
+</li>
+</ul>
+<h2 id="路由器及相应协议"><a class="markdownIt-Anchor" href="#路由器及相应协议"></a> <strong>路由器及相应协议</strong></h2>
+<h3 id="路由器内部结构"><a class="markdownIt-Anchor" href="#路由器内部结构"></a> 路由器内部结构</h3>
+<p><img src="%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C(22Fall)/image-20230210153347-rpjcg6r.png" alt="image.png" /></p>
+<ul>
+<li>RAM：存储临时数据，如路由表，ARP cache，报文缓存【断电失去所有数据】</li>
+<li>NVRAM：存储备份文件和启动文件</li>
+<li>Flash：EEPROM，保存Cisco IOS(Internet Operating System)</li>
+<li>ROM：只读内存，加载引导程序和操作系统备份【POST：power on self test加电自检】</li>
+</ul>
+<h3 id="路由器启动过程"><a class="markdownIt-Anchor" href="#路由器启动过程"></a> 路由器启动过程</h3>
+<ol>
+<li>
+<p>POST：执行加电自检，对所有硬件模块执行ROM中的诊断</p>
+</li>
+<li>
+<p>检验CPU，内存，接口的基本操作</p>
+</li>
+<li>
+<p>初始化软件</p>
+<ol>
+<li>
+<p>在cpu上执行引导程序</p>
+</li>
+<li>
+<p>查找操作系统</p>
+</li>
+<li>
+<p>加载操作系统</p>
+</li>
+<li>
+<p>加载配置文件并执行</p>
+<p>没找到配置文件进入setup模式</p>
+</li>
+</ol>
+</li>
+</ol>
+<h3 id="路由器数据传输"><a class="markdownIt-Anchor" href="#路由器数据传输"></a> 路由器数据传输</h3>
+<p>两个function合作：</p>
+<p>path determination：路径选择，选择最合适接口转发数据包</p>
+<p>switching：转发，在一个接口接收数据包，另一个接口转发</p>
+<p>【administrative distance】</p>
+<p>管理距离，提供路由可靠性参数，范围0~255</p>
+<p>管理值越小越可靠，1是默认值</p>
+<h3 id="ip地址分配协议"><a class="markdownIt-Anchor" href="#ip地址分配协议"></a> ip地址分配协议</h3>
+<h4 id="rarp"><a class="markdownIt-Anchor" href="#rarp"></a> RARP</h4>
+<h4 id="bootp"><a class="markdownIt-Anchor" href="#bootp"></a> BOOTP</h4>
+<h4 id="dhcp"><a class="markdownIt-Anchor" href="#dhcp"></a> DHCP</h4>
+<p>使用<strong>udp广播</strong>实现高效分配ip地址</p>
+<p><img src="%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C(22Fall)/image-20230209234050-iscy12p.png" alt="image.png" /></p>
+<p>【DHCP欺骗】</p>
+<p>非授权DHCP服务器应答客户请求</p>
+<p>启用DHCP snooping防范</p>
+<h3 id="routing-protocols"><a class="markdownIt-Anchor" href="#routing-protocols"></a> routing protocols</h3>
+<h4 id="静态路由"><a class="markdownIt-Anchor" href="#静态路由"></a> 静态路由</h4>
+<p>管理员手动获取路由器中的路由信息</p>
+<h4 id="动态路由"><a class="markdownIt-Anchor" href="#动态路由"></a> 动态路由</h4>
+<p>利用路由协议更新路由信息，维护路由表，定期告诉邻居</p>
+<p>【分类一】</p>
+<ul>
+<li>
+<p>内部网关协议IGP：用于自治系统</p>
+<ul>
+<li>RIP</li>
+<li>OSPF</li>
+<li>IGRP</li>
+<li>EIGRP</li>
+</ul>
+</li>
+<li>
+<p>外部网关协议EGP：用于自治系统之间</p>
+<ul>
+<li>EGP</li>
+<li>BGP（使用tcp）</li>
+</ul>
+</li>
+</ul>
+<p><mark>【分类二】</mark></p>
+<p><img src="%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C(22Fall)/image-20230210181841-cagkjjd.png" alt="image.png" /></p>
+<ul>
+<li>
+<p><strong>DVP（distance-vector protocols)</strong></p>
+<p>通过计算距离矢量选择最佳路径，频繁周期性更新路由表，每次将<strong>整张路由表</strong>发给周围路由器</p>
+<p>DVP不允许路由器知道整个网络的确切拓扑</p>
+<p>使用算法：<strong>Bellman-Ford alogorithm</strong></p>
+<p>【问题】路由环路(routing loops) -&gt; counting to infinity(无穷计数)</p>
+<p>解决方法：</p>
+<ol>
+<li><strong>定义最大跳数</strong>：16作为无穷大，超过最大跳数丢弃报文</li>
+<li>路由毒化(route poisoning)：路由信息失效时将该条路由表设为16（无穷大）再发布出去</li>
+<li>水平分割(split horizon)：由一个接口发出去的信息不可以再朝这个接口发送</li>
+<li>抑制定时器(hold-down timers)：一条路由信息无效之后一段时间内该条路由处于抑制状态，不接收关于同一目的地址的路由更新</li>
+</ol>
+<p>【DVP protocols】</p>
+<ul>
+<li>RIP</li>
+<li>IGRP</li>
+</ul>
+</li>
+<li>
+<p><strong>LSP（link state protocols)</strong></p>
+<p>每个路由器都了解整个网络的拓扑结构，利用算法决定最短路径，每次更新只传递更新</p>
+<p>算法：<strong>SPF(shortest path first)最短路径优先</strong></p>
+<ul>
+<li>link-state advertisements(LSAs) 链路状态通告</li>
+<li>link-state database(LSDB) 链路状态数据库</li>
+</ul>
+<p>【执行过程】</p>
+<ol>
+<li>routers之间交换LSA</li>
+<li>建立拓扑数据库topological database</li>
+<li>SPF算法计算网络可到达与否(network reachability)</li>
+<li>router在路由表中列出最佳路径和到目标网络的port端口</li>
+</ol>
+<p>【问题】</p>
+<ul>
+<li>处理器和内存需求：LSP比DVP对处理器和内存的需求更高</li>
+<li>带宽需求：初始化时packet flooding会使可使用带宽临时减小</li>
+</ul>
+<p>【DVP protocols】</p>
+<ul>
+<li>OSPF</li>
+</ul>
+</li>
+<li>
+<p><strong>混合协议（hybrid protocols）</strong></p>
+<ul>
+<li>OSI’s IS-IS：intermediate System-to-Intermediate System</li>
+<li>Cisco’s EIGRP：Enhanced interior gateway protocol</li>
+</ul>
+</li>
+</ul>
+<h5 id="rip"><a class="markdownIt-Anchor" href="#rip"></a> <strong>RIP</strong></h5>
+<p><strong>使用udp</strong></p>
+<p>routing information protocol，适用于小型网络</p>
+<p>【属性】</p>
+<ul>
+<li>Interior Gateway Protocol(IGP)</li>
+<li>Distance-Vector Protocol(DVP)</li>
+</ul>
+<p>【内容】</p>
+<p>number of hops路由器跳转次数（max-15, infinity-16）</p>
+<p>每30s更新一次(向邻居更新整张路由表），不会总是选择最快路径</p>
+<p>【版本】</p>
+<p>v2-&gt;v1</p>
+<p>v1和v2配置都很简易</p>
+<p>v1的限制：</p>
+<ul>
+<li>不支持VLSM和CIDR（不发送子网掩码）</li>
+<li>255.255.255.255作为广播地址</li>
+<li>不支持认证</li>
+</ul>
+<p>v2特性：</p>
+<ul>
+<li>使用holddown timer和split horizon防止路由环路，默认180s</li>
+<li>认为16跳无限长</li>
+<li>支持VLSM（发送子网掩码）</li>
+<li>以224.0.0.9作为广播地址</li>
+<li>支持authentication</li>
+</ul>
+<h5 id="igrpeigrp"><a class="markdownIt-Anchor" href="#igrpeigrp"></a> IGRP&amp;EIGRP</h5>
+<p>了解名字</p>
+<h5 id="ospf"><a class="markdownIt-Anchor" href="#ospf"></a> <strong>OSPF</strong></h5>
+<p><strong>直接使用ip</strong></p>
+<p>标准：IETF-internet engineering task force/RFC 2328</p>
+<p>使用neighborship database&amp;topology database，算法：dijkstra shortest path first(SPF)</p>
+<p>优点：适用于大型网络，robust健壮，scalable可扩展</p>
+<p>【术语】</p>
+<ul>
+<li>
+<p>link：网络设备之间的物理连接</p>
+<p>link-state：link状态，包括接口信息和邻接路由器关系</p>
+</li>
+<li>
+<p>cost：基于<strong>带宽</strong>的连接上的值（带宽越小，cost越高）</p>
+</li>
+<li>
+<p><strong>area</strong>：一组网络或路由器拥有相同area ID就被划分为一个area</p>
+<p>32位标识，可以采用ip格式(0.0.0.0)或十进制</p>
+<p>单区域area 0，多区域必须都要连接到area 0(中枢链路)</p>
+</li>
+<li>
+<p>designated router(<strong>DR</strong>)：指定路由器，在一个网络中选举出来代表所有路由器的路由</p>
+<p>backup designated router(BDR)：备份DR</p>
+<p>每个路由器和DR&amp;BDR建立邻接关系</p>
+<p>DR使用<strong>224.0.0.5</strong>向其他路由器发送链路状态信息(link-state information)</p>
+<p>链路拓扑改变时其他路由器通过<strong>224.0.0.6</strong>发送给DR/BDR</p>
+</li>
+</ul>
+<p><img src="%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C(22Fall)/image-20230214095022-f7lajds.png" alt="image.png" /></p>
+<p>【OSPF路由协议包】</p>
+<ul>
+<li>
+<p>Hello</p>
+<p>周期性（点对点网络默认每10s发送一次报文，NBMA30s一次）</p>
+<p>发送地址为224.0.0.5</p>
+<p>hello报文type = 1</p>
+<p><img src="%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C(22Fall)/image-20230214095122-xy81z96.png" alt="image.png" /></p>
+</li>
+<li>
+<p>DBD: database description</p>
+</li>
+<li>
+<p>LSR: link-state request</p>
+</li>
+<li>
+<p>LSU: link-state update</p>
+</li>
+<li>
+<p>LSAck: link-state acknowledgement</p>
+</li>
+</ul>
+<p>【OSPF操作】</p>
+<ol>
+<li>
+<p>建立邻接关系</p>
+<p>周期性发送hello报文，找到邻居：加入邻接数据库</p>
+</li>
+<li>
+<p>选举DR和BDR（如果需要）</p>
+<p>priority + router ID 最大的是DR，第二大是BDR</p>
+<p>priority: 1-255 默认1，优先级越高越大，0表示永远不会成为DR</p>
+<p>router ID: loopback ip address环回地址（即类似ip地址），没有环回地址选择最大接口地址（如果接口关闭需要重新建立邻接关系同时重新发送LSA）</p>
+<p>【如果新的优先级更高的路由器加入网络，当前DR和BDR<strong>不变</strong>，如果当前DRfail新的高优先级路由器可以成为BDR，原来BDR成为DR】</p>
+</li>
+<li>
+<p>发现路由</p>
+<p>DR/BDR发送LSA，其他路由器发送DBD/LSR</p>
+</li>
+<li>
+<p>选择合适的路由</p>
+<p>使用<strong>SPF算法建立树</strong>，以cost作为衡量标准，16位（1-65535）</p>
+<p><img src="%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C(22Fall)/image-20230214103836-9g0qj78.png" alt="image.png" /></p>
+</li>
+<li>
+<p>维护路由信息</p>
+<p>周期性交换hello报文发现新的邻居，4倍interval没收到认为路由死掉</p>
+</li>
+</ol>
+<p>【网络类型】</p>
+<ul>
+<li>
+<p>broadcast multi-access, 广播多路接入（如以太网）</p>
+<p>✔️需要DR election</p>
+</li>
+<li>
+<p>point-to-point点对点网络</p>
+<p>❌不需要DR election</p>
+</li>
+<li>
+<p>non-broadcast multi-access(NBMA)非广播多路接入</p>
+<p>✔️需要DR election</p>
+</li>
+</ul>
+<h2 id="局域网交换与vlan"><a class="markdownIt-Anchor" href="#局域网交换与vlan"></a> 局域网交换与VLAN</h2>
+<h3 id="switching"><a class="markdownIt-Anchor" href="#switching"></a> switching</h3>
+<p>【基本功能】建立维护交换表；从接口交换帧到目的端</p>
+<h4 id="对称交换非对称交换"><a class="markdownIt-Anchor" href="#对称交换非对称交换"></a> 对称交换&amp;非对称交换</h4>
+<p>对称交换：提供<strong>带宽相同</strong>端口交换（瓶颈：user尝试访问其他网段服务器）【10或100Mbps】</p>
+<p>非对称交换：减少瓶颈发生的可能性-将服务器和高带宽端口连接【100Mbps】（非对称交换需要交换机中有<strong>内存缓冲</strong>）</p>
+<h4 id="内存缓冲"><a class="markdownIt-Anchor" href="#内存缓冲"></a> 内存缓冲</h4>
+<p>memory buffering，存储目的地和传输数据</p>
+<ul>
+<li>port-based：每个端口以队列形式存储packet，可能因为端口忙碌延迟传送</li>
+<li>shared memory：所有端口共享</li>
+</ul>
+<h4 id="交换方法"><a class="markdownIt-Anchor" href="#交换方法"></a> 交换方法</h4>
+<ul>
+<li>
+<p><strong>store-and-forward</strong>(存储转发)：交换机接收整个帧，计算尾部CRC，再发送到目的地</p>
+</li>
+<li>
+<p><strong>cut-through</strong>(直通转发)：</p>
+<ul>
+<li>fast-forward：快速直通转发，只检查目的MAC地址，然后直接转发</li>
+<li>fragment-free：无碎片直通转发，只读取data前64字节（减少错误）</li>
+</ul>
+</li>
+</ul>
+<h4 id="各层交换"><a class="markdownIt-Anchor" href="#各层交换"></a> 各层交换</h4>
+<p>【第2层交换】基于硬件高速交换，低延迟低代价</p>
+<p>【第3层交换】基于硬件的packet转发</p>
+<p>【第4层交换】基于第三层</p>
+<h3 id="spanning-tree-protocol"><a class="markdownIt-Anchor" href="#spanning-tree-protocol"></a> Spanning-Tree Protocol</h3>
+<p>减少冗余路径不增加延时：通过计算稳定的生成树拓扑</p>
+<h4 id="决定顺序"><a class="markdownIt-Anchor" href="#决定顺序"></a> 决定顺序</h4>
+<p>lowest root BID(bridge identification）</p>
+<p>lowest path cost to root bridge</p>
+<p>lowest sender BID</p>
+<p>lowest port ID</p>
+<p><mark>【BID】</mark> a bridge id - 8 bytes网桥id</p>
+<p>2字节优先级+6字节MAC地址，默认优先级32768</p>
+<p>【path cost】</p>
+<p><img src="%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C(22Fall)/image-20230216171053-3llem71.png" alt="image.png" /></p>
+<h4 id="bpdu"><a class="markdownIt-Anchor" href="#bpdu"></a> BPDU</h4>
+<p>Spanning-tree frames( bridge protocol data units-BPDU)：用来决定生成树拓扑</p>
+<ol>
+<li>
+<p>STP建立一个根节点叫做root bridge</p>
+<p>根据<strong>最低的BID</strong>选举根节点，如果所有交换机优先级相同，选择最小MAC地址</p>
+</li>
+<li>
+<p>从根节点开始建立生成树，冗余链路被阻塞，冗余链路上的packet也被丢弃</p>
+</li>
+<li>
+<p>交换机发送BPDU来形成拓扑结构</p>
+</li>
+</ol>
+<h4 id="5种状态"><a class="markdownIt-Anchor" href="#5种状态"></a> 5种状态</h4>
+<ul>
+<li>blocking：不转发帧，监听BPDU</li>
+<li>listening：不转发帧，监听数据帧</li>
+<li>learning：不转发帧，学习地址</li>
+<li>forwarding：转发帧，学习地址</li>
+<li>disabled：不转发帧，不监听BPDU</li>
+</ul>
+<h4 id="stp收敛步骤"><a class="markdownIt-Anchor" href="#stp收敛步骤"></a> STP收敛步骤</h4>
+<ol>
+<li>选举root switch：根桥所有端口都是指定端口，指定端口都处于forwarding状态</li>
+<li>选举root ports：在剩下的每一个switch中选择1个根端口（从非根桥到根桥花费最低）</li>
+<li>选择指定端口：每个网段有一个指定端口，指定端口是在到根桥花费最低的网桥上选取的，这台交换机上的其他<strong>非指定端口会被阻塞</strong></li>
+</ol>
+<h3 id="vlan"><a class="markdownIt-Anchor" href="#vlan"></a> VLAN</h3>
+<p>逻辑网络设备或用户分组；单一广播域；在第2/3层工作</p>
+<p>用户基于port/MAC/ptotocol/application分组</p>
+<p>不同vlan之间通过<strong>路由器</strong>通信</p>
+<h4 id="trunk-linkaccess-link"><a class="markdownIt-Anchor" href="#trunk-linkaccess-link"></a> trunk link&amp;access link</h4>
+<p>交换机与交换机之间的骨干链路，用于同一vlan通信，减少端口浪费【high speed links: &gt;= 100Mbps】</p>
+<blockquote>
+<p>如何解决共用trunk导致的数据包混淆问题？</p>
+</blockquote>
+<ul>
+<li>
+<p>frame filtering(帧过滤)：检查帧当中的MAC地址或者第三层使用协议</p>
+<p>【交换表/address table】记录主机MAC地址和对应vlan（存储在交换机中）</p>
+</li>
+<li>
+<p>frame tagging(帧标记)：在每个帧头部放置标记位，进入backbone之前加上，离开backbone之后去除</p>
+<p>【IEEE 802.1q】添加标记位的协议</p>
+<p><strong>ISL</strong>: inter-switch link，在头部加上26字节，在尾部添加4字节CRC</p>
+</li>
+</ul>
+<p><strong>access link</strong>: 只属于一个vlan的link，任何vlan中的主机不知道vlan存在（完全透明）</p>
+<p><mark>trunk link</mark>: 支持多个vlan（可以支持所有，也可以配置有限的vlan），连接交换机之间或交换机和路由器</p>
+<p>【vlan trunking protocol-VTP】</p>
+<h4 id="implementation"><a class="markdownIt-Anchor" href="#implementation"></a> implementation</h4>
+<h5 id="static"><a class="markdownIt-Anchor" href="#static"></a> static</h5>
+<p>静态vlan由管理员手动分配</p>
+<p>优点：安全，容易配置监控</p>
+<h5 id="dynamic"><a class="markdownIt-Anchor" href="#dynamic"></a> dynamic</h5>
+<p>switch维护一张交换表动态查找相应的主机地址</p>
+<h5 id="port-centric"><a class="markdownIt-Anchor" href="#port-centric"></a> port-centric</h5>
+<p>路由器分配一个interface给某一个vlan，方便管理，有更高的安全性</p>
+<p>也可以多个vlan共享一个路由器interface</p>
+<h2 id="广域网-wan"><a class="markdownIt-Anchor" href="#广域网-wan"></a> 广域网-WAN</h2>
+<p>WAN在OSI的前三层工作，主要是物理层和数据链路层</p>
+<h3 id="设备"><a class="markdownIt-Anchor" href="#设备"></a> 设备</h3>
+<p>modem调制解调器，主要有CSU&amp;DSU</p>
+<p>CSU：channel service unit信道服务单元</p>
+<p>DSU：data service unit数据服务单元</p>
+<p>CPE：customer premises equipment客户端设备</p>
+<p>CO：central office中心局(CO switch：离WSP提供服务最近的设备接入点)</p>
+<p>Toll Network：collection of switches/trunks in WAN cloud</p>
+<p>ISDN terminal adapter</p>
+<h3 id="circuits"><a class="markdownIt-Anchor" href="#circuits"></a> Circuits</h3>
+<h4 id="switched-virtual-circuitssvc"><a class="markdownIt-Anchor" href="#switched-virtual-circuitssvc"></a> Switched Virtual Circuits(SVC)</h4>
+<p>WAN paths to the destination，有established和terminated两种状态</p>
+<p>【三个阶段】</p>
+<ul>
+<li>circuit establishment</li>
+<li>data transfer</li>
+<li>circuit termination</li>
+</ul>
+<p>【<strong>telephone service电话服务和ATM使用SVC</strong>】</p>
+<p>（ATM: async transfer mode异步传输方式)</p>
+<p>带宽增加，cost减小</p>
+<h4 id="permanent-virtual-circuitspvc"><a class="markdownIt-Anchor" href="#permanent-virtual-circuitspvc"></a> Permanent Virtual Circuits(PVC)</h4>
+<p>只有一种模式data transfer</p>
+<p>【X.25和frame relay使用PVC】</p>
+<h3 id="wan-and-osi"><a class="markdownIt-Anchor" href="#wan-and-osi"></a> WAN and OSI</h3>
+<p>从广域网服务提供商或PTT(post telephone and telegraph)处获取接入广域网服务</p>
+<h4 id="physical-layer"><a class="markdownIt-Anchor" href="#physical-layer"></a> physical layer</h4>
+<p>物理层定义了DTE和DCE之间的接口</p>
+<p>DCE-service provider, DTE-client</p>
+<h4 id="data-link-layer-2"><a class="markdownIt-Anchor" href="#data-link-layer-2"></a> data link layer</h4>
+<p>描述数据如何在不同系统之间的单一链路上传输，包括各种协议等</p>
+<h3 id="accessing-methods"><a class="markdownIt-Anchor" href="#accessing-methods"></a> Accessing methods</h3>
+<h4 id="ppp"><a class="markdownIt-Anchor" href="#ppp"></a> <mark>PPP</mark></h4>
+<p>Point-to-Point Protocol，第二层协议</p>
+<p>IETF开发，用来替代SLIP（只支持ip，不支持动态分配ip地址）</p>
+<p>包含一段用来识别网络层协议的字段</p>
+<p>在建立连接的过程中可以检查链路质量</p>
+<p>提供<strong>PAP</strong>（Password Authentication Protocol）和<strong>CHAP</strong>（challenge handshake authentication protocol）认证</p>
+<h5 id="components"><a class="markdownIt-Anchor" href="#components"></a> components</h5>
+<ul>
+<li>使用HDLC作为第三层报文的封装</li>
+<li>使用LCP（Link Control Protocol）：建立链路，配置链接选项，测试链路质量</li>
+<li>使用NCP（network control protocol）：选择和配置第三层协议</li>
+</ul>
+<h5 id="会话建立和终止"><a class="markdownIt-Anchor" href="#会话建立和终止"></a> 会话建立和终止</h5>
+<ol>
+<li>
+<p>链路建立和配置协商（LCP）</p>
+<p>每个PPP设备发送LCP来开启连接，设备可以协商LCP中携带的压缩或认证协议</p>
+</li>
+<li>
+<p>链路质量测试</p>
+<p>发送和接收LCP来测量error rate</p>
+<p>认证在网络层协议配置开始之前发生</p>
+<p>LCP可以延迟网络层协议信息的传输直到测试阶段完成</p>
+</li>
+<li>
+<p>网络层协议配置（NCP）</p>
+</li>
+<li>
+<p>链路终止</p>
+<p><strong>LCP可以在任何时间终止链路</strong>：用户请求；链路质量不好；超时</p>
+<p>LCP终止链路会通知网络层协议</p>
+</li>
+</ol>
+<h5 id="pap"><a class="markdownIt-Anchor" href="#pap"></a> PAP</h5>
+<p>密码验证协议，双向握手</p>
+<p>用户名和密码对不停的在链路上发送（明文形式）直到验证通过或连接终止，建立连接前只认证一次</p>
+<h5 id="chap"><a class="markdownIt-Anchor" href="#chap"></a> CHAP</h5>
+<p>询问握手验证协议，三次握手</p>
+<p>host发送challenge message给remote node, remote node返回一个加密值，包括收到的challenge和用户名密码</p>
+<p>host检查匹配承认认证</p>
+<h4 id="hdlc"><a class="markdownIt-Anchor" href="#hdlc"></a> HDLC</h4>
+<p>high-level data link control</p>
+<p>ISO standard，不同供应商之间的HDLC不兼容，cisco’s default encapsulation for serial lines，只有两台路由都使用Cisco的IOS时才使用HDLC（否则同步PPP）</p>
+<p>HDLC支持point-to-point和multipoint配置</p>
+<p>没有窗口或流控制</p>
+<p>【LAPB】</p>
+<p>link access procedure, balanced平衡型链路接入规程</p>
+<p>为point-to-point提供可靠性和流控制</p>
+<p>【frame relay】</p>
+<p>帧中继，简单封装，没有纠错机制</p>
+<h4 id="isdn"><a class="markdownIt-Anchor" href="#isdn"></a> ISDN</h4>
+<p>综合业务数字网（Integrated Services Digital Network）</p>
+<p>从已有的电话线传输声音和数据</p>
+<p>PPP和HDLC是两种常见的ISDN上的数据封装，默认HDLC，但是PPP更健壮</p>
+<h5 id="两种信道"><a class="markdownIt-Anchor" href="#两种信道"></a> 两种信道</h5>
+<p>D信道：比modem速度更快的设置</p>
+<p>B信道：更快的数据传输速率(64kps)</p>
+<h5 id="两种访问方式"><a class="markdownIt-Anchor" href="#两种访问方式"></a> 两种访问方式</h5>
+<p><strong>BRI</strong>(basic rate interface)</p>
+<p>基本速率接口</p>
+<p>2个带宽64kpsB信道+1个带宽16kpsD信道 = 144kps</p>
+<p><strong>PRI</strong>(primary rate interface)</p>
+<p>主速率接口</p>
+<p>多个B信道+1个D信道</p>
+<h4 id="adsl"><a class="markdownIt-Anchor" href="#adsl"></a> ADSL</h4>
+<p>asymmetric digital subscriber line不对称数字用户线</p>
+<p>上行和下行带宽不对称</p>
+<p>有极限传输距离限制，与用户线直径、传输速率有关，线径越大传输速率越小，传输距离越大</p>
+<h5 id="dsl"><a class="markdownIt-Anchor" href="#dsl"></a> DSL</h5>
+<p>把电话用户线原来没有使用的高端频谱给上网使用</p>
+<p>xDSL：digital subscriber line数字用户线（x代表不同宽带方案）</p>
+<ul>
+<li>HDSL: high speed DSL</li>
+<li>SDSL: single-line DSL</li>
+<li>VDSL: very high speed DSL</li>
+<li>IDSL: ISDN用户线</li>
+<li>RADSL: rate-adaptive DSL</li>
+</ul>
+<h5 id="dmt"><a class="markdownIt-Anchor" href="#dmt"></a> DMT</h5>
+<p>discrete multi-tone离散多音调(多载波/子信道)调制技术，采用频分复用</p>
+<h5 id="一些设备"><a class="markdownIt-Anchor" href="#一些设备"></a> 一些设备</h5>
+<p>DSLAM: DSL access multiplexer数字用户线接入复用器</p>
+<p>ATU：access terminal unit接入端接单元</p>
+<p>PS：POTS splitter电话分离器</p>
+<h5 id="第二代adsl"><a class="markdownIt-Anchor" href="#第二代adsl"></a> 第二代ADSL</h5>
+<p>提高调制效率得到更高数据率</p>
+<p>使用无缝速率自适应技术SRA(seamless rate adaptation)</p>
+<h4 id="sonet同步光纤网"><a class="markdownIt-Anchor" href="#sonet同步光纤网"></a> SONET同步光纤网</h4>
+<p>Synchronous Optical Network</p>
+<p>sonet各级时钟都来自一个非常精确的主时钟</p>
+<p>第 1 级同步传送信号 <strong>STS-1</strong> (Synchronous Transport Signal)的传输速率是 51.84 Mb/s</p>
+<p>光信号则称为第 1 级<strong>光载波 OC-1</strong>，OC 表示Optical Carrier</p>
+<p><strong>【SDH】</strong></p>
+<p>synchronous digital hierarchy同步数字系列</p>
+<p>ITU(international telecommunication union国际电信联盟)以sonet为基础制定出SDH</p>
+<p>基本速率155.52Mb/s：第1级同步传递模块STM-1（synchronous transfer module）【相当于OC-3速率】</p>
+<p>【四个光接口层】</p>
+<ul>
+<li>光子层</li>
+<li>段层</li>
+<li>线路层</li>
+<li>路径层</li>
+</ul>
+<h4 id="hfc"><a class="markdownIt-Anchor" href="#hfc"></a> HFC</h4>
+<p>hybrid fiber coax光纤同轴混合网</p>
+<p>在CATV基础上开发的居民宽带接入网</p>
+<p>主干线路采用光纤-模拟光纤技术：头部连接到光分配结点ODN(optical distribution node)，光纤结点以下就是同轴电缆</p>
+<p><strong>【UIB】</strong></p>
+<p>user interface box用户接口盒</p>
+<ul>
+<li>
+<p>使用<strong>同轴电缆</strong>连接到机顶盒(set-top box)</p>
+</li>
+<li>
+<p>使用<strong>双绞线</strong>连接到电话机</p>
+</li>
+<li>
+<p>使用<strong>电缆调制解调器</strong>（cable modem）连接到计算机</p>
+<p>电缆调制解调器传输速率高3~10Mb/s</p>
+</li>
+</ul>
+<p>【FTTx】</p>
+<p>fiiber to the…光纤到…</p>
+<p>FTTH fiber to the home</p>
+<p>FTTB fiber to the building</p>
+<p>FTTC fiber to the curb路边</p>
+<h2 id="网络安全"><a class="markdownIt-Anchor" href="#网络安全"></a> 网络安全</h2>
+<h3 id="四种威胁"><a class="markdownIt-Anchor" href="#四种威胁"></a> 四种威胁</h3>
+<ul>
+<li>截获</li>
+<li>中断</li>
+<li>篡改</li>
+<li>伪造</li>
+</ul>
+<p>【被动攻击】截获信息的攻击</p>
+<p>【主动攻击】更改信息或拒绝用户使用资源</p>
+<h3 id="恶意程序"><a class="markdownIt-Anchor" href="#恶意程序"></a> 恶意程序</h3>
+<ul>
+<li>病毒：会传染其他程序的程序</li>
+<li>蠕虫：通过网络的通信功能将自身从一个结点发送到另一个结点并启动运行的程序</li>
+<li>特洛伊木马：程序可执行的功能超出声称功能</li>
+<li>逻辑炸弹：当运行环境满足某种特定条件时执行其他特殊功能的程序</li>
+</ul>
+<h3 id="密钥"><a class="markdownIt-Anchor" href="#密钥"></a> 密钥</h3>
+<p>对称密钥：加密和解密使用相同密码体制DES</p>
+<p>公钥密码体制：使用不同的加密密钥和解密密钥RSA</p>
+<h3 id="数字签名"><a class="markdownIt-Anchor" href="#数字签名"></a> 数字签名</h3>
+<ul>
+<li>报文鉴别：接收者能够核实发送者对报文的签名</li>
+<li>报文完整性：发送者不能抵赖</li>
+<li>不可否认：不能伪造</li>
+</ul>
+<h3 id="防火墙"><a class="markdownIt-Anchor" href="#防火墙"></a> 防火墙</h3>
+<p>防火墙内部：可信任网络，外部：不可信任网络</p>
+<p>功能：阻止和允许</p>
+<ul>
+<li>
+<p>网络级防火墙：防止整个网络出现外来非法的入侵</p>
+<p>分组过滤和授权服务器</p>
+</li>
+<li>
+<p>应用级防火墙：从应用程序来进行接入控制</p>
+<p>网关或代理服务器</p>
+</li>
+</ul>
+<p><mark>【ACL】</mark></p>
+<p>access control list访问控制列表</p>
+<p>根据源地址、目的地址、上层协议来确定哪些包可以通过，哪些不可以</p>
+<p><strong>wildcard mask</strong>：通配符掩码，告诉路由器哪些匹配哪些忽略，0-匹配，1-忽略</p>
+<p><strong>标准ACL</strong>：没有目的参数，需要将ACL表放置在离<strong>保护目的地</strong>近的路由上 <strong>1-99</strong></p>
+<p><strong>扩展ACL</strong>：可以根据多种属性过滤分组，放在离<strong>被拒绝的信源近</strong>的地方 <strong>100-199</strong></p>
+</div></article><nav id="pagination"><div class="prev-post pull-left"><a href="/2023/06/15/knowledge/db/%E6%95%B0%E6%8D%AE%E7%AE%A1%E7%90%86%E5%9F%BA%E7%A1%80(23Spring)/"><i class="fa fa-chevron-left">  </i><span>数据管理基础(23Spring)</span></a></div><div class="next-post pull-right"><a href="/2022/10/24/knowledge/c++/Stanford%20CS106L(2019)/"><span>Stanford CS106L(2019)</span><i class="fa fa-chevron-right"></i></a></div></nav></div></div><footer class="footer-bg" style="background-image: url(https://github.com/AliceRayLu/AliceRayLu.github.io/blob/main/source/pics/back1.jpg?raw=true)"><div class="layout" id="footer"><div class="copyright">&copy;2023 - 2025 By A.R.L</div><div class="footer_custom_text">本站图片资源托管于Github, 网速限制可能无法正确加载</div></div></footer><i class="fa fa-arrow-up" id="go-up" aria-hidden="true"></i><script src="https://cdn.jsdelivr.net/npm/animejs@latest/lib/anime.min.js"></script><script src="https://cdn.jsdelivr.net/npm/jquery@latest/dist/jquery.min.js"></script><script src="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@latest/dist/jquery.fancybox.min.js"></script><script src="https://cdn.jsdelivr.net/npm/velocity-animate@latest/velocity.min.js"></script><script src="https://cdn.jsdelivr.net/npm/velocity-ui-pack@latest/velocity.ui.min.js"></script><script src="/js/utils.js?version=1.9.1"></script><script src="/js/fancybox.js?version=1.9.1"></script><script src="/js/sidebar.js?version=1.9.1"></script><script src="/js/copy.js?version=1.9.1"></script><script src="/js/fireworks.js?version=1.9.1"></script><script src="/js/transition.js?version=1.9.1"></script><script src="/js/scroll.js?version=1.9.1"></script><script src="/js/head.js?version=1.9.1"></script><link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/katex@latest/dist/katex.min.css"><script src="https://cdn.jsdelivr.net/npm/katex-copytex@latest/dist/katex-copytex.min.js"></script><link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/katex-copytex@latest/dist/katex-copytex.min.css"><script src="/js/katex.js"></script><script>if(/Android|webOS|iPhone|iPod|iPad|BlackBerry/i.test(navigator.userAgent)) {
+  $('#nav').addClass('is-mobile')
+  $('footer').addClass('is-mobile')
+  $('#top-container').addClass('is-mobile')
+}</script></body></html>
