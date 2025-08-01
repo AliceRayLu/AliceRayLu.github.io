@@ -1,4 +1,5 @@
-https://aliceraylu.github.io/2025/07/14/knowledge/machine%20learning/CMU10-714/
+https://aliceraylu.github.io/2025/07/14/LLM/CMU10-714/
+https://aliceraylu.github.io/2024/09/29/LLM/transformer/
 https://aliceraylu.github.io/2023/08/01/knowledge/data%20science/UCB%20Data100(22Spring)/
 https://aliceraylu.github.io/about/index.html
 https://aliceraylu.github.io/categories/index.html
@@ -18,10 +19,8 @@ https://aliceraylu.github.io/2023/08/24/technology/blog/Github-Personal-Blog-Qui
 https://aliceraylu.github.io/2024/01/14/stories/24SummerIntern/
 https://aliceraylu.github.io/2023/08/24/stories/The-Beginning-of-the-Story/
 https://aliceraylu.github.io/2023/06/26/knowledge/os/%E8%AE%A1%E7%AE%97%E6%9C%BA%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F(23Spring)/
-https://aliceraylu.github.io/2024/09/29/knowledge/machine%20learning/transformer/
 https://aliceraylu.github.io/2024/01/05/knowledge/machine%20learning/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/
 https://aliceraylu.github.io/2023/10/30/knowledge/machine%20learning/Umich%20EECS%20498-007/
-https://aliceraylu.github.io/2024/04/29/knowledge/machine%20learning/CS224n/
 https://aliceraylu.github.io/2023/06/15/knowledge/db/%E6%95%B0%E6%8D%AE%E7%AE%A1%E7%90%86%E5%9F%BA%E7%A1%80(23Spring)/
 https://aliceraylu.github.io/2023/02/26/knowledge/computer%20network/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C(22Fall)/
 https://aliceraylu.github.io/2024/02/26/knowledge/c++/c++%E9%AB%98%E7%A8%8B/
@@ -44,3 +43,5 @@ https://aliceraylu.github.io/categories/Technology/Blog/
 https://aliceraylu.github.io/categories/Technology/Device-Usage/
 https://aliceraylu.github.io/categories/Technology/LaTex/
 https://aliceraylu.github.io/categories/Technology/Frontend/
+https://aliceraylu.github.io/categories/LLM/
+https://aliceraylu.github.io/categories/LLM/DL-System/
