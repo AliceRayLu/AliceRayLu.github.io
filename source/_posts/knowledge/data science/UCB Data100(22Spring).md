@@ -10,6 +10,10 @@ Lecture Notes are in the format of Jupiter Notebook.
 
 spring22版本完全开源，课程主页上包括了所有课程视频和hw，lab，proj材料等，非常适合自学。
 
+## 食用方式
+1. 学习lecture对应的notebook，疑惑的运行方式查看对应的课程视频部分
+2. 完成配套的hw，lab， proj
+
 ## 后记
 > 11.1 完成所有lab, hw, proj
 

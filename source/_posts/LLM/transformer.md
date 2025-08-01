@@ -1,7 +1,7 @@
 ---
 title: Transformer Learning Materials
 date: 2024-09-29
-category: [Knowledge, Machine Learning]
+category: [LLM]
 toc_number: false
 ---
 
