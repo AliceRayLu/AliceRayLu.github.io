@@ -14,4 +14,14 @@ vscode settings -> search 'proxy' -> http代理地址设置为本地代理的地
 
 ## 远程copilot无法连接
 
-最近经常出现远程的机器服务不稳定问题
+最近经常出现远程的机器代理服务不稳定问题，有以下解决方案：
+
+- 让插件运行在本地，打开设置，搜索extension kind，编辑settings文件
+
+```json
+"remote.extensionKind": {
+    "Github.copilot-chat":[
+        "ui"
+    ]
+}
+```
