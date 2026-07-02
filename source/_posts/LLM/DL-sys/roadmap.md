@@ -28,12 +28,19 @@ toc_number: false
 
 **Course Link**: [MIT 5.5940 Webpage](https://hanlab.mit.edu/courses/2024-fall-65940)
 
-## 1.3 Paper Reading Courses
+## 1.3 Stanford CS336
 
+## 1.4 Paper Reading Courses
+classic papers & talks
 
 # Phase2: Detailed Practise Regarding Different Directions
 
 ## Framework Learning
+
+### vLLM
+
+### SGLang
+
 
 # Resources/References
 
