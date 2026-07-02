@@ -1,3 +1,6 @@
+https://aliceraylu.github.io/2026/04/29/technology/coding_env/coding_config/
+https://aliceraylu.github.io/2026/04/28/LLM/basic/rope/
+https://aliceraylu.github.io/2025/08/11/LLM/DL-sys/roadmap/
 https://aliceraylu.github.io/2026/03/31/technology/device%20usage/Github%20Copilot%20WSL%E4%BD%BF%E7%94%A8/
 https://aliceraylu.github.io/2023/06/26/knowledge/os/%E8%AE%A1%E7%AE%97%E6%9C%BA%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F(23Spring)/
 https://aliceraylu.github.io/2026/03/23/technology/device%20usage/RD%20Client%E8%B8%A9%E5%9D%91%E5%AE%9E%E5%BD%95/
@@ -26,7 +29,6 @@ https://aliceraylu.github.io/2022/10/24/knowledge/c++/Stanford%20CS106L(2019)/
 https://aliceraylu.github.io/2022/09/26/knowledge/algorithm/UCB%20CS61B(2021)/
 https://aliceraylu.github.io/2022/08/24/knowledge/c++/Stanford%20CS106B(2020)/
 https://aliceraylu.github.io/2025/08/29/LLM/DL-sys/MIT65940/
-https://aliceraylu.github.io/2025/08/11/LLM/DL-sys/roadmap/
 https://aliceraylu.github.io/2025/07/14/LLM/DL-sys/CMU10-714/
 https://aliceraylu.github.io/
 https://aliceraylu.github.io/categories/Stories/
@@ -45,3 +47,5 @@ https://aliceraylu.github.io/categories/Technology/Blog/
 https://aliceraylu.github.io/categories/Technology/Frontend/
 https://aliceraylu.github.io/categories/Technology/LaTex/
 https://aliceraylu.github.io/categories/Technology/Device-Usage/
+https://aliceraylu.github.io/categories/LLM/basic/
+https://aliceraylu.github.io/categories/Technology/environment/
